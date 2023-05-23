@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_a_file_server.html 
+keywords: netapp, keystone, create, file, server, 
+summary: Keystone crea un file server 
+---
+= Creare un file server
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I file server appartengono a un subtenant e vengono creati all'interno di una zona. Quando si crea un server, è possibile:
+
+* Abilitare la protezione dei dati per il disaster recovery asincrono per il server. Per ulteriori informazioni sul funzionamento del disaster recovery in NetApp Service Engine, vedere link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Disaster recovery"].
+* Se si dispone di un abbonamento per la protezione dei dati di disaster recovery sincrono, la funzione è attivata per impostazione predefinita.
+* Renderla abilitata per CIFS. I servizi NFS sono attivati per impostazione predefinita.
+
+
+.Prima di iniziare
+Per creare il server, assicurarsi di disporre di quanto segue:
+
+* Il subtenant che ospiterà il server.
+* La regione e la zona in cui appartiene il server.
+* Dettagli relativi alla rete, ad esempio la subnet e l'indirizzo IP (opzionale). Se non si ha familiarità con la rete, rivolgersi al reparto IT per ottenere i valori appropriati.
+* Per abilitare il disaster recovery asincrono sul file server, l'area di disaster recovery (la zona in cui il file server verrà replicato).
+* Per il server CIFS, è necessario conoscere le credenziali di Active Directory, i server DNS, il nome del server e, facoltativamente, l'unità organizzativa (OU) di Active Directory. Le credenziali di Active Directory devono essere valide per un utente che dispone dei privilegi necessari per accedere a un computer al dominio Active Directory.
+
+
+Quando la struttura OU di Active Directory è gerarchica, come mostrato nell'immagine seguente, specificare le OU dal livello più basso all'inizio. In questo esempio, per specificare l'unità organizzativa Melbourne, impostare `cifs_ou` come `"cifs_ou": "ou=melbourne,ou=cifs".`
+
+image:sewebiug_image20.png["Errore: Immagine grafica mancante"]Fasi
+
+. Visualizzare il link:sewebiug_view_servers.html#view-servers["File Server"].
+. Fare clic su *Create Server* (Crea server).
+. Nella pagina Create Server (Crea server), completare i seguenti campi:
++
+|===
+| Campo | Descrizione 
+
+
+| Subtenant | Selezionare il sottotenant dall'elenco. 
+
+
+| Regione | Selezionare la regione in cui risiederà il server. 
+
+
+| Zona | Selezionare la zona in cui risiederà il server. 
+
+
+| Nome | Immettere il nome del server. 
+
+
+| Subnet | Selezionare una subnet predefinita dall'elenco. 
+
+
+| Indirizzo IP | (Facoltativo) specificare un indirizzo IP. Se non specificato, al server verrà assegnato il successivo indirizzo IP disponibile. 
+|===
+. Selezionare i servizi:
++
+NFS è attivato per impostazione predefinita. Viene visualizzato il protocollo NFS in uso.
+
++
+Se si crea un file server CIFS:
+
++
+.. Attivare il pulsante CIFS-Enabled per visualizzare i campi relativi a CIFS.
+.. Aggiungere il nome di dominio, l'IP del server DNS, il nome del server e, facoltativamente, il nome dell'unità organizzativa di Active Directory.
+
+
+. Per attivare il DP di disaster recovery asincrono su questo file server:
++
+.. Attivare il pulsante Disaster Recovery asincrono.
+.. Selezionare l'area e la zona di disaster recovery.
+.. Selezionare la pianificazione della replica per il disaster recovery.
++
+
+NOTE: Se si è sottoscritto un abbonamento alla protezione dei dati per il disaster recovery sincrono, la funzione viene attivata automaticamente per la propria zona e il pulsante di attivazione/disattivazione del disaster recovery sincrono viene attivato per impostazione predefinita. Non è possibile disattivare il pulsante.
+
+
+
+. In alternativa, è possibile aggiungere tag e valori.
+. Fare clic su *Create* (Crea). In questo modo viene creato un lavoro per creare il server.
+
+
+
+NOTE: Se si sta creando un server CIFS, per il nome di dominio immesso (FQDN), immettere il nome utente e la password di Active Directory, quindi fare clic su *Confirm* (Conferma).
+
+.Al termine
+La creazione del server viene eseguita come processo asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori. Per informazioni sul monitoraggio dei processi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+* Al termine del lavoro, controllare lo stato del server nell'elenco Server di
+

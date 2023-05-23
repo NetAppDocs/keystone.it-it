@@ -1,0 +1,120 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_view_host_groups.html 
+keywords: netapp, keystone, view, host, groups, 
+summary: Gruppi di host di Keystone view 
+---
+= Lavorare con i gruppi di host
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I gruppi di host vengono definiti per determinare l'accesso ai dischi. In base ai nodi iniziatori assegnati a un gruppo host, viene determinato l'accesso a tale gruppo. È possibile aggiungere gli iniziatori durante la creazione del gruppo host.
+
+
+
+== Visualizzare i gruppi di host
+
+Per visualizzare l'elenco host Group (Gruppo di host), selezionare *BLOCK STORAGE (ARCHIVIAZIONE A BLOCCHI) > host Groups (gruppi di host)* dal menu.
+
+L'elenco visualizza i gruppi di host definiti.
+
+Da questa pagina è possibile creare un nuovo gruppo di host, modificare un gruppo di host ed eliminare un gruppo di host.
+
+
+
+= Creare un gruppo di host
+
+Esistono due modi per creare un gruppo di host:
+
+* Dalla pagina host Groups (gruppi di host), descritta di seguito.
+* Come parte della creazione di un nuovo disco. Utilizzare questo metodo per creare un gruppo host in un archivio di blocchi non ancora inizializzato. Per ulteriori informazioni, vedere link:sewebiug_create_a_new_disk.html#create-a-new-disk["Creare un nuovo disco"].
++
+È possibile creare un gruppo host vuoto e mapparlo su un disco come segnaposto. È necessario aggiornare il gruppo host vuoto per aggiungere gli iniziatori prima di poter accedere allo storage.
+
+
+
+.Prima di iniziare
+Per creare il gruppo host, è necessario quanto segue:
+
+* Il sottotenant, la regione e la zona in cui creare il gruppo host.
+
+
+
+NOTE: Se l'archivio di blocchi per una combinazione di subtenant/zona non è stato inizializzato in precedenza, non sarà possibile creare un gruppo host utilizzando questo metodo. Un'alternativa è seguire il link:sewebiug_create_a_new_disk.html#create-a-new-disk["Creare un nuovo disco"] process, che consente di inizializzare l'archivio di blocchi e creare un gruppo host come parte del processo.
+
+* Un nome per il gruppo di host
+* Il protocollo del gruppo host: ISCSI o FCP
+* L'elenco degli iniziatori da aggiungere al gruppo: WWPN per i nodi host FC o IQN per i nomi dei nodi host iSCSI.
+* Un alias per ciascun iniziatore; un alias è un nome semplice per identificare il server iniziatore o una singola porta/interfaccia sul server. Ad esempio, Server 4.
+
+
+.Fasi
+. link:sewebiug_view_host_groups.html#view-host-groups["Visualizzare i gruppi di host"] elenco.
+. Fare clic su *Create host Group* (Crea gruppo di host).
+. Nella pagina Create host Group (Crea gruppo di host):
++
+.. Selezionare il protocollo: ISCSI o FCP.
+.. Selezionare il sottotenant, la regione e la zona e per il gruppo di host.
+
+
+. Specificare un nome per il gruppo di host.
+. Selezionare il tipo di sistema operativo: Il sistema operativo su disco.
+. Aggiungere gli iniziatori per il gruppo. Per ciascun iniziatore, specificare l'alias e l'iniziatore.
+. Se necessario, aggiungere tag (coppie chiave-valore) al gruppo host nella sezione Tag.
+. Fare clic su *Create* (Crea). In questo modo viene creato il gruppo host.
+
+
+.Al termine
+Una volta creato, il gruppo host è disponibile per il mapping ai dischi.
+
+
+
+== Modificare i gruppi di host
+
+È possibile modificare un gruppo di host per aggiungere, rimuovere o modificare gli iniziatori.
+
+.Prendere nota di questi punti:
+* Non è possibile modificare il gruppo di host se il gruppo di host non è operativo e l'icona di modifica della penna è disattivata per tali gruppi.
+* La modifica di un gruppo di host modifica l'accesso di ciascun disco mappato al gruppo di host.
+* Non è possibile modificare l'alias di un iniziatore. Per modificare l'alias, eliminare l'iniziatore dal gruppo e ricrearlo.
+
+
+.Fasi
+. Visualizzare il link:sewebiug_view_host_groups.html#view-host-groups["Gruppi di host"] elenco.
+. Individuare il gruppo di host nell'elenco, scorrere fino alla fine della riga e fare clic sull'icona Modifica (icona a forma di penna) del gruppo di host.
++
+Per modificare un iniziatore esistente, individuare l'iniziatore nell'elenco, modificare il valore dell'iniziatore e fare clic su *Aggiorna*.
+
++
+Per aggiungere un iniziatore:
+
++
+.. Fare clic su *Aggiungi iniziatore*.
+.. Specificare Alias e Initiator.
+.. Fare clic su *Create* (Crea).
++
+Per rimuovere un iniziatore dal gruppo host, individuare l'iniziatore nell'elenco e fare clic sull'icona Delete (Elimina).
+
+
+
+. Fare clic su *Chiudi*.
+
+
+
+
+== Eliminare un gruppo di host
+
+È possibile eliminare un gruppo di host se non sono presenti dischi mappati al gruppo di host.
+
+.Fasi
+. Visualizzare il link:sewebiug_view_host_groups.html#view-host-groups["Gruppi di host"] elenco.
+. Individuare il gruppo host nell'elenco e fare clic sull'icona Delete (Elimina) per il gruppo host.
+. Nella finestra di dialogo Confirm Delete (Conferma eliminazione), immettere il nome del gruppo di host per confermare che si desidera eliminare il gruppo di host.
+. Fare clic su *Conferma*.
+

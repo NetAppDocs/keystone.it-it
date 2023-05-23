@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_service_level_metrics_and_definitions.html 
+keywords: netapp, keystone, service, level, metrics, definitions, 
+summary: Metriche e definizioni dei livelli di servizio Keystone 
+---
+= Metriche e definizioni dei livelli di servizio
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I seguenti termini e definizioni vengono utilizzati all'interno del NetApp Keystone:
+
+* Misurazioni *GiB, TIB e PIB.* della capacità di storage dei dati utilizzando una base di 1024 (1 GiB = 1024^3^ byte, 1 TIB = 1024^4^ byte e 1 PIB = 1024^5^ byte).
+* *IOPS/TIB.* le operazioni di protocollo al secondo richieste dall'applicazione, divise per la dimensione logica allocata del volume.
+* *La disponibilità* viene misurata come percentuale del numero di richieste di i/o a cui il servizio ha risposto correttamente, diviso per il numero totale di richieste di i/o del servizio, misurato alla delimitazione del servizio, in un dato mese, senza includere il downtime del servizio pianificato o la non disponibilità delle strutture richieste, rete o altri servizi forniti dal cliente.
+* *Durata* è la percentuale di dati a cui si accede senza perdita di fedeltà, ad esclusione della cancellazione o del danneggiamento causati dal cliente.
+* *IOPS di destinazione per TIB.* gli IOPS garantiti per tutte le richieste di i/o effettuate su un volume prima del raggiungimento della soglia di IOPS di destinazione per TIB. Le performance sul volume sono limitate agli IOPS selezionati per TIB.
+
+
+
+NOTE: La metrica di performance IOPS per TIB di destinazione viene calcolata in base alla capacità logica consumata in TIB.
+
+* *Latenza.* tempo di servizio di una richiesta i/o ricevuta da un client, misurato alla delimitazione del servizio (porta i/o del controller di storage).
+

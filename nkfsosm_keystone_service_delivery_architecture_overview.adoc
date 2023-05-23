@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_keystone_service_delivery_architecture_overview.html 
+keywords: netapp, keystone, service, delivery, architecture, overview, 
+summary: 'Panoramica dell"architettura di erogazione del servizio' 
+---
+= Infrastruttura Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive l'architettura dell'infrastruttura NetApp Keystone e l'applicazione di gestione per gli ambienti NetApp e gestiti dal cliente.
+
+L'architettura dell'infrastruttura Keystone, il design, la scelta della tecnologia e i prodotti dei componenti risiedono esclusivamente in NetApp. NetApp si riserva il diritto di intraprendere le seguenti azioni:
+
+* Selezionare, sostituire o cambiare destinazione d'uso dei prodotti.
+* Aggiorna i prodotti con nuove tecnologie quando lo riterrà opportuno.
+* Aumentare o ridurre la capacità dei prodotti per soddisfare i requisiti di assistenza.
+* Modificare architettura, tecnologia e/o prodotti per soddisfare i requisiti di servizio.
+
+
+L'infrastruttura Keystone include diversi componenti:
+
+* Interfaccia utente (portale web) di NetApp Service Engine.
+* API NetApp Service Engine per l'integrazione.
+* L'infrastruttura Keystone che include i controller storage
+* Strumenti per gestire e gestire il servizio come OpsRamp, Active IQ e Active IQ Unified Manager.
+
+
+Per ulteriori informazioni sull'integrazione di NetApp Keystone con Active IQ, vedere link:https://docs.netapp.com/us-en/active-iq/["Documentazione di Active IQ Digital Advisor"]
+
+image:nkfsosm_image8.png["infrastruttura ks"]
+
+
+
+== NetApp Service Engine
+
+È possibile utilizzare il portale Web NetApp Service Engine per gestire e monitorare il servizio Keystone in un modello NetApp, partner o gestito dal cliente. Il portale comprende le seguenti funzionalità:
+
+* Un'interfaccia grafica (interfaccia Web di NetApp Service Engine) che supporta il monitoraggio e il semplice provisioning dello storage.
+* Un set di API REST di NetApp Service Engine che consentono operazioni di configurazione e gestione dello storage più avanzate.
+
+
+image:nkfsosm_image9.png["architettura ks"]
+
+Il portale NetApp Service Engine è un'unica interfaccia che consente ai clienti di eseguire le seguenti attività:
+
+* Dashboard per gli abbonamenti. Visualizza lo stato della capacità sottoscritta e la quantità di dati consumata.
+* Provisioning dello storage. Workflow per creare condivisioni di file NFS/CIFS, dischi FC/iSCSI e bucket S3.
+* Protezione dei dati. Creare snapshot e impostare criteri di backup o replica dei dati sulla condivisione di file o sul disco con provisioning.
+* Report. Visualizza le condivisioni di file e l'inventario dei dischi e la tendenza all'utilizzo della capacità rispetto ai diversi livelli di servizio.
+* Gestire l'abbonamento. Ordinare capacità aggiuntiva a un abbonamento esistente o a un nuovo servizio attraverso il portale.
+* Inviare richieste di servizio o problemi di supporto e visualizzarne lo stato
+
+
+La funzionalità completa di NetApp Service Engine è disponibile solo nel modello gestito da NetApp. In un modello gestito da un cliente o da un partner, le funzionalità del NetApp Service Engine sono limitate al reporting e alla gestione delle sottoscrizioni.

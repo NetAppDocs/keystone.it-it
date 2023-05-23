@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm-keystone-and-aiq.html 
+keywords: netapp, keystone, aiq keystone customers, Active IQ, Digital Advisor 
+summary: Cosa possono vedere i clienti in Active IQ per Keystone 
+---
+= Cosa possono vedere i clienti di Keystone in Active IQ Digital Advisor?
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se si è abbonati ai servizi NetApp Keystone, è possibile visualizzare i report e i grafici sull'utilizzo nella dashboard di Active IQ Advisor.
+
+Accedendo a Digital Advisor, è possibile visualizzare il widget *Keystone Subscriptions* che riepiloga l'utilizzo della capacità rispetto ai servizi Keystone acquistati.
+
+Per ulteriori informazioni su Digital Advisor, vedere link:https://docs.netapp.com/us-en/active-iq/index.html["Documentazione di Digital Advisor"].
+
+Per informazioni sulla scheda *Abbonamenti Keystone*, consulta la sezione _dashboard e report di Digital Advisor per Keystone_.

@@ -1,0 +1,108 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_subscriptions.html 
+keywords: netapp, keystone, managing, subscriptions, 
+summary: Keystone gestisce gli abbonamenti 
+---
+= Gestione delle sottoscrizioni
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La gestione delle sottoscrizioni include l'assegnazione dei livelli di servizio ai servizi di abbonamento NetApp Keystone e tenant oppure l'assegnazione e la modifica delle capacità ai livelli di servizio mediante l'interfaccia del motore di servizio NetApp.
+
+I servizi di abbonamento rappresentati dalla relazione tra i service provider/partner e NetApp e le sottoscrizioni del tenant rappresentano la relazione tra il service provider e i relativi tenant e subtenant (clienti finali). Quando gli amministratori NetApp o GSSC creano servizi di abbonamento Keystone per partner e tenant, significa che l'allocazione dello storage è stata completata. Tuttavia, a meno che non vengano creati i livelli di servizio e l'allocazione della capacità corrispondente sia completa, lo storage non può essere consumato dai subtenant o dai clienti finali. Gli amministratori dei partner possono gestire lo storage per i servizi di abbonamento Keystone e gli abbonamenti ai tenant. Gli amministratori del tenant possono visualizzare solo i dettagli dell'abbonamento e i servizi del tenant per la propria tenancy.
+
+
+
+== Gestire gli abbonamenti Keystone
+
+Se sei un amministratore partner, puoi visualizzare e gestire i servizi di abbonamento Keystone da *ABBONAMENTI* > *Abbonamenti Keystone*. *Gli abbonamenti Keystone* rappresentano i servizi di abbonamento Keystone creati dagli amministratori NetApp per i partner. Gli amministratori dei partner possono visualizzare i propri servizi di abbonamento Keystone e creare richieste di servizio per:
+
+* Aumentare la capacità di un abbonamento
+* Aggiunta di un servizio a un abbonamento (assegnazione del livello di servizio e della capacità)
+
+
+Le richieste di servizio vengono ricevute e gestite dal team di supporto.
+
+È inoltre possibile visualizzare e gestire i servizi di protezione dei dati e di protezione avanzata a cui si è abbonati, in schede separate. Per ulteriori informazioni, vedere link:index.html#flex-subscription["Protezione dei dati e protezione avanzata dei dati"].
+
+
+
+=== Aumentare la capacità di un abbonamento
+
+È possibile aumentare la capacità impegnata per qualsiasi livello di servizio sottoscritto per soddisfare i requisiti di crescita.
+
+.Fasi
+. Selezionare l'abbonamento per cui si desidera aumentare la capacità dal menu a discesa.
+. Fare clic su *aumenta capacità* per il livello di servizio desiderato.
+. Specificare la capacità (in TIB) richiesta.
+. Fare clic su *Confirm* (Conferma). Viene visualizzata la pagina Manage Keystone Subscriptions (Gestisci abbonamenti Keystone).
+. Fare clic su *Invia modifiche*. Viene creata una richiesta di servizio per aumentare la capacità di GSSC. È possibile visualizzare e tenere traccia dell'avanzamento della richiesta di servizio in base al numero SR visualizzato in un messaggio. Per informazioni sul tracciamento, vedere link:sewebiug_track_a_service_request.html["Tenere traccia di una richiesta di servizio"].
+
+
+
+
+=== Aggiungere un servizio a un abbonamento
+
+È possibile aggiungere un servizio a un abbonamento. L'aggiunta di un servizio include l'assegnazione di un livello di servizio all'abbonamento e la specifica della capacità per lo stesso livello di servizio.
+
+Ogni abbonamento può avere uno di ciascun livello di servizio. Ad esempio, se l'abbonamento contiene già un servizio Extreme e un servizio Standard, è possibile aggiungere un servizio Premium o Block.
+
+.Fasi
+. Selezionare il livello di servizio che si desidera aggiungere all'abbonamento dal menu a discesa.
+. Fare clic su *Aggiungi servizio*.
+. Ad esempio, selezionare il livello di servizio a cui si desidera iscriversi dal menu a discesa `Extreme-tiering`E aggiungere la capacità (in TIB) che si desidera assegnare al livello di servizio.
+. Fare clic su *Conferma*. Torna alla pagina Manage Keystone Subscriptions.
+. Fare clic su *Invia modifiche*. Viene creata una richiesta di servizio per l'assegnazione del livello di servizio al proprio abbonamento da parte di GSSC. È possibile visualizzare e tenere traccia dell'avanzamento della richiesta di servizio in base al numero SR visualizzato in un messaggio.
+
+
+Per informazioni sul tracciamento, vedere link:sewebiug_track_a_service_request.html["Tenere traccia di una richiesta di servizio"].
+
+
+
+== Gestire le sottoscrizioni tenant
+
+Gli amministratori dei partner possono creare, visualizzare e aggiornare le sottoscrizioni tenant da *SOTTOSCRIZIONI* > *Sottoscrizioni tenant*. Gli amministratori dei tenant possono visualizzare solo le sottoscrizioni.
+
+
+
+=== Creare e modificare un abbonamento tenant
+
+È possibile creare nuove sottoscrizioni per i tenant.
+
+.Fasi
+. Fare clic su *nuovo abbonamento*.
+. Specificare la regione, la zona, la durata dell'abbonamento, i piani tariffari e altri dettagli. L'abbonamento al tenant viene assegnato a un abbonamento Keystone in base alla zona selezionata. Questo perché ogni abbonamento Keystone è legato a una zona.
++
+
+NOTE: Non è possibile creare sottoscrizioni sovrapposte. La data di inizio deve essere almeno il giorno successivo, in quanto gli abbonamenti iniziano un giorno prima della data di inizio specificata. Inoltre, non può essere superiore a 30 giorni dalla data corrente.
+
+. Fare clic su *Create* (Crea).
+
+
+Non è possibile eliminare alcun abbonamento. È possibile modificare solo le sottoscrizioni tenant esistenti e aggiungere nuovi livelli di servizio, aumentare la capacità impegnata per un livello di servizio e aggiungere tag alle sottoscrizioni.
+
+Se sei un amministratore partner, puoi modificare le sottoscrizioni tenant. È possibile aggiungere nuovi livelli di servizio a un abbonamento e modificare le capacità dei livelli di servizio già aggiunti. Per aggiungere un nuovo livello di servizio, attenersi alla seguente procedura:
+
+.Fasi
+. Selezionare l'abbonamento che si desidera modificare facendo clic su `+` icona.
+. Nella pagina *Aggiungi un nuovo livello di servizio all'abbonamento*, selezionare il nuovo livello di servizio e aggiungere la capacità richiesta. Se il livello di servizio è già stato aggiunto, non è possibile aggiungerlo o eliminarlo.
+. Fare clic su *Aggiorna*.
+
+
+È inoltre possibile aggiungere tag facendo clic sull'icona dei tag per l'abbonamento.
+
+Per modificare le capacità sottoscritte in base ai livelli di servizio già assegnati all'abbonamento, attenersi alla seguente procedura:
+
+.Fasi
+. Fare clic su e espandere l'abbonamento che si desidera modificare facendo clic su `v` icona. Vengono visualizzati i livelli di servizio dell'abbonamento.
+. Selezionare il livello di servizio che si desidera modificare facendo clic sulla rispettiva icona di modifica della penna.
+. Modificare il piano tariffario aumentando o diminuendo la capacità in Tibers.
+. Fare clic su *Aggiorna*.
+

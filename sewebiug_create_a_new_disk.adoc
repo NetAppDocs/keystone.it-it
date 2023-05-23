@@ -1,0 +1,123 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_a_new_disk.html 
+keywords: netapp, keystone, create, new, disk, 
+summary: Keystone crea un nuovo disco 
+---
+= Creare un disco
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive come creare un nuovo disco specificando direttamente i dettagli del disco. Per istruzioni su come creare un disco in base a un'istantanea di un disco esistente, vedere link:sewebiug_create_a_disk_from_a_snapshot.html#create-a-disk-from-a-snapshot["Creare un disco da uno snapshot"].
+
+.Prima di iniziare
+* Se lo storage a blocchi è disponibile ma non inizializzato, verrà richiesto di inizializzarlo prima di poter creare il disco. Per inizializzare l'archivio di blocchi, è necessario:
++
+** Subnet dell'archivio di blocchi. Se non si ha familiarità con l'ambiente di rete, rivolgersi al reparto IT per conoscere i valori pertinenti.
+** Il protocollo da utilizzare. Per impostazione predefinita, gli archivi a blocchi hanno attivato il servizio iSCSI. Assicurarsi che la subnet sia già stata creata per inizializzare i servizi di storage a blocchi (iSCSI) per il sottenant nella zona specificata. Se l'infrastruttura lo consente, è possibile attivare il servizio FCP.
+** Regione, zona e pianificazione del disaster recovery se si desidera attivare il DP di disaster recovery asincrono per il disco. Per ulteriori informazioni, vedere link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Disaster recovery"].
+
+
+* Identificare o definire i gruppi di host da mappare al disco. È anche possibile creare un gruppo host come parte della creazione del disco.
+* Per attivare le opzioni DP di disaster recovery asincrone per il disco, è necessario creare il disco in un archivio a blocchi abilitato per il disaster recovery asincrono. Per ulteriori informazioni, vedere link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Disaster recovery"].
+* Per abilitare il disaster recovery sincrono per un disco, creare il disco in una zona abilitata per MetroCluster.
+* È possibile definire una policy di backup per acquisire i backup del disco in base a una pianificazione. Per ulteriori informazioni, vedere link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#backups["Backup"].
+
+
+.Fasi
+. Visualizzare il link:sewebiug_view_disks.html#view-disks["Elenco dei dischi"].
+. Fare clic su *Create Disk* (Crea disco).
+. Nella finestra di dialogo Create Disk (Crea disco), selezionare Create New Disk (Crea nuovo disco).
++
+image:sewebiug_image26.png["Errore: Immagine grafica mancante"]
+
++
+Viene visualizzata la pagina Create Disk (Crea disco).
+
+. Selezionare il protocollo di accesso al disco: ISCSI o FCP.
+. Selezionare il sottotenant, la regione, la zona e il sottenant per il nuovo disco. Il blocco memorizza i dettagli relativi alla regione, alla zona e alla visualizzazione del sottotenant selezionati.
+. Se nella zona selezionata non è attivata la funzione di storage a blocchi per il sottotenant selezionato, viene visualizzato un messaggio per inizializzarla.
++
+image:sewebiug_image27.png["Errore: Immagine grafica mancante"]
+
+. Fare clic su *Inizializza storage a blocchi*.
+. Nella finestra di dialogo Initialize Block Storage:
++
+.. Nel pannello iSCSI, specificare obbligatoriamente la subnet. Per impostazione predefinita, il servizio iSCSI è attivato per tutti i dischi.
+.. Se necessario, attivare il protocollo FCP (disponibile solo se supportato dall'infrastruttura sottostante).
+.. Se necessario, attivare le opzioni di Disaster Recovery asincrono (attivare e selezionare Regione, zona e Pianificazione).
+.. Se la zona selezionata è abilitata per MCC, l'opzione Synchronous Disaster Recovery (Ripristino di emergenza sincrono) è attivata e non può essere disattivata. I dischi creati in questo blocco memorizzano la replica sincrona nella zona visualizzata nel pannello Synchronous Disaster Recovery.
+.. Fare clic su *Create* (Crea) per inizializzare l'archivio di blocchi. Attendere l'inizializzazione dell'archivio di blocchi. Il display torna alla pagina Create Disk (Crea disco).
+
+
+. Compilare i seguenti campi:
++
+|===
+| Campo | Descrizione 
+
+
+| Nome | Inserire il nome del disco. 
+
+
+| Percorso del disco | Immettere il percorso del disco. 
+
+
+| Tipo di sistema operativo | Selezionare un sistema operativo per il disco. 
+
+
+| Gruppi di host | Questo elenco visualizza i gruppi di host esistenti che corrispondono al protocollo, al tipo di sistema operativo, al sottenant e alla zona selezionati per il disco. Selezionare uno o più gruppi di host. Per definire un nuovo gruppo di host, passare alla fase successiva. 
+|===
+. Se necessario, creare un nuovo gruppo di host:
++
+.. Fare clic su *Create host Group* (Crea gruppo di host). Viene visualizzata la finestra di dialogo Create host Group (Crea gruppo di host).
+.. Specificare il nome del gruppo di host.
+.. Aggiungere gli iniziatori per il gruppo. Per ciascun iniziatore, specificare l'alias e l'iniziatore.
+.. Se necessario, aggiungere tag (coppie chiave-valore) al gruppo host nella sezione Tag.
+.. Fare clic su *Create* (Crea). Il sistema crea il gruppo host e visualizza un messaggio quando viene creato correttamente.
+.. Per mappare il gruppo di host appena creato sul disco, accedere al campo host Groups (gruppi di host) e selezionarlo.
+
+
+. Selezionare un livello di servizio.
++
+
+NOTE: Selezionare un'opzione per visualizzare i dettagli delle performance per quel livello di servizio (come IOPS/throughput di picco/previsto). Selezionare il livello di servizio più adatto alle proprie esigenze.
+
+. Specificare la capacità del disco.
+. Se sono necessarie snapshot per questo disco:
++
+.. Attivare/disattivare questa opzione per attivare la policy di Snapshot per visualizzare i campi della policy di Snapshot.
+.. Specificare quando creare le snapshot:
++
+*** *Hourly.* specificare il minuto (dell'ora) per eseguire l'istantanea (controllo) e il numero di snapshot orarie da conservare.
+*** *Daily.* specificare quando (ora e minuto) eseguire lo snapshot (controllo) e il numero di snapshot orarie da conservare. Se si desidera specificare più ore per l'acquisizione giornaliera dello snapshot, è possibile aggiungere i valori delle ore in un elenco separato da virgole, ad esempio 5, 10, 15, e così via.
+*** *Settimanale.* specificare quando (giorno della settimana, ora e minuto) eseguire snapshot (controllo) e il numero di snapshot settimanali da conservare.
+*** *Monthly.* specificare quando (giorno del mese, ora e minuto) acquisire snapshot e il numero di snapshot mensili da conservare.
+
+
+
+
+. Se il disaster recovery asincrono è attivato nell'archivio di blocchi sottostante, la replica asincrona del disaster recovery viene attivata automaticamente per il nuovo disco. Se si desidera escludere il disco dalle repliche asincrone di disaster recovery, attivare l'opzione Asynchronous Disaster Recovery (Disaster Recovery asincrono) in modo che il disaster recovery asincrono sia disattivato.
+. Se il disco viene creato in una zona abilitata per MetroCluster, il pulsante Disaster Recovery sincrono viene attivato e non può essere disattivato. Il disco viene replicato nella zona visualizzata nel pannello Synchronous Disaster Recovery.
+. Per abilitare i backup per questo disco:
++
+.. Attivare questa opzione per attivare la visualizzazione dei campi Backup Policy (Criteri di backup).
+.. Specificare la zona di backup.
+.. Specificare il numero di ogni tipo di backup da conservare: Giornaliero, settimanale e/o mensile.
+
+
+. Se si desidera aggiungere tag (coppie chiave-valore) al disco, specificarli nella sezione Tag.
+. Fare clic su *Create* (Crea). In questo modo viene creato un lavoro per creare il disco.
+
+
+.Al termine
+Il disco di creazione viene eseguito come processo asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori.
+* Al termine del processo, controllare lo stato del disco nell'elenco dischi.
+

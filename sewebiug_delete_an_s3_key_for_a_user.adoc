@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_delete_an_s3_key_for_a_user.html 
+keywords: netapp, keystone, s3, key, user, 
+summary: Keystone elimina una chiave S3 per un utente 
+---
+= Eliminare una chiave S3 per un utente
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizzare questo metodo per eliminare una chiave S3 per un utente.
+
+.Fasi
+. Visualizzare l'utente dello storage a oggetti link:sewebiug_view_the_object_storage_group_and_users.html["Visualizzare utenti e gruppi di storage a oggetti"].
+. Assicurarsi di aver selezionato il subtenant corretto e di aver fatto clic sulla scheda *Users* (utenti).
+. Individuare l'utente nell'elenco e fare clic sull'icona Key relativa al gruppo.
++
+Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Azioni di visualizzazione elenco"].
+
+. Viene visualizzata la finestra di dialogo *Manage S3 Keys* (Gestisci chiavi S3) che mostra l'elenco delle chiavi per l'utente.
+. Nell'elenco delle chiavi, individuare la chiave da eliminare e fare clic sull'icona *Delete* (Elimina).
+. Fare clic su *Confirm* (Conferma) per confermare l'azione di eliminazione. La chiave viene rimossa dall'elenco delle chiavi utente.
+. Fare clic su *Close* (Chiudi) per chiudere la finestra di dialogo Manage S3 Keys (Gestisci chiavi S3).
+

@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_uscs.html 
+keywords: netapp, keystone, US citizen support, USCS GSSC, Keystone Success Manager, USCS support 
+summary: 'USCS (US Citizen Support)' 
+---
+= STATI UNITI Supporto cittadino (USCS)
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il supporto cittadino degli Stati Uniti (USCS) è un'offerta aggiuntiva per gli abbonamenti NetApp Keystone. Ti dà diritto a ricevere la consegna e il supporto dei servizi Keystone in corso da parte degli Stati Uniti Cittadini negli Stati Uniti suolo.
+
+Leggi le seguenti sezioni per capire quali elementi degli abbonamenti sono vincolati da questo servizio add-on e sono forniti in base ai termini del contratto NetApp Keystone.Footnote:disclaimer 1[i servizi e le offerte qui descritti sono soggetti, limitati e regolati da un contratto Keystone pienamente eseguito.]
+
+
+
+== Monitoraggio del NetApp Global Services Support Center
+
+NetApp Global Services and Support Center (GSSC) monitora lo stato dei prodotti e dei servizi sottoscritti, fornisce supporto remoto e collabora con Keystone Success Manager. Tutto il personale che monitora i prodotti associati ai relativi ordini di abbonamento Keystone è cittadino statunitense che opera negli Stati Uniti suolo.
+
+
+
+== Keystone Success Manager
+
+Il Keystone Success Manager è un Cittadino che opera negli Stati Uniti suolo. Le loro responsabilità sono specificate nel Contratto NetApp Keystone.
+
+
+
+== Attività di implementazione
+
+Se disponibili, le attività di installazione e implementazione in sede e in remoto sono condotte da U.S. Cittadini negli Stati Uniti suolo. Nota a piè di pagina:disclaimer[la disponibilità del personale appropriato per le attività in loco dipende dalla posizione geografica in cui vengono implementati i sistemi Keystone.]
+
+
+
+== Supporto
+
+Se disponibili, le attività di risoluzione dei problemi e supporto in loco necessarie sono condotte da U.S. Cittadini negli Stati Uniti suolo. nota a piè di pagina:disclaimer[]

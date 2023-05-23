@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_tiering.html 
+keywords: netapp, keystone, tiering, 
+summary: Tiering Keystone 
+---
+= Tiering
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il servizio NetApp Keystone include una funzionalità di tiering che identifica i dati utilizzati con minore frequenza e i Tier IT in un cold storage di proprietà, implementato e gestito da NetApp.
+
+La funzionalità di tiering sfrutta la tecnologia NetApp FabricPool che consente il tiering automatizzato dei dati su Tier di storage a oggetti a basso costo, on-premise o off-premise. Grazie a questa funzionalità, i dati con accesso non frequente vengono automaticamente suddivisi in livelli per uno storage a basso costo, on-premise o nel cloud, in base ai servizi concordati.
+
+I partner e i tenant possono sfruttare facilmente questa funzionalità scegliendo i due livelli di servizio preconfigurati, i livelli di servizio Extreme-tiering e Premium-tiering durante il provisioning dello storage. L'Extreme-tiering ha le stesse policy QoS dei livelli di servizio Standard, Extreme e Premium.
+
+La funzionalità di tiering add-on è disponibile solo con i livelli di servizio Extreme e Premium. NetApp presuppone che il 25% dei dati sia hot e il 75% meno frequentemente utilizzato e possa essere spostato in uno storage cold. La fatturazione viene determinata in base alla durata per volume di ciascun livello di servizio.
+
+Sono abilitate le seguenti funzioni:
+
+* È possibile creare report dei dati inattivi per i dischi e le condivisioni di file e decidere se modificare il livello di servizio. Quando si sposta o si modifica la policy di tiering, le latenze possono essere più elevate se si accede ai dati dal cold Tier.
+* È possibile modificare il livello di servizio dei volumi rispettivamente da Extreme e Premium a Extreme-Tiering e Premium Tiering, a condizione che il tiering di destinazione sia attivato nel cluster.
+* Allo stesso modo, è possibile modificare i livelli di servizio di tiering in non tiering per i volumi.
+* Abilitare e disabilitare i backup per un volume a livello di servizio di tiering.
+* Abilitare e disabilitare il disaster recovery per un volume a livello di servizio di tiering.
+
+
+Per informazioni sulla fatturazione, vedere link:nkfsosm_kfs_billing.html#billing-for-fabricpool-usage["Fatturazione per l'utilizzo di FabricPool"].

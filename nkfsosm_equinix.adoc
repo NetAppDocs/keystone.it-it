@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_equinix.html 
+keywords: netapp, keystone, Equinix 
+summary: Servizi Keystone ed Equinix 
+---
+= Servizi Keystone basati su Equinix
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp ha stretto una partnership con Equinix per l'hosting dei servizi NetApp Keystone in un data center Equinix, al fine di garantire la fornitura di una soluzione unificata.
+
+I servizi Keystone basati su Equinix sono invariati rispetto all'offerta di servizi Keystone standard.
+
+Oltre all'offerta standard di servizi Keystone, dovrai selezionare un data center Equinix per ospitare le tue apparecchiature Keystone.

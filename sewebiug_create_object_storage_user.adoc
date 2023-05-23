@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_object_storage_user.html 
+keywords: netapp, keystone, create, object, storage, user, 
+summary: Keystone crea un utente di storage a oggetti 
+---
+= Crea utente storage a oggetti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare utenti e aggiungerli a gruppi specifici per assegnare loro l'accesso allo storage a oggetti.
+
+.Prima di iniziare
+Poiché un utente dello storage a oggetti appartiene a un gruppo di storage a oggetti, il gruppo di storage a oggetti deve esistere prima di poter creare l'utente.
+
+.Fasi
+. Accedere a *STORAGE A OGGETTI > Gestione utenti > utenti*.
+. Assicurarsi di aver selezionato il subtenant corretto e di aver fatto clic sulla scheda *Users* (utenti).
+. Fare clic su *Create User* (Crea utente).
+. Nella finestra di dialogo Create User (Crea utente):
++
+.. Immettere il nome utente.
+.. Selezionare il gruppo a cui appartiene il membro.
+
+
+. Fare clic su *Create* (Crea). In questo modo viene creato un lavoro per creare l'utente con le impostazioni specificate.
+
+
+.Al termine
+Create user viene eseguito come processo asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori. Per ulteriori informazioni, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["Job e indicatore di stato del job"].
+* Al termine del lavoro, controllare lo stato della condivisione nell'elenco Users (utenti).
+

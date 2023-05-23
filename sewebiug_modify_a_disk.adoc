@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_a_disk.html 
+keywords: netapp, keystone, modify, disk, 
+summary: Keystone modifica un disco 
+---
+= Modificare un disco
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile modificare il nome del disco, la mappatura del gruppo di host, il livello di servizio, la capacità e la policy di snapshot. Utilizzando questo metodo, è possibile spostare i dischi a diversi livelli di servizio, se disponibili.
+
+.Prima di iniziare
+Il disco deve essere in uno stato operativo. Per informazioni sugli stati dei volumi e sui passaggi da intraprendere per renderli operativi, vedere link:sewebiug_view_disks.html["Visualizzare i dischi"] e. link:sewebiug_netapp_service_engine_web_interface_overview.html#object-states["stati degli oggetti"]
+
+.Fasi
+. Visualizzare il link:sewebiug_view_disks.html#view-disks["Elenco dei dischi"].
+. Individuare il disco nell'elenco e fare clic sull'icona Edit (Modifica) del disco. Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Azioni di visualizzazione elenco"]).
+. Apportare le modifiche necessarie; fare riferimento a. link:sewebiug_create_a_new_disk.html["Creare un nuovo disco"] per le descrizioni dei campi.
+. Fare clic su *fine*. In questo modo viene creato un processo per modificare il disco.
+
+
+.Al termine
+Il disco di modifica viene eseguito come processo asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori. Per informazioni sul monitoraggio dei processi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+* Al termine del processo, controllare lo stato del disco nell'elenco dischi.
+

@@ -1,0 +1,139 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_kfs_billing.html 
+keywords: netapp, keystone, billing, Keystone billing logic, charges, charging, billing cycle, billing schedule, MetroCluster billing, TMP temporary volumes, Adaptive QoS policy billing, cloned volumes, burst billing 
+summary: Fatturazione Keystone 
+---
+= Fatturazione Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Keystone offre prezzi prevedibili e anticipati per l'abbonamento allo storage.
+
+Se preferisci il modello di consumo delle spese operative (OpEx) alle spese in conto capitale (CapEx) o al leasing, puoi scegliere il modello Keystone pay-as-you-grow per le tue esigenze di consumo flessibili e scalabili.
+
+Keystone offre le seguenti funzioni di fatturazione:
+
+* Puoi pagare in base agli IOPS e alla capacità di latenza impegnata per soddisfare le varie esigenze di carico di lavoro. I diversi livelli di servizio per le performance: Extreme, Premium, Standard e Value consentono di gestire lo storage in base al livello di servizio acquistato per i servizi Keystone.
+* Presenta una fatturazione prevedibile per la capacità impegnata e pay-per-use per l'utilizzo della capacità variabile (burst).
+* Puoi scegliere un prezzo bundle per hardware, sistema operativo core e supporto per un prezzo CIB/dollari. Hai una singola fattura per ogni tipo di storage, file, blocco, oggetto o servizi di cloud storage.
+* Seleziona un termine flessibile per i servizi e il pagamento: Puoi scegliere tra 12 mesi, 100 TiB o più per sito. In seguito, puoi rinnovare automaticamente per 12 mesi o passare da un mese all'altro.
+
+
+La fatturazione di Keystone si basa sulla capacità impegnata e sul consumo variabile di burst.
+
+Per informazioni sull'utilizzo della capacità di burst e commit, vedere link:nkfsosm_keystone_service_capacity_definitions.html["Definizioni della capacità del servizio Keystone"].
+
+Per informazioni su come visualizzare i dettagli di fatturazione, vedere link:sewebiug_billing.html["Visualizza fatturazione"].
+
+
+
+== Fatturazione basata sulla capacità impegnata
+
+La capacità impegnata si riferisce alle capacità dei vari servizi in un singolo abbonamento, concordato dalle parti interessate (NetApp/partner e cliente). Questa capacità viene indicata su ciascun ordine Keystone e viene fatturata, indipendentemente dal consumo effettivo.
+
+.Misurazione della capacità consumata
+Nell'ambito dell'implementazione del servizio Keystone, NetApp monitora e misura continuamente il consumo del servizio. Ogni cinque minuti, il sistema genera un record di consumo, che indica in dettaglio la capacità corrente consumata per l'abbonamento. Questi record vengono aggregati nel periodo di fatturazione per generare fatture e report sull'utilizzo.
+
+
+
+== Fatturazione basata sul consumo burst
+
+Quando la capacità consumata è superiore alla capacità impegnata per un determinato livello di servizio, viene registrato il consumo burst e vengono applicati gli addebiti di conseguenza. Questo processo si verifica per ogni record di consumo generato. Il consumo di burst, pertanto, riflette sia la quantità che la durata delle capacità di consumo eccessivo in aggiunta alle capacità impegnate.
+
+
+
+== Pianificazioni di fatturazione
+
+I servizi Keystone vengono fatturati mensilmente e annualmente.
+
+.Fatturazione mensile
+Le fatture vengono inviate mensilmente. Per il mese in cui i servizi sono disponibili, viene inviata una fattura nel mese successivo. Ad esempio, la fattura per i servizi utilizzati a gennaio viene consegnata all'inizio di febbraio. La fattura include i costi per la capacità impegnata e, se applicabile, l'utilizzo in caso di burst.
+
+.Fatturazione annuale
+All'inizio di ogni anno di abbonamento viene generata una fattura per il pagamento minimo della capacità impegnata. Viene generato alla data di inizio dell'abbonamento. Un'altra fattura viene inviata alla fine di un trimestre di abbonamento, riassumendo gli addebiti applicabili di qualsiasi utilizzo burst maturato in quel trimestre. Se la capacità impegnata viene modificata durante un abbonamento, viene inviata una fattura lo stesso giorno in cui la modifica della capacità impegnata è effettiva, per i pagamenti minimi proporzionalmente per il resto dell'anno di abbonamento.
+
+.Periodo di tolleranza nella fatturazione burst
+Durante i primi 60 giorni dall'attivazione di un abbonamento, qualsiasi consumo di burst che si accumulerà viene registrato, ma non addebitato sulla fattura del servizio Keystone. Questo periodo di tolleranza consente di configurare lo storage con le impostazioni AQoS (Adaptive Quality of Service) appropriate, in modo che possa essere monitorato e fatturato in modo appropriato. Una volta configurato correttamente lo storage, è possibile evitare eventuali cariche di burst impreviste. Qualsiasi utilizzo burst accumulato dopo il periodo di tolleranza iniziale di 60 giorni verrà addebitato sulla fattura successiva. Questo periodo di tolleranza non influisce sulle modifiche o sui rinnovi degli abbonamenti esistenti.
+
+
+
+== Scenari vari per la fatturazione Keystone
+
+Ci sono diversi scenari per la fatturazione di Keystone e dovresti avere familiarità con questi scenari.
+
+
+
+=== Fatturazione per volumi clonati
+
+Se i volumi vengono clonati in ONTAP e utilizzati per il backup e il ripristino dei dati, è possibile continuare a utilizzare i cloni senza alcun pagamento aggiuntivo. Tuttavia, vengono addebitati i volumi clonati utilizzati per qualsiasi altro scopo dell'azienda per un periodo di tempo esteso.
+
+Tenere presente quanto segue:
+
+* Il consumo sui volumi clonati non viene preso in considerazione durante le prime 24 ore di creazione del clone e non si verificano addebiti durante questo periodo.
+* I volumi clonati con i livelli di servizio Standard e Value non vengono considerati per il consumo, se i nuovi dati non vengono scritti nel volume. Ad esempio, in un caso di utilizzo di backup o ripristino, il backup o il ripristino dei dati da un volume clonato non modifica i dati nel volume clonato stesso e non viene considerato come consumo.
+
+
+
+
+=== Fatturazione per MetroCluster
+
+La protezione avanzata dei dati utilizza NetApp MetroCluster per eseguire il mirroring dei dati tra due cluster fisicamente separati. Negli aggregati mirrorati di MetroCluster, i dati vengono scritti due volte, una volta su ciascun cluster. I costi di servizio di Keystone per il consumo su ciascun lato sono indipendenti, con la conseguenza di due record di consumo identici. Se si monitorano i cluster tramite Gestore di sistema di ONTAP (Gestore di sistema) o Active IQ Unified Manager (Gestore unificato), potrebbe verificarsi una discrepanza tra il consumo riportato su questi strumenti e i servizi di Keystone. System Manager e Unified Manager non riportano i volumi sul cluster mirrorato (remoto) e, in questo modo, riporta la metà delle metriche di consumo riportate dal servizio Keystone.
+
+Ad esempio: Il sito A e il sito B vengono configurati in una configurazione MetroCluster. Quando un utente crea un volume di 10 TB nel sito A, viene creato un volume identico di 10 TB nel sito B. Keystone distingue entrambi i volumi e registra altri 10 TB di consumo in ogni sito, per un aumento totale di 20 TB. System Manager e Unified Manager riportano un volume da 10 TB creato nel sito A.
+
+
+
+=== Fatturazione per volumi temporanei
+
+Occasionalmente, i volumi temporanei (TMP) vengono creati da ONTAP durante lo spostamento dei volumi. Questi volumi temporanei sono di breve durata e il consumo su questi volumi non viene misurato per la fatturazione.
+
+
+
+=== Policy di fatturazione e QoS adattivi
+
+Keystone misura il consumo in base ai livelli di servizio. Ogni livello di servizio è associato a una specifica policy di qualità del servizio (QoS) adattativa. Durante l'implementazione, sarai informato dei dettagli di ogni policy QoS per i servizi Keystone sottoscritti. Durante le operazioni di gestione dello storage, assicurarsi che i volumi abbiano le policy QoS appropriate assegnate in base ai livelli di servizio sottoscritti, per evitare la fatturazione imprevista. Per ulteriori informazioni sui criteri QoS in ONTAP, vedere link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Garantire il throughput con la panoramica QoS"].
+
+
+
+=== Fatturazione per destinazioni SnapMirror
+
+Il prezzo del volume di destinazione SnapMirror regolato dalla policy QoS per il livello di servizio assegnato all'origine. Tuttavia, se l'origine non dispone di una policy QoS associata, la destinazione viene fatturata in base al livello di servizio più basso disponibile.
+
+
+
+=== Fatturazione per FlexGroups
+
+I FlexGroup vengono fatturati in base alla policy QoS adattiva di FlexGroup. Le policy di QoS dei suoi componenti non vengono prese in considerazione.
+
+
+
+=== Fatturazione per LUN
+
+Per i LUN, di solito viene seguito lo stesso modello di fatturazione dei volumi che sono regolati dalle policy QoS. Se sui LUN sono impostate policy QoS separate, allora:
+
+* La dimensione del LUN viene conteggiata per il consumo in base al livello di servizio associato a tale LUN.
+* Il resto dello spazio nel volume, se presente, viene addebitato in base alla policy QoS del livello di servizio impostato sul volume.
+
+
+
+
+=== Fatturazione per l'utilizzo di FabricPool
+
+Se i dati vengono suddivisi in Tier da un sistema Keystone allo storage a oggetti S3 (Simple Storage Service) di ONTAP o StorageGRID di NetApp, la capacità consumata sul Tier hot (sistema Keystone) viene ridotta dalla quantità di dati che sono stati suddivisi in Tier, con un impatto sulla fatturazione risultante. Ciò indipendentemente dal fatto che lo storage ONTAP S3 o il sistema StorageGRID sia coperto dall'abbonamento Keystone.
+
+Per tiering dei dati su qualsiasi storage a oggetti di terze parti, contatta il tuo Keystone Success Manager.
+
+Per informazioni sull'utilizzo della tecnologia FabricPool per gli abbonamenti Keystone, consulta link:nkfsosm_tiering.html["Tiering"].
+
+
+
+=== Fatturazione per volumi di sistema e root
+
+I volumi di sistema e root vengono monitorati come parte del monitoraggio generale del servizio Keystone, ma non vengono conteggiati o fatturati. Il consumo su questi volumi è esentato per la fatturazione.

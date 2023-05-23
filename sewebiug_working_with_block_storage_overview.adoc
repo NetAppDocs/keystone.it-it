@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_working_with_block_storage_overview.html 
+keywords: netapp, keystone, working, block, storage, overview, 
+summary: 'Keystone Panoramica sull"utilizzo dello storage a blocchi' 
+---
+= Panoramica
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Nei sistemi di storage a blocchi, lo storage dei dati viene suddiviso in singole parti, ciascuna con un identificatore univoco. NetApp Service Engine fa riferimento allo storage dei dati a blocchi come archivio a blocchi e ai singoli pezzi come dischi.
+
+Gli archivi a blocchi appartengono a un sottenant e sono specificati all'interno di una zona (un archivio a blocchi per zona per sottenant). Un archivio di blocchi dispone di attributi di rete (ad esempio, indirizzo IP e ID VLAN) che vengono utilizzati per accedere ai dischi attraverso il protocollo iSCSI o FC. È possibile attivare il DP per il disaster recovery in un archivio a blocchi. Per ulteriori informazioni, vedere link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Disaster recovery"].
+
+Gli archivi a blocchi devono essere inizializzati prima di poter essere utilizzati. Se lo storage a blocchi è disponibile e non è stato inizializzato, può essere inizializzato prima di creare il primo disco nell'archivio a blocchi come parte del processo Create Disk.
+
+I dischi vengono creati negli archivi a blocchi. I dischi hanno molti attributi configurabili, tra cui capacità e livello di servizio associato. Opzioni DP come link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#snapshots["Snapshot"] e. link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Disaster recovery"] può essere abilitato per un disco.
+
+L'accesso ai dischi viene controllato tramite gruppi di host. I gruppi di host sono costituiti da nomi di nodi iniziatori; mappando uno o più gruppi di host su un disco, è possibile definire quali iniziatori hanno accesso al disco.
+
+Gruppi di host:
+
+* Sono specifici del protocollo. Possono essere:
++
+** Gruppi di host del protocollo FC: Costituiti da iniziatori che sono nomi WWPN (World Wide Port Name) FC. Ad esempio, `20:56:00:a0:98:5c:0d:da`).
+** Gruppi di host del protocollo iSCSI: Sono costituiti da iniziatori che sono iSCSI Qualified Name (IQN). Ad esempio, `iqn.1998-01.com.vmware:esx2`.
+
+
+* Sono costituite da coppie alias/iniziatore. Un alias consente di identificare in modo semplice l'iniziatore. Ad esempio, `esxserver1`.
+* Può essere creato senza iniziatori. I gruppi di host vuoti possono essere mappati ai dischi come segnaposto, ma devono essere completamente definiti per consentire l'accesso al disco. L'utilizzo di gruppi di host consente di:
++
+** Mappatura di più dischi nello stesso set di iniziatori
+** Aggiornamento del set di iniziatori su più dischi.
+
+
+
+
+Questa sezione contiene informazioni su:
+
+* Lavorare con i gruppi di host:
++
+** Visualizzare i gruppi di host
+** Creare un gruppo di host
+** Modificare gli iniziatori dei gruppi di host
+** Eliminare un gruppo di host
+
+
+* Utilizzo dei dischi:
++
+** Visualizzare i dischi
+** Creare un nuovo disco
+** Creare un disco da snapshot
+** Modificare un disco
+** Eliminare un disco
+** Creare uno snapshot ad hoc di un disco
+
+
+

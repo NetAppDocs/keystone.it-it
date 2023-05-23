@@ -1,0 +1,73 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_service_request_process.html 
+keywords: netapp, keystone, service, request, process, 
+summary: Processo di richiesta di servizio Keystone 
+---
+= Processo di richiesta di servizio
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive un flusso semplificato del processo di richiesta di servizio.
+
+La figura seguente mostra il flusso sotto forma di diagramma e la tabella seguente descrive gli attori, le azioni e lo stato della richiesta di servizio come risultato dell'azione.
+
+image:sewebiug_image45.png["Errore: Immagine grafica mancante"]
+
+|===
+|  | Chi | Azione | Stato della richiesta in NetApp Service Engine dopo l'azione | Notifica 
+
+
+| 1 | NetApp Service Engine | Generare una nuova richiesta di servizio. | Novità | È stata creata una richiesta di conferma automatica via e-mail 
+
+
+| 2 | NetApp GSSC | Riconoscere la richiesta. | Aprire  a| 
+* Email di riconoscimento: GSSC
+* Email automatica che indica lo stato in Open
+
+
+
+
+| 3 | NetApp GSSC | Eseguire il triage e assegnarlo al Fulfillment Engineer. | Aprire | – 
+
+
+| 4 | NetApp GSSC | Monitorare e tenere traccia della richiesta durante l'intero processo di evasione della richiesta. | – | – 
+
+
+| 5 | NetApp Fulfillment Engineer | Esaminare la richiesta. | Aprire | – 
+
+
+| 6 | NetApp Fulfillment Engineer | Se sono richieste ulteriori informazioni, inviare un'e-mail al richiedente per ulteriori informazioni. | In sospeso  a| 
+* Email automatica che indica lo stato in sospeso.
+* Comunica via email per richiedere ulteriori informazioni
+
+
+
+
+| 7 | Cliente | Fornire ulteriori informazioni. | In sospeso | Comunicare via email 
+
+
+| 8 |  | Ripetere i passaggi 6 e 7 fino a ottenere informazioni sufficienti per l'avanzamento della richiesta. | In sospeso | Comunica via email per richiedere ulteriori informazioni 
+
+
+| 9 | NetApp Fulfillment Engineer | Soddisfare la richiesta | Aprire | Email automatica che indica che lo stato è aperto. 
+
+
+| 10 | NetApp Fulfillment Engineer | Risolvere la richiesta e informare il cliente che la richiesta è stata risolta. | Risolto  a| 
+* Email per richiedere conferma la richiesta di servizio è stata risolta
+* Email automatica che indica che lo stato è stato risolto.
+
+
+
+
+| 11 | Cliente | Comunicare che la richiesta di servizio è stata risolta. | Risolto | Email per confermare che la richiesta di servizio è stata risolta. 
+
+
+| 12 | Automatico | Se dopo tre giorni non sono necessarie ulteriori azioni, la richiesta di servizio viene chiusa automaticamente. | Chiuso | Email automatica che indica che lo stato è chiuso. 
+|===

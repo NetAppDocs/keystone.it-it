@@ -1,0 +1,70 @@
+---
+sidebar: sidebar 
+permalink: seapiref_overview_of_netapp_service_engine_apis.html 
+keywords: netapp, overview, service, engine, apis, 
+summary: Panoramica delle API del motore di servizio NetApp 
+---
+= Panoramica delle API di NetApp Service Engine
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Service Engine fornisce un set di API per gestire le risorse di storage sui sistemi di storage supportati attraverso un'interfaccia di servizio Web RESTful per qualsiasi integrazione di terze parti. Le API coprono tutte le funzionalità supportate dalla GUI. NetApp fornisce la documentazione API, ma è responsabilità del cliente integrarsi nelle proprie applicazioni.
+
+Questa guida di riferimento API di NetApp Service Engine fornisce informazioni sulle API e sui codici di esempio. Le informazioni fornite nella guida consentono di creare client RESTful di NetApp Service Engine. Le API sono basate sullo stile architettonico REST (Representational state Transfer).
+
+
+
+== Pubblico di riferimento
+
+Questa guida è destinata agli sviluppatori che creano applicazioni che si interfacciano con il software NetApp Service Engine tramite API REST.
+
+Utilizzare questa guida se si desidera utilizzare il provider di storage, il cluster NetApp ONTAP e le API di amministrazione della gestione per la gestione dello storage.
+
+
+
+== Categorie e accesso alle API di NetApp Service Engine
+
+
+
+=== Creazione di un URL per accedere direttamente alle API REST
+
+È possibile accedere alle API REST direttamente attraverso un linguaggio di programmazione, come Python, C, C++, JavaScript, e così via. Per accedere alle API REST in `https:// <hostname> /api` Inserire il nome host o l'indirizzo IP e l'URL.
+
+
+
+=== API di utenti privati e amministratori
+
+Il presente documento suddivide le descrizioni API in due sezioni:
+
+* API consumer
+* API dell'amministratore
+
+
+
+
+== Concetti chiave di NetApp Service Engine
+
+NetApp Service Engine supporta i concetti di regioni e zone, come mostrato nella figura seguente. Una regione rappresenta un data center o un sito, mentre una zona rappresenta una sottounità di storage all'interno della regione (tecnicamente, un cluster all'interno di un data center/sito). Più zone supportano funzionalità di disponibilità dei dati e protezione dei dati (DP).
+
+image:seapiref_image1.png["relazione tra zone e regioni"]
+
+Una singola istanza di NetApp Service Engine può supportare uno o più tenant. NetApp Service Engine utilizza i concetti di tenant e subtenant come entità gerarchiche che possiedono o gestiscono il servizio di storage.
+
+Un tenant può essere un cliente, un partner o un'entità di fatturazione. Un tenant detiene l'abbonamento (o più abbonamenti) al servizio Keystone.
+
+Un subtenant è un'entità interamente all'interno del tenant. Può essere utilizzato per lo showback, la separazione della sicurezza e così via.
+
+Gli elementi di storage vengono creati per subtenant. Ogni sottenant può contenere più elementi di storage del tipo e del numero adatti a tale sottenant.
+
+NetApp Service Engine supporta i seguenti tipi di storage:
+
+* Storage a blocchi in archivi a blocchi e dischi
+* Storage di file in file server e condivisioni di file
+* Storage di oggetti nei bucket
+

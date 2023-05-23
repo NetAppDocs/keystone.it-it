@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_adhoc_snapshot_of_a_file_share.html 
+keywords: netapp, keystone, create, adhoc, snapshot, file, share, 
+summary: 'Keystone crea un"istantanea ad hoc di una condivisione file' 
+---
+= Creare un'istantanea ad hoc di una condivisione file
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive come creare un'istantanea ad hoc di una condivisione file.
+
+.Fasi
+. Visualizzare il link:sewebiug_view_shares.html#view-shares["Shares"].
+. Individuare la condivisione nell'elenco e fare clic sull'icona dell'istantanea corrispondente. Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Azioni di visualizzazione elenco"].
+. Nella finestra di dialogo Create Snapshot (Crea istantanea), immettere un nome per l'istantanea e fare clic su *Create* (Crea).
+
+
+.Al termine
+La disponibilità dello snapshot può richiedere alcuni minuti. Se disponibile, puoi creare un'altra condivisione clonando questo snapshot. Per ulteriori informazioni, vedere link:sewebiug_create_file_share_from_snapshot.html["Creare una condivisione di file da uno snapshot"].

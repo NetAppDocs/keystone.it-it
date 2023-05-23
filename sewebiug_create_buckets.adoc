@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_buckets.html 
+keywords: netapp, keystone, create, buckets, 
+summary: Keystone crea bucket 
+---
+= Creare bucket
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I bucket vengono creati sotto un sotttenant.
+
+.Fasi
+. Visualizzare il link:sewebiug_view_buckets.html#view-buckets["Elenco bucket"] e selezionare il sottotenant sotto il quale creare il bucket.
+. Fare clic su *Crea bucket*.
+. Nella finestra di dialogo Crea bucket, immettere il nome del nuovo bucket e la regione.
+. Fare clic su *Create* (Crea). Questo crea un lavoro per creare il bucket.
+
+
+.Al termine
+Create bucket viene eseguito come lavoro asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori.
+* Al termine del lavoro, controllare lo stato del server nell'elenco bucket. Per ulteriori informazioni, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["Job e indicatore di stato del job"].
+

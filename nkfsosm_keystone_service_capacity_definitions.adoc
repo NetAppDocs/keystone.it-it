@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_keystone_service_capacity_definitions.html 
+keywords: netapp, keystone, service, capacity, definitions, burst, committed capacity, consumed capacity, billed capacity 
+summary: Definizioni della capacità del servizio Keystone 
+---
+= Definizioni della capacità del servizio Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le capacità del servizio NetApp Keystone includono:
+
+
+
+== Capacità logica
+
+Si tratta dei dati inseriti nell'infrastruttura Keystone da un cliente. Tutte le capacità Keystone si riferiscono a una capacità logica. Ad esempio, se un file 1 TIB viene memorizzato nell'infrastruttura Keystone, è necessario acquistare almeno 1 TIB di capacità.
+
+
+
+== Capacità impegnata
+
+La capacità logica minima fatturata ogni mese per la durata del termine:
+
+* La capacità viene impegnata in base a ciascun livello di servizio.
+* La capacità impegnata non può essere diminuita durante il periodo.
+* È possibile aggiungere capacità impegnata e livelli di servizio aggiuntivi durante il periodo di validità.
+
+
+
+
+=== Modifiche alla capacità impegnata
+
+Durante il periodo di validità di un abbonamento, è possibile modificare le capacità assegnate. Tuttavia, esistono alcune condizioni preliminari:
+
+* La capacità impegnata non può essere diminuita
+* La capacità impegnata non può essere aumentata 90 giorni prima della scadenza dell'abbonamento, a meno che l'abbonamento non debba essere rinnovato per un ulteriore periodo di 12 mesi.
+* Puoi richiedere modifiche alla capacità impegnata tramite l'interfaccia NetApp Service Engine o Keystone Success Manager. Per informazioni sulla richiesta di modifiche, vedere link:sewebiug_raise_a_service_request.html["Inoltrare una richiesta di servizio"].
+
+
+
+
+== Capacità di burst
+
+Si tratta della capacità logica che ha superato la capacità impegnata. Prendere nota dei seguenti punti:
+
+* Il servizio Keystone offre una capacità superiore del 20% rispetto alla capacità impegnata.
+* La capacità di burst può essere consumata su base elastica e viene addebitata ogni giorno in base alla media consumata.
+* La capacità di burst fino al 20% viene addebitata allo stesso tasso della capacità impegnata.
+* La capacità di burst superiore al 20% del commit viene addebitata a una tariffa premium. Contatta il supporto per eventuali requisiti di burst aggiuntivi superiori al 20%.
+
+
+
+
+== Capacità consumata/fornita
+
+La capacità consumata si riferisce alla capacità in TIB dello storage attualmente consumata nel servizio. Il servizio Keystone considera la somma delle dimensioni fornite (non la capacità logica o fisica utilizzata) di tutti i volumi su un determinato livello di servizio da considerare come capacità consumata per quel livello di servizio. Ciò include:
+
+* La capacità fornita attraverso la creazione, la modifica, l'eliminazione o la potenziale crescita automatica dei volumi.
+* Copie e cloni Snapshot.
++
+
+NOTE: La quantità di dati memorizzati all'interno della capacità fornita o la quantità di dati effettivamente scritti su disco non viene presa in considerazione.
+
+
+
+
+
+== Capacità fatturata
+
+Bolletta mensile = (capacità impegnata [TIB] * tasso impegnato [ USD/TIB]) + (capacità burst media giornaliera [TIB] * tasso burst [ USD/TIB]). La fattura mensile contiene un costo minimo in base alla capacità impegnata.
+
+La fattura mensile varia oltre la tariffa minima in base al consumo medio giornaliero di capacità burst. Per ulteriori informazioni sulla fatturazione, vedere link:nkfsosm_kfs_billing.html["Fatturazione Keystone"].

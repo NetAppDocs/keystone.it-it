@@ -1,0 +1,43 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_dashboard.html 
+keywords: netapp, keystone, view, dashboard, capacity utilization, monthly charges, alerts, service request 
+summary: Vista dalla dashboard 
+---
+= Visualizza Keystone Dashboard su NetApp Service Engine
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La dashboard fornisce una rapida panoramica delle sottoscrizioni allo storage NetApp Keystone. Visualizza informazioni sulla capacità utilizzata, sulla fatturazione in base all'utilizzo, sugli avvisi recenti e sulle richieste di servizio.
+
+La dashboard visualizza informazioni importanti nei seguenti widget, che possono essere cliccati per un'analisi approfondita:
+
+* *Utilizzo della capacità:* Visualizza l'utilizzo della capacità per i servizi sottoscritti, ad esempio i servizi in abbonamento Keystone e i servizi cloud. Facendo clic su un grafico a barre si passa ai grafici di utilizzo scomposti per ciascun livello di servizio. È possibile visualizzare l'utilizzo inutilizzato, consumato e burst per ogni livello di servizio e i servizi aggiuntivi, come la protezione dei dati e la protezione avanzata. Consente di identificare se è necessario aggiungere capacità alle sottoscrizioni o scegliere un livello di servizio diverso.
+* *Costi fino alla data (fatturazione):* questa sezione è disponibile in base ai diritti di amministratore del partner. Visualizza i costi mensili aggregati per tutti gli abbonamenti. È possibile visualizzare i dettagli di fatturazione degli ultimi quattro mesi. Passando il cursore del mouse sul grafico, è possibile visualizzare la suddivisione degli addebiti in base all'utilizzo di burst e commit. Se si dispone di più abbonamenti per un servizio sottoscritto, facendo clic sul grafico a barre per un mese, l'elenco degli abbonamenti viene visualizzato nella schermata Billing (fatturazione). Per ulteriori informazioni sulla fatturazione, vedere link:sewebiug_billing.html["Visualizza fatturazione"].
+* *Avvisi:* Visualizza il riepilogo degli avvisi più recenti, ad esempio lo stato, il messaggio e la data di creazione. Per ulteriori informazioni sugli avvisi, vedere link:sewebiug_alerts.html["Creare e gestire gli avvisi"].
+* *Richieste di servizio:* Visualizza il riepilogo delle richieste di servizio più recenti, ordinate in base alla priorità e alla data di creazione. Per ulteriori informazioni sulle richieste di servizio, vedere link:sewebiug_raise_a_service_request.html["Inoltrare una richiesta di servizio"].
+
+
+image:sewebiug_image9_dashboard1.png["Dashboard NSE-1"]
+
+image:sewebiug_image9_dashboard2.png["Dashboard NSE-2"]
+
+
+
+== Vista dalla dashboard per un service provider in una multi-tenancy
+
+Se sei un amministratore partner in un ambiente multi-tenant, la dashboard offre una panoramica di alto livello di tutti i servizi sottoscritti per NetApp Keystone. I dati widget relativi all'utilizzo della capacità e ai dettagli di fatturazione, tra gli altri, rappresentano il tuo rapporto di abbonamento e fatturazione con NetApp.
+
+È inoltre possibile visualizzare l'utilizzo della capacità da parte di ciascun tenant, selezionando uno specifico tenant dall'angolo in alto a destra. I dati nel widget utilizzo capacità e avvisi rappresentano l'utilizzo dei dati e la configurazione dei messaggi di avviso per il tenant selezionato, mentre i dati negli altri widget rimangono costanti e rappresentano le sottoscrizioni allo storage.
+
+
+
+== Vista dalla dashboard per un tenant in un multi-tenancy
+
+Se si è un amministratore tenant in un ambiente multi-tenant, è possibile visualizzare l'utilizzo della capacità e gli avvisi configurati per l'ambiente in uso. Per ulteriori informazioni, fare clic sui widget. Contattare il provider di servizi per i dettagli di fatturazione.

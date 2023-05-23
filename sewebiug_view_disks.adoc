@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_view_disks.html 
+keywords: netapp, keystone, view, buckets, 
+summary: Dischi Keystone view 
+---
+= Visualizzare i dischi
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'elenco Disks (dischi) visualizza i dischi appartenenti al tenant selezionato. Per visualizzare l'elenco, selezionare *BLOCK STORAGE > Disks* (ARCHIVIAZIONE A BLOCCHI > dischi) dal menu.
+
+I dischi che fanno già parte dell'ambiente esistente e appartengono alle VM di storage configurate nel motore di servizio NetApp possono essere visualizzati in questa schermata e gestiti come parte dei servizi di abbonamento NetApp Keystone. I dischi forniti al di fuori del NetApp Service Engine vengono periodicamente importati ed elencati in questa pagina con i codici di stato appropriati.
+
+Se i dischi importati rientrano negli standard accettabili di NetApp Service Engine, ovvero se tutti i parametri necessari per rendere operativi i dischi sono disponibili, vengono importati con lo stato As `Operational` E può essere gestito direttamente tramite NetApp Service Engine. Tuttavia, alcuni dischi potrebbero non essere nello stesso standard dei dischi esistenti su NetApp Service Engine. Dopo l'importazione, questi dischi vengono classificati con `Imported` oppure `Non-Standard` stato. Per informazioni sugli stati dei dischi e sui passaggi da intraprendere per renderli operativi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#object-states["stati degli oggetti"]
+
+Nell'elenco dischi, visualizzare informazioni semplici. Per ulteriori informazioni sull'utilizzo delle funzioni di un elenco, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Azioni di visualizzazione elenco"].
+
+* Nome del disco
+* Percorso del disco
+* Dimensioni del disco
+* Protocollo
+* Subtenant a cui appartiene il disco
+* Zona in cui è presente il disco
+* Stato operativo
+

@@ -1,0 +1,78 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_define_network_configurations.html 
+keywords: netapp, keystone, subnet, subtenant, network, tenant network, IPspace, VLAN, port 
+summary: Creare ed eliminare le subnet 
+---
+= Definire le configurazioni di rete per tenant e subtenant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Un service provider o un amministratore del partner può definire le configurazioni di rete per i tenant in base alle proprie zone di abbonamento e assegnare le VLAN a ciascuna configurazione di rete. Inoltre, possono creare una subnet con ciascuna VLAN appartenente alla stessa zona e alla stessa tenancy e assegnarla a un subtenant sotto tale tenancy.
+
+È necessaria una rete tenant preconfigurata per la creazione della subnet. Una subnet è necessaria quando un subtenant o un cliente finale esegue il provisioning di file server o archivi a blocchi. Le VM di storage a blocchi e file sono di proprietà dei subtenant nel motore di servizio NetApp, mentre sono di proprietà di IPspaces in ONTAP. Quando si definisce il limite di rete a livello di sottostruttant, il sottostruttore nel motore di servizio NetApp viene mappato su un singolo IPSpace ONTAP per tale zona. In questo modo si eliminano i rischi e si garantisce che due subtenant distinti non selezionino lo stesso ID VLAN e finano nello stesso IPSpace.
+
+* In ciascuna zona possono essere create più subnet. Per ciascuna zona in tenancy, è disponibile un elenco allocato di VLAN. Per tutte le VLAN disponibili, è possibile creare le subnet corrispondenti. Esiste una mappatura 1:1 tra una subnet e una VLAN. Invece, esiste una mappatura tra le subnet e la zona.
+* Un tenant può avere più subnet, una per ogni VLAN disponibile in una zona. Vengono visualizzati in una singola configurazione di rete per ciascuna zona.
+* Per ogni subnet di rete può essere presente una sola VLAN. Ogni configurazione di rete mostra un elenco di VLAN disponibili.
+* È possibile creare una sola subnet per una combinazione di zone e VLAN per un sottenant.
+
+
+
+NOTE: Un amministratore del tenant può visualizzare solo le configurazioni di rete per la propria tenancy e le subnet per i propri subtenant.
+
+
+
+== Definire una configurazione di rete per un tenant
+
+In qualità di amministratore partner, è possibile creare configurazioni di rete per ciascun tenant. È possibile allocare a ciascun tenant un pool VLAN unico e configurabile in base ai requisiti. Quando un tenant viene cancellato, le VLAN ad esso associate vengono restituite al pool VLAN tenant.
+
+.Prima di iniziare
+* Assicurarsi che i tenant siano stati creati
+* È necessario conoscere la configurazione di zone, VLAN, subnet CIDR e port override
+
+
+.Fasi
+. Da *AMMINISTRAZIONE* > *tenant*, selezionare il tenant desiderato.
+. Fare clic sull'icona della rete. Viene visualizzata la schermata Networks (reti) con l'elenco delle configurazioni di rete per il tenant.
+. Fare clic su *Create Network* (Crea rete). Specificare la zona, la VLAN e l'override della porta, se applicabile. Se è stata definita l'override della porta, selezionare la porta assegnata dall'elenco a discesa. Per tutte le connessioni di rete del tenant, viene utilizzata questa porta e non la porta predefinita.
++
+
+NOTE: L'override della porta viene configurato dal team di supporto durante la configurazione della zona. Se non viene specificato un override della porta, la rete utilizza la porta predefinita e crea una nuova VLAN per quel tenant.
+
+. Fare clic su *Create* (Crea). La nuova configurazione di rete viene elencata per il tenant nella schermata Networks (reti).
+
+
+Se viene creata la configurazione di rete per una zona, è possibile assegnare solo nuove VLAN alla configurazione di rete. Fare clic sull'icona *+* e aggiungere i dettagli relativi alla sostituzione della porta e della VLAN. Fare clic su *Aggiorna*.
+
+
+
+== Creare una subnet per un sottenant
+
+In qualità di amministratore partner, puoi creare subnet per i tuoi subtenant da *RETI* > *subnet*. La definizione della subnet include l'ID VLAN implementato in ONTAP, l'intervallo di indirizzi CIDR e una specifica di routing. Una subnet è allineata a una VLAN all'interno di un tenant e di una zona. Non è possibile creare due subnet con la stessa VLAN per una zona.
+
+.Prima di iniziare
+* La configurazione della VLAN e della zona dovrebbe essere già stata completata per il tenant
+* È necessario conoscere i requisiti per la creazione della subnet
+
+
+.Fasi
+. Selezionare il tenant richiesto. I subtenant per i quali si creano le sottoreti devono trovarsi in questo tenant.
+. Fare clic su *RETI* > *subnet*. È possibile visualizzare l'elenco delle subnet create per i subtenant nella pagina *subnet*.
+. Fare clic su *Create Subnet* (Crea subnet).
+. Specificare il sottotenant, la zona, il nome della subnet, la VLAN e il CIDR della subnet. È inoltre possibile aggiungere tag e specifiche del percorso.
++
+
+NOTE: Nella specifica del percorso, la *destinazione* deve essere univoca e parte della VLAN citata, mentre più percorsi possono avere lo stesso valore per *Metrico*.
+
+. Fare clic su *Create* (Crea).
+
+
+
+NOTE: Non è possibile modificare o eliminare una subnet. È possibile modificare solo i tag associati.

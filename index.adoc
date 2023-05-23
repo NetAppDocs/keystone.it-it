@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: index.html 
+keywords: netapp, keystone, service, offering, 
+summary: 'NetApp Keystone è un"offerta di storage as a service pay-as-you-grow per servizi di storage dei dati on-premise e cloud con un"unica sottoscrizione con la possibilità di riallocare la spesa per lo storage nei cloud.' 
+---
+= Documentazione per NetApp Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+NetApp Keystone è un portfolio di alternative di spese di capitale on-premise (CAPEX) per consentire il percorso on-ramp verso il cloud. NetApp Keystone offre un'esperienza di cloud ibrido perfetta con servizi storage che si estendono on-premise e nel cloud. Per ulteriori informazioni su NetApp Keystone, vedere link:https://www.netapp.com/services/subscriptions/keystone/["NetApp Keystone"]
+
+Per ulteriori informazioni su NetApp Keystone, vedere https://www.netapp.com/services/keystone/["NetApp Keystone"].
+
+Keystone è un'offerta storage-as-a-service che offre un'esperienza simile al cloud sui tuoi sistemi on-premise con connettività al cloud, disponibile alle tue condizioni.
+
+
+
+== Keystone
+
+Keystone è un modello di servizio basato su abbonamento pay-as-you-grow che offre un'esperienza di cloud ibrido perfetta per coloro che preferiscono i modelli di consumo OpEx a CapEx anticipate o leasing. Consente ai clienti di accelerare il time-to-value riducendo gli ostacoli legati alla gestione della crescita imprevedibile della capacità e all'esecuzione di complessi cicli di approvvigionamento. Keystone consente ai clienti di allineare economia e operazioni alle loro priorità di business.
+
+image:nkfsosm_image2.png["arco keystone"]
+
+Keystone è un'offerta di servizi basata su abbonamento che fornisce capacità di storage, a livelli di servizio delle performance predefiniti (livelli di servizio), per tipi di dati a blocchi, file e oggetti che possono essere implementati on-premise e gestiti da NetApp, un partner o dal cliente. Oltre al servizio di base fornito da Keystone, è possibile scegliere servizi aggiuntivi a un costo aggiuntivo. Questi servizi sono descritti nella figura seguente.
+
+* Il servizio *protezione dati di base* offre le funzionalità NetApp SnapMirror e NetApp SnapVault con le impostazioni predefinite.
+* *Protezione dei dati avanzata* fornisce un servizio con SLA di RPO=0 sfruttando le funzionalità di NetApp MetroCluster.
+
+
+
+NOTE: Keystone utilizza la tecnologia SnapVault per le operazioni di backup e SnapMirror per il disaster recovery per replicare i dati in remoto; non esegue automaticamente il failover e il ripristino delle applicazioni.
+
+image:nkfsosm_image3.png["servizi keystone"]
+
+
+
+=== Vantaggi di Keystone
+
+Keystone offre i seguenti vantaggi:
+
+* Libera il personale IT da attività complesse legate allo storage e consente loro di concentrarsi sulla gestione delle applicazioni
+* Riduce gli investimenti iniziali di capitale
+* Consente ai clienti di soddisfare le proprie esigenze senza eseguire l'overprovisioning
+* Allinea i costi dello storage dei dati con le esigenze e le attività aziendali
+* Semplifica il provisioning dell'infrastruttura evitando complesse procedure di approvvigionamento organizzative
+* Protegge i dati on-premise
+* Consente un controllo adeguato su conformità, performance e sicurezza
+
+
+image:nkfsosm_image4.png["benefici"]

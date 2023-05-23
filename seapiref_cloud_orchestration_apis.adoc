@@ -1,0 +1,608 @@
+---
+sidebar: sidebar 
+permalink: seapiref_cloud_orchestration_apis.html 
+keywords:  
+summary:  
+---
+= API di orchestrazione del cloud
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le API di orchestrazione cloud NetApp Service Engine supportano la connessione di Cloud Volumes Services a NetApp Service Engine e la loro collaborazione all'interno di NetApp Service Engine. Azure NetApp Files (ANF) e Google Cloud Platform (GCP) sono supportati per i servizi Cloud Volumes.
+
+Gli abbonamenti ai servizi Cloud Volumes vengono gestiti al di fuori di NetApp Service Engine. Le credenziali pertinenti vengono fornite a NetApp Service Engine per consentire la connessione ai servizi cloud.
+
+Questa sezione descrive le API per:
+
+* Gestione delle istanze di Cloud Volumes Service
+* Gestione degli account Azure NetApp Files
+* Gestione dei pool di capacità Azure NetApp Files
+* Gestione dei volumi Azure NetApp Files
+* Gestione dei volumi Google Cloud
+
+
+
+
+== Istanze di Cloud Volumes Service
+
+Utilizzare i metodi elencati nella tabella seguente per recuperare e creare istanze di Cloud Volumes Service.
+
+|===
+| Metodo HTTP | Percorso | Descrizione 
+
+
+| `GET` | `/v2.1/cvs/instances` | Recuperare tutte le istanze di Cloud Volumes Service. 
+
+
+| `POST` | `/v2.1/cvs/instances` | Creare nuove istanze di Cloud Volumes Service. 
+
+
+| `GET` | `/v2.1/cvs/instances/{id}` | Recuperare un'istanza di Cloud Volumes Service in base all'ID. 
+
+
+| `GET` | `/v2.1/anf/accounts` | Recuperare gli account Azure NetApp Files. 
+
+
+| `POST` | `/v2.1/anf/accounts` | Creare un account Azure NetApp Files 
+
+
+| `GET` | `/v2.1/anf/accounts/{id}` | Recuperare un account Azure NetApp Files in base all'ID. 
+
+
+| `GET` | `/v2.1/anf/pools` | Recuperare tutti i pool di capacità. 
+
+
+| `POST` | `/v2.1/anf/pools`` | Creare un pool di capacità. 
+
+
+| `GET` | `/v2.1/anf/pools/{id}` | Recuperare un pool di capacità Azure NetApp Files in base all'ID. 
+|===
+
+
+=== Attributi dell'istanza di Cloud Volumes Service
+
+Nella tabella seguente sono elencati gli attributi dell'istanza di Cloud Volumes Service.
+
+|===
+| Attributo | Tipo | Descrizione 
+
+
+| `id` | Stringa | Identificatore univoco dell'istanza di Cloud Volumes Service. 
+
+
+| `name` | Stringa | Nome dell'istanza di Cloud Volumes Service. 
+
+
+| `cc_working_env` | Stringa | Nome dell'ambiente di lavoro in BlueXP. 
+
+
+| `cc_client_id` | Stringa | Auth0 ID servizio. 
+
+
+| `cc_refresh_token` | Stringa | Token di refresh Auth0. 
+
+
+| `cc_account_id` | Stringa | ID account Cloud Central. 
+
+
+| `cc_account_name` | Stringa | Nome account Cloud Central. 
+
+
+| `cc_credentials_id` | Stringa | ID dell'ambiente di lavoro Cloud Centra. 
+
+
+| `azure_client_id` | Stringa | ID applicazione (client). L'ID di un'entità del servizio Active Directory che BlueXP può utilizzare per l'autenticazione con Azure Active Directory. 
+
+
+| `azure_client_secret` | Stringa | Il valore del segreto del client per l'applicazione principale del servizio. 
+
+
+| `azure_tenant_id` | Stringa | L'ID di Azure Active Directory. Questo è anche noto come ID tenant. 
+
+
+| `azure_subscription_id` | Stringa | L'ID dell'abbonamento ad Azure Active Directory. 
+
+
+| `subtenant_id` | Stringa | L'ID del sottotenant. 
+
+
+| `tags` |  | Le coppie chiave-valore. 
+|===
+
+
+=== Recuperare l'istanza di Cloud Volumes Service
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri del percorso 
+
+
+| `GET` | `/v2.1/cvs/instances` | Recuperare le istanze di Cloud Volumes Service. | `tenant_id:` (Facoltativo) Restituisci le istanze di Cloud Volumes Service appartenenti al tenant specificato. Vedere anche link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Impaginazione comune"] parametri. 
+|===
+Parametri del corpo della richiesta richiesti: `none`
+
+
+
+=== Recuperare l'istanza di Cloud Volumes Service in base all'ID
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare un'istanza di Cloud Volumes Service in base al relativo identificatore.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/cvs/instances/{id}` | Recuperare un'istanza di Cloud Volumes Service in base all'ID. | `id (string):` Identificatore univoco dell'istanza di Cloud Volumes Service. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+
+
+=== Creare istanze di Cloud Volumes Service
+
+Utilizzare il metodo elencato nella tabella seguente per creare una nuova istanza di Cloud Volumes Service.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `POST` | `/v2.1/cvs/instances` | Creare un'istanza di Cloud Volumes Service. | Nessuno 
+|===
+Attributi del corpo della richiesta richiesti: `name, cc_working_env, cc_client_id, cc_refresh_token, cc_account_id, cc_account_name, azure_client_id, azure_client_secret, azure_tenant_id, azure_subscription_id, subtenant_id`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "instance1",
+  "cc_working_env": "my-working-env",
+  "cc_client_id": "Mu0V1ywgYteI6w1MbD15fKfVIUrNXGWC",
+  "cc_refresh_token": "y1tMw3lNzE8JL9jtiE29oSRxOAzYu0cdnwS_2XhjQBr9G",
+  "cc_account_id": "account-335jdf32",
+  "cc_account_name": "my-account-name",
+  "cc_credentials_id": "d336c449-aeb8-4bb3-af28-5b886c40dd00",
+  "azure_client_id": "53ba6f2b-6d52-4f5c-8ae0-7adc20808854",
+  "azure_client_secret": "NMubGVcDqkwwGnCs6fa01tqlkTisfUd4pBBYgcxxx=",
+  "azure_tenant_id": "53ba6f2b-6d52-4f5c-8ae0-7adc20808854",
+  "azure_subscription_id": "1933a261-d141-4c68-9d6c-13b607790910",
+  "subtenant_id": "5d2fb0fb4f47df00015274e3",
+  "tags": {
+    "key1": "Value 1",
+    "key2": "Value 2",
+    "key3": "Value 3",
+    "keyN": "Value N"
+  }
+}
+....
+
+
+=== Gestire i tag per le istanze di Cloud Volumes Service
+
+Utilizzare il metodo elencato nella tabella seguente per specificare i tag per l'istanza di Cloud Volumes Service denominata.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `POST` | `/v2.1/cvs/instances/{id}/tags` | Gestire i tag per un'istanza di Cloud Volumes Service. | `id (string)``L'identificatore univoco dell'istanza di Cloud Volumes Service. 
+|===
+Attributi del corpo della richiesta richiesti: `key-value pairs`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "env": "test"
+}
+....
+
+
+== Account Azure NetApp Files
+
+
+
+=== Attributi degli account Azure NetApp Files
+
+La tabella seguente elenca gli attributi dell'account Azure NetApp Files.
+
+|===
+| Attributo | Tipo | Descrizione 
+
+
+| `id` | Stringa | Identificativo univoco dell'account Azure NetApp Files. 
+
+
+| `name` | Stringa | Il nome dell'account Azure NetApp Files. 
+
+
+| `resource_group` | Stringa | Il gruppo di risorse Azure. 
+
+
+| `location` | Stringa | La posizione di Azure (regione/zona). 
+
+
+| `cvs_instance_id` | Stringa | L'identificativo dell'istanza di Cloud Volumes Service. 
+
+
+| `tags` | – | Le coppie chiave-valore. 
+|===
+
+
+=== Recuperare gli account Azure NetApp Files
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri del percorso 
+
+
+| `GET` | `/v2.1/anf/accounts` | Recuperare gli account Azure NetApp Files. | `subtenant_id:` (Obbligatorio) l'ID del subtenant a cui appartiene l'account Azure NetApp Files.
+`tenant_id:` (Facoltativo) Restituisce gli account Azure NetApp Files appartenenti al tenant specificato. Vedere anche link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Impaginazione comune"] parametri. 
+|===
+Parametri del corpo della richiesta richiesti: `none`
+
+
+
+=== Recuperare l'account Azure NetApp Files in base al nome
+
+Utilizzare il metodo indicato nella tabella seguente per recuperare un account Azure NetApp Files in base al nome.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/anf/accounts/{name}` | Recuperare un account Azure NetApp Files in base al nome. | `name (string):` (Obbligatorio) il nome dell'account Azure NetApp Files.
+`subtenant_id (string):` (Obbligatorio) l'ID del subtenant a cui appartiene l'account Azure NetApp Files. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+
+
+=== Creare account Azure NetApp Files
+
+Utilizzare il metodo indicato nella tabella seguente per creare un nuovo account Azure NetApp Files.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `POST` | `/v2.1/anf/accounts` | Creare un nuovo account Azure NetApp Files. | Nessuno 
+|===
+Attributi del corpo della richiesta richiesti: `name, resource_group, location, cvs_instance_id`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "string",
+  "resource_group": "string",
+  "location": "string",
+  "cvs_instance_id": "5d2fb0fb4f47df00015274e3",
+  "tags": {
+    "key1": "Value 1",
+    "key2": "Value 2",
+    "key3": "Value 3",
+    "keyN": "Value N"
+  }
+}
+....
+
+
+== Pool di capacità Azure NetApp Files
+
+
+
+=== Attributi dei pool di capacità
+
+Nella tabella seguente sono elencati gli attributi del pool di capacità.
+
+|===
+| Attributo | Tipo | Descrizione 
+
+
+| `id` | Stringa | Identificatore univoco del pool di capacità. 
+
+
+| `name` | Stringa | Il nome del pool di capacità. 
+
+
+| `resource_group` | Stringa | Il gruppo di risorse Azure. 
+
+
+| `location` | Stringa | La posizione di Azure (regione/zona). 
+
+
+| `size` | Intero | Le dimensioni del pool di capacità in TB. 
+
+
+| `service_level` | Stringa | Il nome del livello di servizio applicabile: Ultra, Premium o Standard. 
+
+
+| `anf_account_name` | Stringa | L'identificativo dell'istanza dell'account Azure NetApp Files. 
+
+
+| `subtenant_id` | Stringa | L'ID del sottotenant. 
+
+
+| `tags` | – | Le coppie chiave-valore. 
+|===
+
+
+=== Recuperare i pool di capacità
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri del percorso 
+
+
+| `GET` | `/v2.1/anf/pools` | Recuperare i pool di capacità. | `subtenant_id:` (Obbligatorio) l'ID del subtenant a cui appartiene l'account ANF.
+`tenant_id:` (Facoltativo) Restituisci i pool di capacità appartenenti al tenant specificato. Vedere anche link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Impaginazione comune"] parametri. 
+|===
+Parametri del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+none
+....
+
+
+=== Recuperare il pool di capacità in base al nome
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare un pool di capacità in base al nome.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/anf/pools/{name}` | Recuperare un pool di capacità in base al nome. | `name (string):` (Obbligatorio) il nome univoco del pool di capacità.
+`subtenant_id (string):` (Obbligatorio) l'ID del subtenant a cui appartiene il pool di capacità. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+
+
+=== Creare pool di capacità
+
+Utilizzare il metodo elencato nella tabella seguente per creare un nuovo pool di capacità.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `POST` | `/v2.1/anf/pools` | Creare un pool di capacità. | Nessuno 
+|===
+Attributi del corpo della richiesta richiesti: `name, resource_group, location, size, service_level, anf_account_name, subtenant_id`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "string",
+  "resource_group": "string",
+  "location": "string",
+  "size": 10,
+  "service_level": "Standard",
+  "anf_account_name": "myaccount",
+  "subtenant_id": "5d2fb0fb4f47df00015274e3",
+  "tags": {
+    "key1": "Value 1",
+    "key2": "Value 2",
+    "key3": "Value 3",
+    "keyN": "Value N"
+  }
+}
+....
+
+
+=== Modificare le dimensioni del pool di capacità
+
+Utilizzare il metodo indicato nella tabella seguente per modificare le dimensioni del pool di capacità.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `PUT` | `/v2.1/anf/pools/{name}` | Modificare le dimensioni del pool di capacità. | `name (string):` Obbligatorio: Il nome univoco del pool di capacità. 
+|===
+Attributi del corpo della richiesta richiesti: `name, resource_group, location, anf_account_name, size, service_level, subtenant_id`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "myaccount",
+  "resource_group": "string",
+  "location": "string",
+  "anf_account_name": "myaccount",
+  "size": 4,
+  "service_level": "Standard",
+  "subtenant_id": "5d2fb0fb4f47df00015274e3",
+  "tags": {
+    "key1": "Value 1",
+    "key2": "Value 2",
+    "key3": "Value 3",
+    "keyN": "Value N"
+  }
+}
+....
+
+
+== Volumi Azure NetApp Files
+
+
+
+=== Attributi del volume Azure NetApp Files
+
+Nella tabella seguente sono elencati gli attributi del volume Azure NetApp Files.
+
+|===
+| Attributo | Tipo | Descrizione 
+
+
+| `id` | Stringa | Identificatore univoco del volume Azure NetApp Files. 
+
+
+| `name` | Stringa | Il nome del volume Azure NetApp Files. 
+
+
+| `resource_group` | Stringa | Il gruppo di risorse Azure. 
+
+
+| `subtenant_id` | Stringa | L'ID del sottotenant. 
+
+
+| `anf_account_name` | Stringa | Il nome dell'account Azure NetApp Files. 
+
+
+| `anf_pool_name` | Stringa | Il nome del pool di Azure NetApp Files. 
+
+
+| `location` | Stringa | La posizione di Azure (regione/zona). 
+
+
+| `file_path` | Stringa | Token di creazione o percorso file. Un percorso di file univoco per l'accesso al volume. 
+
+
+| `quota_size` | Intero | Quota massima di storage consentita in GiB. 
+
+
+| `subNetID` | Stringa | L'URL delle risorse Azure per una subnet delegata. È necessario disporre della delega Microsoft NetApp/Volumes. 
+
+
+| `tags` | – | Le coppie chiave-valore. 
+|===
+
+
+=== Recuperare i volumi Azure NetApp Files
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare i volumi Azure NetApp Files. Specificare un `tenant_id` restituisce solo gli account appartenenti al tenant.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri del percorso 
+
+
+| `GET` | `/v2.1/anf/volumes` | Recuperare i volumi Azure NetApp Files. | `subtenant_id:` (Obbligatorio) l'ID del subtenant a cui appartiene il volume ANF.
+`tenant_id:` (Facoltativo) Restituisce i volumi ANF appartenenti al tenant specificato. Vedere anche link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Impaginazione comune"] parametri. 
+|===
+Parametri del corpo della richiesta richiesti: `none`.
+
+
+
+=== Recuperare il volume Azure NetApp Files in base al nome
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare un volume Azure NetApp Files in base al nome.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/anf/volumes/{name}` | Recuperare un volume Azure NetApp Files in base al nome. | `name (string):` Obbligatorio: Il nome univoco del volume Azure NetApp Files.
+`subtenant_id:` (Stringa) obbligatorio. L'ID del sottotenant a cui appartiene il volume Azure NetApp Files. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+none
+....
+
+
+=== Creare volumi Azure NetApp Files
+
+Utilizzare il metodo elencato nella tabella seguente per creare un nuovo volume Azure NetApp Files.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `POST` | `/v2.1/anf/volumes` | Creare un volume Azure NetApp Files. | Nessuno 
+|===
+Attributi del corpo della richiesta richiesti: `name, resource_group, subtenant_id, anf_account_name, anf_pool_name, virtual_network, location, file_path, quota_size, subNetID`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "myVolume",
+  "resource_group": "string",
+  "subtenant_id": "5d2fb0fb4f47df00015274e3",
+  "anf_account_name": "myaccount",
+  "anf_pool_name": "myaccount",
+  "virtual_network": "anf-vnet",
+  "location": "string",
+  "file_path": "myVolume",
+  "quota_size": 100,
+  "subNetId": "string",
+  "protocol_types": [
+    "string"
+  ],
+  "tags": {
+    "key1": "Value 1",
+    "key2": "Value 2",
+    "key3": "Value 3",
+    "keyN": "Value N"
+  }
+}
+....
+
+
+== Gestione di Cloud Volumes Service per Google Cloud
+
+Il `/v2.1/gcp/volumes` API nella categoria Cloud Orchestration ti consente di gestire i volumi cloud per la tua istanza di Google Cloud. Prima di eseguire questa API, assicurarsi che l'account Cloud Volumes Service per l'abbonamento alla piattaforma cloud Google (GCP) sia stato attivato per il sottostruttore.
+
+|===
+| Verbo HTTP | Percorso | Descrizione | Parametri obbligatori/corpo della richiesta 
+
+
+| `GET` | `/v2.1/gcp/volumes` | Puoi utilizzare IL metodo GET per recuperare i dettagli di tutti i volumi Google Cloud creati per l'abbonamento Cloud Volumes Service del tuo subtenant. | `offset`: Il numero di elementi da saltare prima di iniziare a raccogliere il set di risultati.
+`limit`: Il numero di elementi da restituire.
+`subtenant_id`: L'ID del subtenant iscritto a Google Cloud.
+`region`: La regione del servizio sottoscritto. 
+
+
+| `GET` | `/v2.1/gcp/volumes/{id}` | Puoi utilizzare questo metodo per recuperare i dettagli di un volume Google Cloud specifico creato per l'abbonamento Cloud Volumes Service del tuo subtenant. | `id`: L'ID del volume GCP.
+`subtenant_id`: L'ID del subtenant iscritto a Google Cloud.
+`region`: La regione del servizio sottoscritto. 
+
+
+| `POST` | `/v2.1/gcp/volumes` | Creare un volume GCP per un sottenant. Aggiungere i valori nel corpo della richiesta per creare un volume con i parametri specificati. | ```
+{
+  "subtenant_id": "<ID>",
+  "name": "<Volume_name>",
+  "region": "<region>",
+  "zone": "<zone>",
+  "creation_token": "<token>",
+  "allowed_clients": "<IP address of the clients allowed to access GCP>",
+  "network": "<network details as entered for the GCP subscribed service>",
+  "protocol_types": [
+    "<Protocol for the connection, such as NFSv3>"
+  ],
+  "quota_gib": <volume quota in bytes>,
+  "service_level": "<the type of Performance Service Level, such as standard>",
+  "labels": ["<tag_value>"]
+}
+``` 
+
+
+| IN PRIMO PIANO | `/v2.1/gcp/volumes/{id}` | Modificare un volume GCP già creato per un sottenant. Aggiungere l'ID del volume che si desidera modificare e il valore dei parametri che si desidera modificare nel corpo della richiesta. | ```
+{
+  "subtenant_id": "<ID>",
+  "name": "<Volume_name>",
+  "region": "<region>",
+  "zone": "<zone>",
+  "allowed_clients": "<IP address of the clients allowed to access GCP>",
+  "quota_gib": <volume quota in bytes>,
+  "service_level": "<the type of Performance Service Level, such as standard>",
+  "protocol_types": ["<Protocol for the connection, such as NFSv3>"],
+  "labels": ["<tag_value>"]
+}
+``` 
+
+
+| ELIMINARE | `/v2.1/gcp/volumes/{id}` | Puoi utilizzare questo metodo per eliminare un volume Google Cloud specifico creato per l'abbonamento Cloud Volumes Service del tuo subtenant. | `id`: L'ID del volume GCP.
+`subtenant_id`: L'ID del subtenant iscritto a Cloud Volumes Service per Google Cloud.
+`region`: La regione del servizio sottoscritto. 
+|===

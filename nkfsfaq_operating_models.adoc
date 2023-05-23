@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: nkfsfaq_operating_models.html 
+keywords: netapp, keystone, operating, models, 
+summary: Modelli operativi 
+---
+= Modelli operativi e responsabilità
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I servizi Keystone includono tre modelli operativi. Queste FAQ sono correlate a questi modelli operativi.
+
+*Quali sono i diversi modelli operativi e chi è responsabile delle principali attività?*
+
+Il grafico seguente è una panoramica dei tre modelli operativi che un cliente può selezionare: NetApp Operated, Partner Operated e Customer Operated.
+
+* *Modello gestito da NetApp*: La gestione end-to-end di installazione, implementazione, operazioni, monitoraggio, ottimizzazione e supporto viene eseguita da NetApp.
+* *Modello gestito dal partner*: La condivisione dei ruoli e delle responsabilità dipende dallo SLA tra l'utente e il provider di servizi o il partner. Per ulteriori informazioni, rivolgersi al provider di servizi.
+* *Modello gestito dal cliente*: La seguente tabella riassume il modello di ciclo di vita generale del servizio e i ruoli e le responsabilità ad essi associati in un ambiente gestito dal cliente.
+
+
+|===
+| Attività | NetApp | Cliente 
+
+
+ a| 
+Installazione e attività correlate
+
+* Installare
+* Configurare
+* Implementare
+* A bordo
+
+| image:check.png["controllare"] | Nessuno 
+
+
+ a| 
+Amministrazione e monitoraggio
+
+* Monitorare
+* Report
+* Eseguire attività amministrative
+* Avviso
+
+| Nessuno | image:check.png["controllare"] 
+
+
+ a| 
+Operazioni e ottimizzazione
+
+* Gestire la capacità
+* Gestire le performance
+* Gestire lo SLA
+
+| Nessuno | image:check.png["controllare"] 
+
+
+ a| 
+Supporto
+
+* Supportare il cliente
+* Riparazione dell'hardware
+* Supporto software
+* Aggiornamenti e patch
+
+| image:check.png["controllare"] | Nessuno 
+|===
+*Cos'è un modello gestito da NetApp?*
+
+Questo modello operativo consente al cliente di sottoscrivere i servizi offerti, in base ai livelli di performance selezionati e ai tipi di servizi storage, e di selezionare l'opzione gestita da NetApp a un costo aggiuntivo. NetApp definisce l'architettura e i prodotti, si installa presso la sede del cliente e NetApp gestisce le operazioni quotidiane di gestione dell'infrastruttura utilizzando le nostre risorse IT e di storage. I tipi di servizi di storage disponibili sono file, blocchi (iSCSI) e oggetti. Sono supportati anche Cloud Volumes Service per GCP e AWS.
+
+NetApp crea e gestisce inoltre i partner, i tenant, a seconda dei casi, e le sottoscrizioni.
+
+*Cos'è un modello gestito dal partner?*
+
+Il modello operativo per il partner o il service provider è simile al modello gestito da NetApp, ma con il partner che gestisce il servizio per il cliente finale. In questo modello, il partner è la parte contrattuale di riferimento. I tenant sono clienti dei service provider e non hanno alcun rapporto di fatturazione con NetApp. Gestiscono la loro tenancy e i clienti. Le richieste di supporto dei tenant vengono prima sottoposte a valutazione dal service provider prima di essere inoltrate a NetApp.
+
+*Che cos'è un modello gestito dal cliente?*
+
+Questo modello operativo consente al cliente di sottoscrivere un servizio offerto, in base ai livelli di performance selezionati e ai tipi di servizio storage. NetApp definisce l'architettura e i prodotti e li installa presso la sede del cliente e consente ai clienti di gestire l'infrastruttura utilizzando le risorse IT e di storage. I tipi di servizi di storage disponibili sono file, blocchi (iSCSI) e oggetti. In questo modello, il cliente ha fatto riferimento alla parte contrattuale, che può essere un utente finale o un partner.
+
+*Chi possiede l'apparecchiatura?*
+
+In tutti e tre i modelli operativi, NetApp detiene il titolo di tutti i componenti hardware e software installati presso la sede del cliente.

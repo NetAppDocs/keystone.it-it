@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_create_a_disk_from_a_snapshot.html 
+keywords: netapp, keystone, create, disk, snapshot 
+summary: Creare un disco da uno snapshot 
+---
+= Creare un disco da uno snapshot
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare un nuovo disco da uno snapshot esistente. Il nuovo disco, clonato dallo snapshot, ha le stesse proprietà del disco da cui viene creato lo snapshot.
+
+.Fasi
+. Selezionare *BLOCK STORAGE* (BLOCCA STORAGE) dal riquadro di navigazione a sinistra e selezionare *Disks* (dischi). Viene visualizzato l'elenco dei dischi esistenti per il tenancy.
+. Fare clic su *Create Disk* (Crea disco) e selezionare *Clone from snapshot* (Clona da snapshot). In alternativa, se si conosce il disco di cui si desidera utilizzare lo snapshot per la clonazione, individuare il disco e fare clic sul pulsante di copia accanto. Il disco deve essere in uno stato operativo. Viene visualizzata la schermata *Create Disk from Snapshot* (Crea disco da snapshot) con tutti i dischi del tenant. È possibile filtrare i dischi in base all'area, alla zona e al sottenant. È possibile selezionare qualsiasi disco in stato operativo. Per informazioni sugli stati degli oggetti, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#object-states["stati degli oggetti"]
+. Selezionare la casella di controllo accanto al disco desiderato e fare clic su *Avanti*. Vengono visualizzate le istantanee del disco.
++
+
+NOTE: Per il disco selezionato, se nell'ambiente SnapCenter sono state create alcune snapshot al di fuori del motore di servizio NetApp, è possibile trovare tali snapshot importate ed elencate per la selezione. È possibile selezionare queste snapshot importate e clonare i nuovi dischi da esse.
+
++
+È possibile cercare uno snapshot specifico o selezionare il tipo di pianificazione per filtrare gli snapshot.
+
+. Selezionare la casella di controllo accanto allo snapshot da cui si desidera clonare e fare clic su *Avanti*. Il nuovo disco eredita le proprietà dello snapshot selezionato.
+. Aggiungere *Nome* e *percorso del disco*. Aggiornare le altre impostazioni, ad esempio l'assegnazione di un *livello di servizio* e fare clic su *Crea*. Selezionare il livello di servizio più adatto alle proprie esigenze. Dopo aver finito
+
+
+*Create Disk* viene eseguito come processo asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori. Per informazioni sul monitoraggio dei processi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+* Al termine del processo, controllare lo stato del disco nell'elenco *dischi*.
+

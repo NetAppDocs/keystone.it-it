@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_service_requests_overview.html 
+keywords: netapp, keystone, managing, service, requests, overview, 
+summary: 'Keystone: Panoramica sulla gestione delle richieste di servizio' 
+---
+= Panoramica
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le richieste di servizio consentono di segnalare un problema con il team GSSC in modo che possa risolvere il problema e aggiornare lo stato da visualizzare.
+
+
+NOTE: È possibile visualizzare il menu *Support > Service Requests* (supporto > Richieste di servizio) solo se si è un amministratore del partner. In qualità di amministratore del partner, è inoltre possibile visualizzare l'elenco delle richieste di servizio inoltrate per il tenant selezionato nella dashboard. Se sei un amministratore tenant, non puoi inoltrare una richiesta di servizio con il supporto NetApp.
+
+Il flusso di lavoro è a. link:https://docs.netapp.com/us-en/keystone/sewebiug_service_request_process.html["Processo di richiesta di servizio"]
+
+Inviare una richiesta di servizio per:
+
+* Ripristino del backup
+* Failover del disaster recovery
+* Un problema tecnico con NetApp Service Engine
+* Volumi non standard: I volumi importati nei servizi di abbonamento Keystone condividono lo stesso standard dei dischi e delle condivisioni di file esistenti su NetApp Service Engine. Dopo l'importazione, i dischi e le condivisioni di file vengono classificati con `Non-Standard` stato. Viene inoltrata una richiesta di servizio per modificarne lo stato in uno standard.
+* Qualsiasi altro problema non trattato in questo elenco.
+
+
+Gli altri argomenti di questa sezione discutono:
+
+* Come inoltrare una richiesta di servizio
+* Come tenere traccia di una richiesta di servizio
+* Il processo di richiesta di servizio
+

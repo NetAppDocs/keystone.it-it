@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: nkfsfaq_overview.html 
+keywords: netapp, keystone, overview, 
+summary: Panoramica di NetApp Keystone 
+---
+= Domande frequenti (FAQ) su NetApp Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le seguenti domande forniscono risposte alle domande frequenti su NetApp Keystone.
+
+*Cos'è NetApp Keystone?*
+
+NetApp Keystone è un portfolio di alternative di spese di capitale on-premise (CAPEX). Per ulteriori informazioni, vedere https://www.netapp.com/services/keystone/["NetApp Keystone"].
+
+*In che modo NetApp Keystone offre vantaggi ai miei clienti?*
+
+NetApp Keystone è il ponte che collega i pilastri della nostra strategia CAPEX e del cloud ibrido, offrendo agilità, flessibilità finanziaria e rischi finanziari ridotti che aiutano i clienti a soddisfare le loro esigenze di business e di flusso di cassa.
+
+Il marchio NetApp Keystone offre un portfolio di soluzioni di pagamento flessibili che includono opzioni tradizionali di finanziamento, leasing e fisse/variabili per i clienti attenti al contante, oltre ai servizi Keystone.
+
+*Servizi Keystone (OPEX, cloud-like Experience):* * preferisco il 100% di OPEX, quindi le risorse non finiranno nel bilancio del cliente * Provider di servizi interni/esterni che cercano di allineare i costi con l'utilizzo/ricavi * workload con una crescita della capacità imprevedibile * risorse IT riallocate a partire da task storage tipici (migrazioni, aggiornamento tecnologico, upgrade, E così via) * soluzione a breve termine prima della migrazione dei carichi di lavoro nel cloud * rimpatrio dei carichi di lavoro dal cloud a on-premise
+
+*Cos'è NetApp Keystone?*
+
+NetApp Keystone è un nuovo modello di procurement on-premise, flessibile e basato su abbonamento. Consente ai clienti di accelerare il time-to-value eliminando gli ostacoli legati alla gestione delle risorse e al lungo ciclo di approvvigionamento. I servizi Keystone consentono ai clienti di allineare l'economia alle loro priorità di business. Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/keystone/index.html#netapp-keystone-flex-subscription["qui"].
+
+*Cosa significa on-premise?*
+
+Per "on-premise" si intende un data center di proprietà del cliente o uno spazio di proprietà del cliente in una struttura di co-location. Il cliente è responsabile dello spazio, dell'alimentazione e del raffreddamento.
+
+*Quali sono i vantaggi dei servizi Keystone?*
+
+Alcuni vantaggi dei servizi Keystone sono:
+
+* Libera il personale IT da attività complesse legate allo storage e consente loro di concentrarsi sulla gestione delle applicazioni
+* Riduce gli investimenti iniziali di capitale
+* Consente ai clienti di soddisfare le proprie esigenze senza eseguire l'overprovisioning
+* Allinea i costi dello storage dei dati con le esigenze e le attività aziendali
+* Semplifica il provisioning dell'infrastruttura evitando complesse procedure di approvvigionamento organizzative
+* Protegge i dati on-premise
+* Consente un controllo adeguato su conformità, performance e sicurezza. Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/keystone/index.html#benefits-of-flex-subscription["qui"].
+

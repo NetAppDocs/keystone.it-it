@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_delete_file_server.html 
+keywords: netapp, keystone, delete, file, server, 
+summary: Keystone elimina il file server 
+---
+= Eliminare il file server
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+*Attenzione:* l'eliminazione di un file server comporta anche la cancellazione di quanto segue:
+
+* Tutti i backup associati al file server
+* Tutte le copie replicate di disaster recovery associate al file server. Non è possibile annullare l'eliminazione di un server.
+
+
+.Prima di iniziare
+Per eliminare un file server, è necessario prima eliminare tutte le condivisioni presenti sul server.
+
+.Fasi
+. Visualizzare il link:sewebiug_view_servers.html#view-servers["File Server"].
+. Individuare il server nell'elenco e fare clic sull'icona Delete (Elimina) del server. Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Azioni di visualizzazione elenco"]).
+. Nella finestra di dialogo Conferma eliminazione, immettere il nome del file server per confermare che si desidera eliminare il file server.
++
+image:sewebiug_image21.png["Errore: Immagine grafica mancante"]
+
+. Fare clic su *Conferma*. In questo modo viene creato un lavoro per eliminare il server.
+
+
+.Al termine
+* Quando si eliminano file server CIFS, l'oggetto computer di Active Directory rimane. Chiedere all'amministratore di Active Directory di rimuovere manualmente l'oggetto computer per il file server cancellato da Active Directory.
+* Il server di eliminazione viene eseguito come processo asincrono. È possibile:
++
+** Verificare lo stato del lavoro nell'elenco dei lavori. Per informazioni sul monitoraggio dei processi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+** Al termine del processo, verificare che il server sia stato rimosso dall'elenco Server.
+
+
+

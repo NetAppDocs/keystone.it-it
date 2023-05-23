@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_azure_capacity_pools.html 
+keywords: netapp, keystone, managing, azure, capacity, pools, 
+summary: Keystone che gestisce i pool di capacità di Azure 
+---
+= Gestione dei pool di capacità di Azure
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive come gestire i pool di capacità di Azure:
+
+
+NOTE: La gestione dei pool di capacità di Azure richiede l'accesso dell'amministratore del cliente.
+
+In questa sezione viene descritto come eseguire le seguenti operazioni:
+
+* Visualizzare un elenco dei pool di capacità di Azure
+* Aggiungere un pool di capacità Azure
+* Modificare i dettagli del pool di capacità di Azure
+* Eliminare un pool di capacità Azure
+
+
+
+
+== Visualizzare un elenco dei pool di capacità di Azure
+
+L'elenco dei pool di capacità di Azure visualizza un elenco di pool di capacità per un sottostrato e una posizione specificati. Per visualizzare l'elenco, selezionare *FILE SERVICES > Azure Capacity Pools* dal menu.
+
+L'elenco visualizza semplici informazioni su ciascun pool di capacità di Azure. Le icone di azione accanto a ciascun pool di capacità di Azure consentono di modificare o eliminare il pool di capacità di Azure.
+
+
+
+== Aggiungere un pool di capacità Azure
+
+In questa sezione viene descritto come aggiungere un pool di capacità Azure.
+
+.Prima di iniziare
+Sono necessari:
+
+* Il subtenant a cui appartiene la capacità
+* L'account ANF
+* Il livello di servizio
+* Un nome per il pool di capacità
+* Le dimensioni della piscina
+
+
+.Fasi
+. Selezionare *FILE SERVICES > Azure Capacity Pools* dal menu.
+. Fare clic su *Create* (Crea).
+. Nella finestra di dialogo Create Azure Capacity Pool, specificare il sottenant, l'account ANF, il livello di servizio, il nome e la dimensione.
+. Se necessario, aggiungere tag al pool di capacità.
+. Fare clic su *Create* (Crea). Quando viene creato il pool di capacità, lo stato cambia in `Succeeded` (Può essere visualizzato nell'elenco dei pool di capacità di Azure).
+
+
+
+
+== Modificare i dettagli del pool di capacità di Azure
+
+Utilizzare questo metodo per modificare i dettagli di un pool di capacità Azure. È possibile modificare il livello di servizio in base alle dimensioni del pool ed aggiungere o rimuovere tag.
+
+.Fasi
+. Selezionare *FILE SERVICES > Azure Capacity Pools* dal menu.
+. Dall'elenco, individuare il pool di capacità di Azure e fare clic sull'icona di modifica.
+. Nella finestra di dialogo Manage Azure Capacity Pool, apportare le modifiche necessarie.
+. Fare clic su *Aggiorna*.
+
+
+
+
+== Eliminare un pool di capacità Azure
+
+Utilizzare questo metodo per eliminare un pool di capacità Azure.
+
+.Fasi
+. Selezionare *FILE SERVICES > Azure Capacity Pools* dal menu.
+. Dall'elenco, individuare il pool di capacità di Azure e fare clic sull'icona di eliminazione.
+. Nella finestra di dialogo Conferma eliminazione, immettere il nome del pool di capacità Azure da eliminare.
+. Fare clic su *Conferma*.
+

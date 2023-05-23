@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: nkfsfaq_keystone_subscription.html 
+keywords: netapp, keystone, subscription, subscriptions, 
+summary: Abbonamento NetApp Keystone 
+---
+= Domande frequenti su NetApp Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le seguenti domande forniscono risposte alle domande frequenti sui servizi Keystone di NetApp Keystone.
+
+*Cosa viene offerto come parte di NetApp Keystone?* NetApp Keystone è un'offerta di servizi basati su abbonamento per servizi dati a blocchi, file e oggetti che possono essere implementati on-premise e gestiti da NetApp, un partner o un cliente.
+
+*Quali offerte di servizi storage vengono fornite come parte di Keystone?* per informazioni, vedere link:nkfsosm_performance.html["Livelli di servizio"]
+
+*Quali servizi aggiuntivi sono supportati?* la protezione avanzata dei dati (backup e disaster recovery) e il tiering del cloud ibrido con FabricPool sono servizi aggiuntivi che possono essere scelti a un costo aggiuntivo.
+
+*Quali livelli di servizio garantisce NetApp con il servizio?* in uno scenario gestito da NetApp, NetApp Keystone garantisce IOPS/TIB per lo storage sottoposto a provisioning e la latenza per ciascun livello di servizio.
+
+*A che cosa si associa Keystone?* Keystone esegue la mappatura su un singolo sito o su un singolo data center e può comprendere diversi livelli di servizio.
+
+*Quali sono i vantaggi dei livelli di servizio di tiering estremo e di tiering premium?* il tiering è abilitato nei livelli di servizio di tiering estremo e di tiering premium, che consentono di ridurre l'impatto dello storage e i costi associati. NetApp presuppone che il 25% dei dati sia caldo, mentre il restante 75% sia meno utilizzato o meno freddo e lo sposti nello storage a freddo. Inoltre, è possibile controllare i report sull'utilizzo per comprendere la frequenza di accesso ai dati e abilitare il servizio di tiering in base alle informazioni.
+
+*I partner possono vendere ai clienti una capacità superiore a quella acquistata da NetApp?* gli abbonamenti tenant non sono limitati dalla capacità acquistata dal partner. I partner possono vendere ai propri clienti una capacità superiore a quella acquistata da NetApp. La capacità in eccesso rispetto alla capacità acquistata viene indicata come oversubscription.
+
+*Le API vengono fornite per l'integrazione con gli strumenti del cliente?* Sì, le API RESTful sono disponibili per l'integrazione nelle tue applicazioni. Accedere a *SUPPORT> API Documentation* per consultare la documentazione API per i servizi Keystone. Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html["Guida alle API Keystone"].
+
+*Cos'è la capacità burst?* puoi aumentare e ridurre l'utilizzo fino al 20% rispetto alla capacità impegnata. L'utilizzo della capacità burst viene misurato quotidianamente e fatturato solo se utilizzato. Ad esempio, se la capacità impegnata è 100 TIB, è possibile eseguire il burst fino a 120 TIB.
+
+*È previsto un costo premium per l'utilizzo di burst?* l'utilizzo della capacità burst fino al 20% della capacità impegnata viene fatturato allo stesso tasso della capacità impegnata, per qualsiasi utilizzo superiore al 20% della capacità impegnata viene addebitato un costo premium del 50%.
+
+*Qual è il vantaggio della capacità burst?* la capacità Burst ti offre la flessibilità di consumare lo storage on-demand rispetto al commit a lungo termine.
+
+*Come viene allocata la capacità burst ai tenant?* la capacità Burst viene allocata ai partner, che la allocano ulteriormente ai loro clienti in base ai requisiti.
+
+*Dove posso vedere l'utilizzo della capacità burst e impegnata?* NetApp Service Engine dispone di dashboard integrati per segnalare la capacità consumata rispetto alla capacità impegnata.
+
+*Se raggiungerò una determinata percentuale di utilizzo della capacità impegnata, verranno inviate notifiche?* Sì, i tool di gestione forniscono notifiche sull'utilizzo della capacità attraverso il dashboard di NetApp Service Engine.
+
+*Come posso visualizzare l'utilizzo di Keystone?* NetApp Service Engine offre una vista dashboard con informazioni su tutti i servizi a cui sono stati sottoscritti e su quanto viene utilizzato. Per ulteriori informazioni su NetApp Service Engine, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_overview.html["qui"].
+
+*Come posso segnalare eventuali problemi con il servizio?* il supporto NetApp Keystone può essere raggiunto attraverso i seguenti canali:
+
+* Email di supporto: Mailto:keystone.services@netapp.com[keystone.services@netapp.com^]
+* Email di escalation: Mailto:keystone.escalations@netapp.com[keystone.escalations@netapp.com^]
+
+
+*Posso ordinare un nuovo servizio di storage?* Sì, è possibile richiedere un nuovo servizio di storage o un nuovo servizio di espansione allo storage dal portale NetApp Service Engine. La richiesta viene elaborata dal team operativo NetApp Keystone prima di renderla disponibile per l'utilizzo.
+
+*Gli aumenti degli impegni di storage sono immediatamente disponibili?* a seconda della quantità di capacità richiesta, viene effettuata una determinazione se la capacità è già implementata o se richiede la spedizione e l'installazione di apparecchiature aggiuntive.
+
+*I workload possono essere spostati tra i Tier?* Sì, i workload possono essere spostati tra i Tier, a condizione che l'utente abbia sottoscritto il Tier in cui si sta trasferendo il workload. Tuttavia, si sconsiglia di passare da un livello superiore a un livello inferiore perché può causare un peggioramento delle performance. Il processo si ottiene semplicemente modificando la condivisione file e modificando l'impostazione del livello di servizio.
+
+*Quale versione software (ad esempio, ONTAP) viene installata come predefinita?* a seconda del livello di servizio sottoscritto (ad esempio, ONTAP con servizi di file e blocco, SANtricity per blocco e StorageGRID per oggetto) il team di supporto installa la versione stabile più recente senza problemi di sicurezza o funzionalità.

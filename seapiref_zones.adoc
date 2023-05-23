@@ -1,0 +1,249 @@
+---
+sidebar: sidebar 
+permalink: seapiref_zones.html 
+keywords: netapp, keystone, zones, 
+summary: Keystone Zones 
+---
+= Zone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizzare i metodi elencati nella tabella seguente per creare, modificare ed eliminare le zone. Per le API che consentono di recuperare le zone, vedere API di amministrazione (Consumer).
+
+|===
+| Metodo HTTP | Percorso | Descrizione 
+
+
+| `POST` | `/v2.1/zones` | Creare una nuova zona. 
+
+
+| `PUT` | `/v2.1/zones/{name}` | Modificare i dettagli di una zona. 
+
+
+| `DELETE` | `/v2.1/zones/{name}` | Eliminare una zona. 
+|===
+
+
+== Attributi di zona
+
+Nella tabella seguente sono elencati gli attributi della zona.
+
+|===
+| Attributo | Tipo | Descrizione 
+
+
+| `id` | Stringa | l'identificatore univoco della zona. 
+
+
+| `name` | Stringa | Il nome della zona. 
+
+
+| `description` | Stringa | La descrizione della zona. 
+
+
+| `region_name` | Stringa | Il nome della regione in cui risiede la zona. 
+|===
+
+
+== Recuperare tutte le zone
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare tutte le zone o un sottoinsieme di zone. Specificando una regione verranno restituiti solo gli archivi di blocchi appartenenti a quel tenant.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/zones` | Recuperare le zone. | (Facoltativo) Nome della regione (stringa)
+`offset` e. `limit` – vedere link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Impaginazione comune"] 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+none
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "total_records": 5,
+    "sort_by": "created",
+    "order_by": "desc",
+    "offset": 2,
+    "limit": 1,
+    "records": [
+      {
+        "id": "5ce5d919b68d3b82dc34bef2",
+        "name": "au-west1-a",
+        "description": "au-west1-a",
+        "region": "au-west1"
+      }
+    ]
+  }
+....
+
+
+== Recuperare una zona in base al nome
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare una zona in base al nome della zona.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/zones/{name}` | Recuperare una zona in base al nome. | `Name (string)`: Nome della zona 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+none
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ce5d919b68d3b82dc34bef2",
+        "name": "au-west1-a",
+        "description": "au-west1-a",
+        "region": "au-west1"
+      }
+    ]
+  }
+}
+....
+
+
+== Creare una zona
+
+Utilizzare il metodo elencato nella tabella seguente per creare una zona.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `POST` | `/v2.1/zones` | Creare una nuova zona all'interno di una regione. | Nessuno 
+|===
+Attributi del corpo della richiesta richiesti: `name`, `description`, `region_name`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "MyZoneName",
+  "description": "DescriptionOfMyZone",
+  "region_name": "MyRegionName"
+}
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. New resource created.",
+    "verbose_message": "",
+    "code": 201
+  },
+  "result": {
+    "total_records": 1,
+    "records": [
+      {
+        "id": "5e61741c9b64790001fe9663",
+        "name": "MyZoneName",
+        "description": "DescriptionOfMyZone",
+        "region": "MyRegionName"
+      }
+    ]
+  }
+}
+....
+
+
+== Modificare una zona
+
+Per modificare una zona, utilizzare il metodo riportato nella tabella seguente.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `PUT` | `/v2.1/zones{name}` | Modificare una zona identificata dal nome. | `name (string)`: Nome della zona. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "MyZoneName",
+  "description": "NewDescriptionOfMyZone"
+}
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "total_records": 1,
+    "records": [
+      {
+        "id": "5e61741c9b64790001fe9663",
+        "name": "MyZoneName",
+        "description": "NewDescriptionOfMyZone",
+        "region": "MyRegionName"
+      }
+    ]
+  }
+}
+....
+
+
+== Eliminare una zona
+
+Per eliminare una zona, utilizzare il metodo indicato nella tabella seguente.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `DELETE` | `/v2.1/zones{name}` | Eliminare una singola zona identificata dal nome. Tutte le risorse di storage all'interno di una zona devono essere eliminate per prime. | `name (string)`: Nome della zona. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+none
+....
+*Esempio di corpo di risposta:*
+
+Nessun contenuto da restituire in caso di eliminazione riuscita.

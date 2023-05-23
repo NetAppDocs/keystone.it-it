@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_view_a_list_of_users.html 
+keywords: netapp, keystone, view, list, users, 
+summary: Keystone visualizza un elenco di utenti 
+---
+= Visualizzare un elenco di utenti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'elenco Users (utenti) visualizza un elenco di tutti gli utenti delle tenancy a cui l'utente connesso ha accesso. Per visualizzare l'elenco, selezionare Administration (Amministrazione) > Users (utenti) dal menu.
+
+L'elenco visualizza semplici informazioni su ciascun utente, ad esempio nome utente, nome e cognome, indirizzo e-mail, tenancy principale e data di creazione.
+
+Le icone delle azioni accanto a ciascun utente consentono di modificare o eliminare l'utente.

@@ -1,0 +1,387 @@
+---
+sidebar: sidebar 
+permalink: seapiref_tenants.html 
+keywords: netapp, keystone, tenants, 
+summary: Tenant Keystone 
+---
+= Tenant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizzare i metodi elencati nella tabella seguente per recuperare, creare, modificare ed eliminare i tenant.
+
+|===
+| Metodo HTTP | Percorso | Descrizione 
+
+
+| `GET` | `/v2.1/tenants` | Recuperare un elenco di tutti i tenant. 
+
+
+| `GET` | `/v2.1/tenants/{id}` | Recuperare un tenant in base all'ID tenant. 
+
+
+| `POST` | `/v2.1/tenants` | Creare un nuovo tenant. 
+
+
+| `PUT` | `/v2.1/tenants/{id}` | Modificare i dettagli di un tenant. 
+
+
+| `DELETE` | `/v2.1/tenants/{id}` | Eliminare un tenant. 
+|===
+
+
+== Attributi del tenant
+
+Nella tabella seguente sono elencati gli attributi del tenant.
+
+|===
+| Attributo | Tipo | Descrizione 
+
+
+| `id` | Stringa | Identificatore univoco del tenant. 
+
+
+| `code` | Stringa | Codice specificato dal cliente (o predefinito) che rappresenta il tenant. Questo attributo può contenere lettere minuscole, numeri e caratteri di sottolineatura. 
+
+
+| `name` | Stringa | Il nome del tenant. 
+
+
+| `zuora_account_name` | Stringa | Il nome dell'account di fatturazione: Il nome dell'abbonamento in Zuora. 
+
+
+| `zuora_account_number` | Stringa | Il numero dell'account di fatturazione: Il numero dell'abbonamento in Zuora. 
+
+
+| `description` | Stringa | La descrizione del tenant. 
+
+
+| `usage` | – | I servizi e i dettagli del servizio applicabili al tenant. Per ogni livello di servizio, questo attributo visualizza quanto segue: *Nome:* Nome del livello di servizio *Used_size_gb:* Nome del livello di servizio *Nome_ruolo:* ruolo utente (utente, amministratore, lettura, partner o root) 
+|===
+
+
+== Recuperare tutti i tenant
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare tutti i tenant o un sottoinsieme di tutti i tenant.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/tenants` | Recuperare tutti i tenant. | `offset` e. `limit` – vedere link:seapiref_netapp_service_engine_rest_apis.html#pagination>["Impaginazione comune"] 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+none
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 2 records.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 2,
+    "total_records": 23,
+    "sort_by": "created",
+    "order_by": "desc",
+    "offset": 0,
+    "limit": 2,
+    "records": [
+      {
+        "id": "5e7c3af7aab46c00014ce877",
+        "name": "MyTenant",
+        "zuora_account_name": "MyAccount",
+        "zuora_account_number": "A00000415",
+        "description": "",
+        "code": "mytenantcode",
+        "usage": {
+          "A-S00003875": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 10,
+              "burst": 0
+            },
+            {
+              "service_level": "standard",
+              "consumed": 1.94,
+              "committed": 30,
+              "burst": 0
+            }
+          ],
+          "A-S00004566": [
+            {
+              "service_level": "object",
+              "consumed": 3.31,
+              "committed": 300,
+              "burst": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "5d914499869caefed0f39eee",
+        "name": "MyOrg",
+        "zuora_account_name": "MyOrg Inc",
+        "zuora_account_number": "A00000415",
+        "description": "",
+        "code": "myorg",
+        "usage": {
+          "A-S00003875": [
+            {
+              "service_level": "standard",
+              "consumed": 12.33,
+              "committed": 30,
+              "burst": 0
+            },
+            {
+              "service_level": "object",
+              "consumed": 0,
+              "committed": 40,
+              "burst": 0
+            }
+          ],
+          "A-S00003969": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 5,
+              "burst": 0
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+....
+
+
+== Recuperare un tenant in base all'ID
+
+Utilizzare il metodo elencato nella tabella seguente per recuperare un tenant in base all'ID.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `GET` | `/v2.1/tenants/{id}` | Recuperare il tenant specificato dall'ID. | `id (string)`L'identificatore univoco del tenant. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+Esempio di corpo della richiesta:
+
+....
+none
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5e7c3af7aab46c00014ce877",
+        "name": "MyTenant",
+        "zuora_account_name": "MyAccount",
+        "zuora_account_number": "A00000415",
+        "description": "",
+        "code": "mytenantcode",
+        "usage": {
+          "A-S00003875": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 10,
+              "burst": 0
+            },
+            {
+              "service_level": "premium",
+              "consumed": 2.4,
+              "committed": 20,
+              "burst": 0
+            },
+            {
+              "service_level": "standard",
+              "consumed": 1.94,
+              "committed": 30,
+              "burst": 0
+            },
+            {
+              "service_level": "object",
+              "consumed": 0,
+              "committed": 40,
+              "burst": 0
+            }
+          ],
+          "A-S00003969": [
+            {
+              "service_level": "extreme",
+              "consumed": 0,
+              "committed": 5,
+              "burst": 0
+            },
+            {
+              "service_level": "standard",
+              "consumed": 0,
+              "committed": 30,
+              "burst": 0
+            }
+          ],
+          "A-S00004566": [
+            {
+              "service_level": "object",
+              "consumed": 3.31,
+              "committed": 300,
+              "burst": 0
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
+....
+
+
+== Creare un tenant
+
+Utilizzare il metodo elencato nella tabella seguente per creare un tenant.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `POST` | `/v2.1/tenants` | Creare un nuovo tenant. | Nessuno 
+|===
+Attributi del corpo della richiesta richiesti: `code`, `name`, `zuora_account_name`, `zuora_account_number`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "MyNewTenant",
+  "code": "mytenant",
+  "zuora_account_name": "string",
+  "zuora_account_number": "A00000415",
+  "description": "DescriptionOfMyTenant"
+}
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. New resource created.",
+    "verbose_message": "",
+    "code": 201
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed5ac802c356a0001a735af",
+        "name": "MyNewTenant",
+        "zuora_account_name": "string",
+        "zuora_account_number": "A00000415",
+        "description": "DescriptionOfMyTenant",
+        "code": "mytenant",
+        "usage": null
+      }
+    ]
+  }
+}
+....
+
+
+== Modificare il tenant
+
+Per modificare il tenant, utilizzare il metodo riportato nella tabella seguente.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `PUT` | `/v2.1/tenants/{id}` | Modificare il tenant specificato dall'ID. È possibile modificare il nome, i dettagli dell'abbonamento a Zuora (nome dell'account o numero di abbonamento) e la descrizione del tenant. | `id (string)`L'identificatore univoco del tenant. 
+|===
+Attributi del corpo della richiesta richiesti: `code`
+
+*Esempio di corpo della richiesta:*
+
+....
+{
+  "name": "MyNewTenant",
+  "code": "mytenant",
+  "zuora_account_name": "string",
+  "zuora_account_number": "A00000415",
+  "description": "New description of my tenant"
+}
+....
+*Esempio di corpo di risposta:*
+
+....
+{
+  "status": {
+    "user_message": "Okay. Returned 1 record.",
+    "verbose_message": "",
+    "code": 200
+  },
+  "result": {
+    "returned_records": 1,
+    "records": [
+      {
+        "id": "5ed5ac802c356a0001a735af",
+        "name": "MyNewTenant",
+        "zuora_account_name": "string",
+        "zuora_account_number": "A00000415",
+        "description": "New description of my tenant",
+        "code": "mytenant",
+        "usage": null
+      }
+    ]
+  }
+}
+....
+
+
+== Eliminare il tenant
+
+Utilizzare il metodo elencato nella tabella seguente per eliminare il tenant.
+
+|===
+| Metodo HTTP | Percorso | Descrizione | Parametri 
+
+
+| `DELETE` | `/v2.1/tenants/{id}` | Eliminare il tenant specificato dall'ID. | `id (string)`L'identificatore univoco del tenant. 
+|===
+Attributi del corpo della richiesta richiesti: `none`
+
+*Esempio di corpo della richiesta:*
+
+....
+none
+....
+*Esempio di corpo di risposta:*
+
+....
+No content for successful delete
+....

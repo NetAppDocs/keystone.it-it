@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_delete_a_file_share.html 
+keywords: netapp, keystone, delete, file, share, 
+summary: Keystone elimina una condivisione di file 
+---
+= Eliminare una condivisione di file
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive come eliminare una condivisione file.
+
+*Attenzione:*
+
+* Non è possibile annullare l'eliminazione di una condivisione. Una volta eliminato, i dati non possono essere ripristinati.
+* L'eliminazione di una condivisione di file principale comporta l'eliminazione di tutti i backup associati
+
+
+.Fasi
+. Visualizzare il link:sewebiug_view_shares.html#view-shares["Shares"].
+. Individuare la condivisione nell'elenco e fare clic sull'icona Delete (Elimina) per la condivisione. Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Azioni di visualizzazione elenco"]).
+. Nella finestra di dialogo Conferma eliminazione, immettere il nome della condivisione file per confermare che si desidera eliminare la condivisione file.
++
+image:sewebiug_image25.png["Errore: Immagine grafica mancante"]
+
+. Fare clic su *Conferma*. In questo modo viene creato un lavoro per eliminare la condivisione.
+
+
+.Al termine
+La funzione di eliminazione della condivisione viene eseguita come processo asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori. Per informazioni sul monitoraggio dei processi, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+* Al termine del processo, verificare che la condivisione sia stata rimossa dall'elenco delle condivisioni.
+

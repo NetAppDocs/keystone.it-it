@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_view_servers.html 
+keywords: netapp, keystone, view, servers, 
+summary: Server Keystone view 
+---
+= Visualizza server
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'elenco Servers (Server) visualizza i file server appartenenti al tenant selezionato. Per visualizzare l'elenco, selezionare file Services (servizi file) > Servers (Server) dal menu.
+
+L'elenco visualizza semplici informazioni su ciascun server, ad esempio:
+
+* Nome del server
+* Indirizzo IP
+* Subtenant
+* Zona
+* Stato operativo
+* Protocolli in uso (NFS, CIFS)
+* Il nome del server CIFS (se pertinente).
++
+Per ulteriori informazioni su come utilizzare le funzioni di un elenco, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Vista elenco"].
+
+

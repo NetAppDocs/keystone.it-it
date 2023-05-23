@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: aqos-kfs.html 
+keywords: aqos, qos, adaptive quality of service, quality of service 
+summary: 'Qualità adattiva del servizio (AQoS) Keystone' 
+---
+= Qualità adattiva del servizio in Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La qualità del servizio (QoS) dello storage è una tecnologia critica che garantisce che le applicazioni ottengano performance costanti e prevedibili. Senza QoS, alcuni carichi di lavoro, come quelli per l'avvio di più sistemi, possono consumare la maggior parte o tutte le risorse per un determinato periodo e influire su altri carichi di lavoro. Per informazioni su QoS, vedere https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Garantire il throughput con la panoramica QoS"^].
+
+
+
+== QoS adattiva
+
+La QoS adattiva (AQoS) viene utilizzata dai servizi Keystone per mantenere dinamicamente il rapporto IOPS/TIB in base alle dimensioni del volume. Per informazioni sui criteri AQoS, vedere https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html#about-adaptive-qos["Informazioni su QoS adattiva"^].
+
+Keystone offre policy AQoS che è possibile configurare una volta che il cluster è in produzione. Assicurarsi che tutti i volumi siano associati alle policy AQoS corrette già create e disponibili nel sistema.
+
+Un volume ONTAP non è conforme se non è stato applicato un criterio AQoS. Un volume senza policy QoS è l'ultimo dell'elenco di priorità per il sistema a fornire tutte le operazioni input-output disponibili. Tuttavia, se sono disponibili operazioni input-output, il volume potrebbe consumare tutti gli iOS disponibili.
+
+
+NOTE: Se non sono state applicate policy AQoS ai volumi, tali volumi verranno misurati e addebitati al livello di servizio più elevato in base all'abbonamento. Ciò potrebbe causare cariche di burst non intense.
+
+
+
+=== Impostazioni QoS adattive
+
+Le impostazioni di QoS adattivo (AQoS) variano in base ai livelli di servizio.
+
+|===
+
+
+| *Nome policy* | *Extreme* e *Extreme Tiering* | *Premium* e *Premium Tiering* | *Standard* | *Valore* 
+
+
+| *IOPS previsti* | 6,144 | 2,048 | 128 | 64 
+
+
+| *Allocazione IOPS prevista* 4+| Spazio allocato 
+
+
+| *IOPS di picco* | 12,288 | 4,096 | 512 | 128 
+
+
+| *Allocazione IOPS massima* 4+| Spazio allocato 
+
+
+| *Dimensione blocco* 4+| 32.000 
+|===

@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_site_requirements.html 
+keywords: netapp, keystone, sire, requirements, 
+summary: Requisiti del sito Keystone 
+---
+= Requisiti del sito
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Esistono diversi requisiti per abilitare i servizi NetApp Keystone nel tuo ambiente, come spazio, rack, PDU, alimentazione, e raffreddamento, con ulteriori requisiti di sicurezza e di rete discussi in seguito.
+
+
+
+== Spazio
+
+Spazio per l'hosting dell'infrastruttura Keystone (fornito dai clienti). NetApp fornisce le specifiche di peso in base alla configurazione finale.
+
+
+
+== Rack
+
+Rack a quattro montanti nell'offerta gestita dal cliente (forniti dai clienti). Nell'offerta gestita da NetApp, NetApp o il cliente possono fornire i rack, a seconda dei requisiti. NetApp offre 42 rack profondi.
+
+
+
+== PDU
+
+Le unità di distribuzione dell'alimentazione (PDU) devono essere collegate a due circuiti separati e protetti con prese C13 sufficienti. Nell'offerta gestita dal cliente, in alcuni casi, sono richiesti punti vendita C19. Nell'offerta gestita da NetApp, NetApp o il cliente possono fornire le PDU, a seconda dei requisiti.
+
+
+
+== Potenza
+
+Fornire l'alimentazione necessaria. NetApp fornirà le specifiche dei requisiti di alimentazione in base alla classificazione a 200 V (tipico A, massimo A, tipico W, massimo W, tipo di cavo di alimentazione, e quantità), in base alla configurazione finale. Tutti i componenti sono dotati di alimentatori ridondanti. NetApp fornirà i cavi di alimentazione in-cabinet.
+
+
+
+== Raffreddamento
+
+NetApp è in grado di fornire le specifiche dei requisiti di raffreddamento (BTU tipica, BTU massima), in base alla configurazione finale e ai requisiti.
+
+
+
+== Networking
+
+A seconda dei requisiti del cliente e dei controller di storage utilizzati, NetApp è in grado di fornire connettività da 10 GB, 40 GB e 100 GB presso la sede del cliente.
+
+NetApp fornisce i ricetrasmettitori necessari solo per i dispositivi dell'infrastruttura Keystone forniti da NetApp. È necessario fornire i ricetrasmettitori necessari per i dispositivi del cliente e il cablaggio ai dispositivi dell'infrastruttura Keystone forniti da NetApp.

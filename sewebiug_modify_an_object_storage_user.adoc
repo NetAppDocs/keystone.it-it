@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_an_object_storage_user.html 
+keywords: netapp, keystone, modify, object, storage, user, 
+summary: Keystone consente di modificare un utente dello storage a oggetti 
+---
+= Modificare un utente dello storage a oggetti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizzare questo metodo per modificare i dettagli di un utente dello storage a oggetti, ad esempio il nome utente e il gruppo a cui sono assegnati.
+
+.Fasi
+. Visualizzare l'utente dello storage a oggetti link:sewebiug_view_the_object_storage_group_and_users.html["Visualizzare utenti e gruppi di storage a oggetti"].
+. Assicurarsi di aver selezionato il subtenant corretto e di aver fatto clic sulla scheda *Users* (utenti).
+. Individuare l'utente nell'elenco e fare clic sull'icona di modifica corrispondente.
++
+Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Azioni di visualizzazione elenco"].
+
+. Nella finestra di dialogo *Edit User* (Modifica utente), modificare il gruppo di storage a oggetti per l'utente.
+. Fare clic su *Aggiorna*. In questo modo viene creato un lavoro per aggiornare il gruppo per l'utente. Per informazioni sul monitoraggio dei processi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+

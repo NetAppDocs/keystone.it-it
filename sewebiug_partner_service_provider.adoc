@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_partner_service_provider.html 
+keywords: netapp, service, engine, web, portal, partner, service provider 
+summary: NetApp service Engine partner, funzioni di service provider 
+---
+= Ruoli e operazioni di service provider e clienti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+In base al tuo ruolo di service provider o partner (utilizzato in modo intercambiabile) o di amministratore di un cliente o tenant (utilizzato in modo intercambiabile), vengono determinate le visualizzazioni e le funzioni del portale Web di NetApp Service Engine.
+
+
+
+== Attività che è possibile eseguire come amministratore del provider di servizi
+
+In qualità di amministratore di service provider in un ambiente multi-tenant, è possibile eseguire le funzioni di provisioning, reporting, fatturazione e gestione dei clienti con sottoscrizioni proprie, tramite l'interfaccia utente Web di NetApp Service Engine. È possibile eseguire le seguenti funzioni:
+
+* Visualizzare lo storage sottoscritto e fornito come parte del servizio di abbonamento Keystone.
++
+
+NOTE: In qualità di service provider, puoi vendere ai tuoi clienti una capacità superiore a quella acquistata da NetApp (oversubscription). Gli abbonamenti ai tenant possono estendersi oltre il periodo di abbonamento corrente a Keystone, tuttavia viene visualizzato un avviso al momento della creazione dell'abbonamento e in dashboard/report.
+
+* Creare, visualizzare, modificare ed eliminare tenant, subtenant, e utenti.
+* Visualizza zone e regioni per i tuoi abbonamenti.
+* Gestire e ospitare più tenant all'interno del servizio di abbonamento Keystone: Creare e gestire gli abbonamenti tenant e visualizzare i dettagli dell'abbonamento Keystone.
++
+
+NOTE: Le sottoscrizioni al tenant possono essere create in base alle corrispondenti sottoscrizioni zone e Keystone Keystone. Vengono creati in base ai livelli di servizio forniti sotto la capacità sottoscritta del tuo abbonamento Keystone.
+
+* Creare file server o archivi a blocchi e inizializzare lo storage a blocchi, file e oggetti, in base ai requisiti di rete per il provisioning di ciascun tipo di storage per i tenant.
+* È inoltre possibile creare e gestire subnet per i tenant,
+* Visualizza condivisioni di file, dischi e bucket creati come parte del tuo abbonamento Keystone. Inoltre, creare e gestire utenti e gruppi di storage a oggetti.
+* Crea report per il consumo rispetto al tuo abbonamento Keystone, agli abbonamenti ai tenant e all'utilizzo per tutti i tenant, per utilizzarlo nei rispettivi sistemi di fatturazione e classificazione.
+* Visualizza la fatturazione e il reporting per tutti i tenant e i clienti e solo per lo storage sottoscritto o fornito.
+* Visualizza e gestisci le richieste di servizio inoltrate dai clienti all'interno del tuo strumento di richiesta di servizio (partner/service provider) (integrato con OpsRamp / GSSC).
+
+
+
+
+== Attività che è possibile eseguire in qualità di amministratore del cliente/tenant
+
+In qualità di amministratore del tenant, puoi visualizzare i dettagli dell'abbonamento del tuo tenancy ed eseguire attività amministrative per i tuoi subtenant. È possibile eseguire le seguenti operazioni:
+
+* Visualizzare lo storage sottoscritto e fornito come parte del servizio di abbonamento tenant.
+* Gestisci e modifica i subtenant per il tuo tenancy.
+* Visualizzare zone, regioni, sottosenant e subnet.
+* Visualizzare i file server creati dai provider di servizi.
+* Creare condivisioni di file, dischi e bucket e assegnare loro i livelli di servizio.
+* Visualizzare i report per tenant e subtenant da *Report > utilizzo capacità* per visualizzare i dati di consumo solo per lo storage sottoscritto o fornito per il tenancy e i subtenant.
+* Visualizza i report per tenant e subtenant da *Report > Performance* per visualizzare le performance e la compliance del servizio per la tua tenancy per ogni servizio sottoscritto e servizi aggiuntivi (Data Protection e Advanced Protection).
++
+
+NOTE: Per gli abbonamenti aggiuntivi, è possibile utilizzare il tool per le richieste di servizio.
+
+

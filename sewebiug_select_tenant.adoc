@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_select_tenant.html 
+keywords: netapp, keystone select, tenant, 
+summary: Tenant Keystone Select 
+---
+= Selezionare il tenant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Quando si lavora con l'interfaccia Web di NetApp Service Engine, tutti i dati visualizzati e le attività eseguite si riferiscono al tenant selezionato. È possibile visualizzare il tenant nella parte superiore della schermata, come mostrato di seguito.
+
+image:sewebiug_image8.png["Errore: Immagine grafica mancante"]
+
+La maggior parte degli utenti dell'interfaccia Web di NetApp Service Engine ha accesso a un solo tenant. Tuttavia, nei casi in cui è possibile accedere a più tenant, è possibile modificarlo selezionando un altro tenant nel campo tenant.

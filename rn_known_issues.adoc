@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: rn_known_issues.html 
+keywords: netapp, keystone, release notes, known issues 
+summary: Problemi noti di NetApp Service Engine 
+---
+= Problemi noti di NetApp Service Engine
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+I seguenti problemi noti sono stati segnalati in NetApp Service Engine. Questi problemi potrebbero verificarsi quando si effettua il provisioning o si utilizza lo storage come parte delle sottoscrizioni Keystone.
+
+[cols="3*"]
+|===
+| Problema noto | Descrizione | Soluzione alternativa 
+
+
+| Limitazioni della protezione sincrona dei dati | Si verifica un problema a causa del quale le VLAN, gli spazi IP e i domini di trasmissione non sono definiti sul partner secondario di un cluster MetroCluster. Questo problema può influire sul ripristino dei dati dall'area di replica. | Inviare una richiesta di servizio a GSSC per eseguire una configurazione di rete manuale sul cluster del partner. La configurazione di rete può essere eseguita in anticipo se i componenti di rete (VLAN, IPSpace e domini Broadcast) sono noti. 
+
+
+| Limitazioni nella disattivazione e nell'eliminazione dei volumi abilitati per il disaster recovery | Se in una VM di storage sono presenti due o più volumi abilitati per il disaster recovery, il disaster recovery non può essere disattivato per una condivisione di file o un disco. | Inoltrare una richiesta di servizio a GSSC per risolvere il problema. 
+
+
+| Limitazioni nell'eliminazione dei file server e degli archivi a blocchi abilitati per il disaster recovery | L'eliminazione di un archivio di blocchi o di una condivisione di file abilitati per il disaster recovery potrebbe non riuscire perché il peering non viene rimosso a causa di un timeout. | L'eliminazione non riuscita è disponibile in "Contatta il supporto" e il supporto verrà notificato tramite OpsRamp Ticket. 
+
+
+| Limitazione durante la creazione di più snapshot | Quando vengono attivati più snapshot per la creazione, la pagina Web visualizza inizialmente solo l'ultimo snapshot emesso. | Job automatico raccoglie le altre istantanee entro 15 minuti. 
+
+
+| I file server abilitati per il disaster recovery sui controller secondari non vengono cancellati. | Tutti i volumi primari e le relazioni di replica vengono rimossi. Tuttavia, l'oggetto di disaster recovery non viene eliminato. Questo oggetto non consuma alcuna capacità o rete. | Non esiste una soluzione per questo problema. 
+
+
+| Limitazione nella disattivazione del backup sui volumi | Inoltrare una richiesta di servizio a GSSC per risolvere il problema. | Non esiste una soluzione per questo problema. 
+
+
+| Limitazione nell'eliminazione delle subnet di rete | I clienti non sono in grado di eliminare le subnet di rete. | Inoltrare una richiesta di servizio a GSSC per risolvere il problema. 
+
+
+| Limitazione nell'eliminazione della VLAN mediante API | L'eliminazione di una VLAN associata a una subnet lascia un stub di subnet vuoto nell'interfaccia utente. | Inoltrare una richiesta di servizio a GSSC per risolvere il problema. 
+
+
+| Limitazione nell'importazione di VM di storage con subnet non standard | Le VM di storage (macchine virtuali di storage, note anche come SVM), create al di fuori di NetApp Service Engine non possono essere operative a causa di una subnet non standard. Le VM storage vengono importate con lo stato `Contacted Support`. | Inoltrare una richiesta di servizio a GSSC per risolvere il problema. 
+
+
+| I report di fatturazione e capacità potrebbero essere imprecisi negli ambienti gestiti da NetApp | In un ambiente gestito da NetApp, i report di capacità e fatturazione generati dall'interfaccia utente potrebbero essere influenzati a causa della mancanza di metriche delle dimensioni del LUN e dei livelli di servizio sui volumi di backup. | Inoltrare una richiesta di servizio a GSSC per risolvere il problema. 
+
+
+ a| 
+Ritardo di 15 minuti nel reporting della capacità impegnata sui grafici dopo la creazione dell'abbonamento.
+ a| 
+Quando viene creata una sottoscrizione al tenant e i grafici dei report vengono controllati immediatamente (entro 15 minuti dalla creazione della sottoscrizione), la capacità impegnata non viene riportata correttamente.
+ a| 
+Controllare i grafici dei report almeno 15 minuti dopo la creazione dell'abbonamento.
+
+
+
+ a| 
+La modifica dei livelli di servizio non sposta i volumi
+ a| 
+Se due aggregati diversi nello stesso cluster vengono utilizzati per due livelli di servizio, la modifica del livello di servizio su un volume in un altro non sposta il volume sull'altro aggregato. Viene applicata solo la policy QoS adattiva.
+ a| 
+Inoltrare una richiesta di servizio a GSSC per risolvere il problema.
+
+
+
+ a| 
+La creazione di FCP SVM richiede l'attivazione iSCSI
+ a| 
+Per creare una macchina virtuale di storage (SVM) e abilitare il supporto FCP su di essa, è necessaria un'attivazione dell'interfaccia iSCSI.
+ a| 
+Inoltrare una richiesta di servizio a GSSC per risolvere il problema.
+
+
+
+ a| 
+Limitazione con più gruppi di host con lo stesso iniziatore
+ a| 
+Se vengono creati più gruppi di host con lo stesso nome di iniziatore e i dischi vengono mappati a tutti i gruppi di host, i dischi vengono mappati a un solo gruppo di host sul cluster.
+ a| 
+Inoltrare una richiesta di servizio a GSSC per risolvere il problema.
+
+|===

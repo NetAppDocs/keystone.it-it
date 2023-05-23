@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_managing_tenants_and_subtenants.html 
+keywords: netapp, keystone, managing, subtenants, 
+summary: Keystone gestisce i subtenant 
+---
+= Gestione di tenant e subtenant
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile visualizzare e gestire tenant e subtenant utilizzando NetApp Service Engine. Il tenancy iniziale viene impostato dal supporto NetApp per service provider/partner e tenant. La regione, la zona e l'abbonamento sono già configurati dal supporto e sono disponibili quando si creano tenant e subtenant sotto il proprio tenancy.
+
+
+
+== Tenant
+
+Gli amministratori dei partner possono creare, modificare ed eliminare un tenant da *AMMINISTRAZIONE* > *tenant*. Gli amministratori del tenant possono visualizzare solo le rispettive sottoscrizioni e i relativi subtenant. Per gli inquilini che si trovano sotto il proprio tenancy partner, è anche possibile definire la rete.
+
+
+
+=== Creare un tenant
+
+È possibile creare un tenant se si è un amministratore del partner. È inoltre possibile creare e gestire reti per ciascun tenant. Per ulteriori informazioni sulla creazione di reti, vedere link:sewebiug_define_network_configurations.html["Definire le configurazioni di rete con le subnet"].
+
+.Fasi
+. Fare clic su *Crea tenant*.
+. Aggiungere un nome e il codice. Il codice che rappresenta il tenant deve essere univoco all'interno di un'istanza di NetApp Service Engine e deve essere composto da caratteri minuscoli.
+. Fare clic su *Create* (Crea).
+
+
+
+NOTE: È possibile modificare solo il nome e la descrizione di un tenant esistente. Inoltre, non è possibile eliminare un tenant a cui sono associati subtenant o componenti di storage.
+
+
+
+== Subtenant
+
+Se sei un amministratore del partner o un amministratore del tenant, puoi visualizzare e gestire i subtenant.
+
+
+
+=== Creare un sottotenant
+
+Se sei un amministratore partner o un amministratore tenant, puoi creare, modificare ed eliminare un subtenant da *AMMINISTRAZIONE* > *subtenant*. È inoltre possibile creare e gestire le reti per ogni sottostruttura.
+
+Per ulteriori informazioni sulla creazione di reti, vedere link:sewebiug_define_network_configurations.html["Definire le configurazioni di rete con le subnet"].
+
+.Fasi
+. Fare clic su *Create subtenant* (Crea subtenant).
+. Aggiungere un nome e il codice. Il codice che rappresenta il sottenant deve essere univoco all'interno di un'istanza di NetApp Service Engine e deve essere composto da caratteri minuscoli.
+. Fare clic su *Create* (Crea).
+
+
+
+NOTE: È possibile modificare solo il nome di un subtenant esistente. Inoltre, non è possibile eliminare un subtenant a cui sono associati componenti di storage.

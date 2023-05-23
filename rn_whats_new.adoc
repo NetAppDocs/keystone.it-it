@@ -1,0 +1,249 @@
+---
+sidebar: sidebar 
+permalink: rn_whats_new.html 
+keywords: 'netapp, keystone, release notes, new features, what"s new,' 
+summary: Nuove funzionalità di NetApp Service Engine 
+---
+= Novità di questa release di servizi NetApp Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le note di rilascio forniscono informazioni sulle nuove funzionalità e sui miglioramenti introdotti nei servizi di abbonamento NetApp Keystone, oltre alle limitazioni e alle correzioni note.
+
+Le seguenti funzionalità sono state introdotte in diverse versioni di NetApp Service Engine per supportare le funzionalità avanzate offerte dai servizi di abbonamento Keystone:
+
+
+
+== Funzionalità introdotte in NetApp Service Engine 2.2
+
+Le nuove funzionalità di questa release includono una dashboard rinnovata per nuovi widget su fatturazione, utilizzo della capacità, richieste di servizio e avvisi. Questa versione include anche nuove schermate per la gestione della fatturazione e degli avvisi e la ridenominazione del menu servizi registrati in servizi cloud.
+
+
+
+=== Vista dashboard migliorata
+
+La dashboard di NetApp Service Engine è stata riprogettata per includere i seguenti nuovi componenti:
+
+* *Utilizzo della capacità* per visualizzare la capacità utilizzata per i servizi sottoscritti.
+* *Addebiti mensili (fatturazione)* per visualizzare gli addebiti mensili aggregati per tutti gli abbonamenti.
+* *Avvisi* per visualizzare il riepilogo degli avvisi più recenti nell'ambiente in uso.
+* *Richieste di servizio* per visualizzare l'elenco delle richieste di servizio più recenti generate nel proprio ambiente. Per ulteriori informazioni, vedere link:sewebiug_dashboard.html["Visualizza la dashboard di Keystone"].
+
+
+
+
+=== Nuova schermata di fatturazione
+
+È stata aggiunta una nuova schermata *Billing* per facilitare l'accesso e il calcolo dei dati di fatturazione storici. La schermata offre una vista olistica dei costi mensili associati a tutti i servizi sottoscritti.
+
+Accedere a questa schermata dal widget *addebiti mensili* nella dashboard o da *AMMINISTRAZIONE > fatturazione* per visualizzare una suddivisione mensile a livello di abbonamento dei costi per tutti i servizi sottoscritti. I dati di fatturazione si basano sull'utilizzo della capacità burst e impegnata e sono disponibili per l'utilizzo nei mesi precedenti. Per ulteriori informazioni, vedere link:sewebiug_billing.html["Visualizza fatturazione"].
+
+
+
+=== Schermata New Alerts (nuovi avvisi
+
+In questa release viene introdotta una nuova schermata *Alerts* che elenca tutti gli avvisi generati dal sistema e dagli utenti. La schermata consente inoltre di creare messaggi di avviso personalizzati per gli eventi critici relativi all'ambiente e di trasmetterli ad altri utenti. Possono visualizzare e chiudere gli avvisi, in base alle esigenze. Per ulteriori informazioni, vedere link:sewebiug_alerts.html["Creare e gestire gli avvisi"].
+
+
+
+=== Interfaccia utente migliorata
+
+Sono stati apportati i seguenti miglioramenti all'interfaccia utente di NetApp Service Engine:
+
+* Il menu *Dashboard* nel riquadro di navigazione sinistro presenta un punto di navigazione intuitivo per accedere alla dashboard.
+* Il menu *servizi abbonamento* nel riquadro di navigazione a sinistra è stato rinominato *servizi cloud*. + + +
+
+
+
+
+== Funzionalità introdotte in NetApp Service Engine 2.1
+
+Le nuove funzionalità di questa release includono il supporto della multi-tenancy in un ambiente Keystone e la funzionalità di tiering che facilita lo spostamento dei dati inattivi in un Tier locale o cloud a basso costo.
+
+
+
+=== Presentazione dei servizi di abbonamento Keystone per i service provider
+
+NetApp Service Engine supporta ora la gestione di un ambiente multi-tenant da parte di un service provider. È possibile eseguire le funzioni di provisioning, reporting, fatturazione e gestione dei clienti che dispongono di sottoscrizioni personalizzate. Per supportare questa funzione, sono stati apportati i seguenti miglioramenti:
+
+* *Dashboard:* il Dashboard visualizza le informazioni sulle sottoscrizioni allo storage, ad esempio i livelli di servizio, l'utilizzo della capacità per ciascun livello di servizio e i servizi di protezione dei dati aggiuntivi, per un numero di abbonamento specifico. In qualità di service provider, puoi visualizzare i dettagli dell'abbonamento a NetApp Keystone e degli abbonamenti al tenant. In qualità di amministratore del tenant, è possibile visualizzare i dettagli di tutte le sottoscrizioni del tenant per il tenant.
+* *Creazione di report:* è possibile creare report sulla capacità e sulle performance in relazione all'utilizzo dell'abbonamento a NetApp Keystone e anche per l'utilizzo del tenant. In qualità di amministratore partner, puoi visualizzare il report della capacità per l'utilizzo dell'abbonamento da *Report* > *Keystone Usage*. In qualità di amministratore del partner, è possibile visualizzare i report sull'utilizzo della capacità per un tenant specifico da *Report* > *utilizzo tenant*/*utilizzo capacità*. In qualità di amministratore del tenant, è possibile visualizzare i report dei tenant da *Report* > *utilizzo del tenant*.
+* *Abbonamento:* in qualità di amministratore partner, puoi visualizzare e aggiornare le tue sottoscrizioni e i tuoi abbonamenti tenant rispettivamente da *ABBONAMENTI* > *Abbonamenti Keystone* e *ABBONAMENTI* > *Abbonamenti tenant*. In qualità di amministratore del tenant, è possibile visualizzare solo le sottoscrizioni del tenant.
+* *Utenti:* in base al tuo ruolo, puoi assegnare i privilegi a un utente nuovo o esistente all'interno di una locazione in base ai requisiti. Il ruolo può essere amministratore di NetApp, amministratore di NetApp con privilegi di sola lettura, amministratore del partner o amministratore del tenant. In qualità di amministratore del partner, è possibile assegnare ai nuovi utenti solo ruoli di amministratore del partner o del tenant. Un utente amministratore tenant può assegnare solo il ruolo di amministratore tenant ad altri utenti.
+* *Menu reti:* in qualità di amministratore del partner, è possibile visualizzare le reti definite per il proprio tenancy. È inoltre possibile creare subnet per il proprio subtenant e zona da *RETI* > *subnet*. Ciò è necessario durante il provisioning dello storage da parte dei clienti finali o dei subtenant.
+* Supporto API: Il `/tenants/{tenant_id}/zones/{zone_name}/subnets` e. `/tenants/{tenant_id}/zones/{zone_name}/subnets/{id}/tags` Le API vengono offerte come parte di questa release per creare e visualizzare le subnet per i subtenant.
+
+
+Per ulteriori informazioni su questa funzionalità, consultare i seguenti collegamenti:
+
+* link:nkfsosm_overview.html["Modello operativo, ruoli e responsabilità"]
+* link:nkfsosm_tenancy_overview.html["Tenancy e multi-tenancy in Keystone"]
+* link:sewebiug_dashboard.html["Visualizza la dashboard di Keystone"]
+* link:sewebiug_working_with_reports.html["Visualizzare i report"]
+* link:sewebiug_managing_subscriptions.html["Gestione delle sottoscrizioni"]
+* link:sewebiug_managing_tenants_and_subtenants.html["Gestione di tenant e subtenant"]
+* link:sewebiug_define_network_configurations.html["Definire le reti per tenant e subtenant"]
+
+
+
+
+=== Tiering
+
+Il servizio Keystone di NetApp Keystone include ora una funzionalità di tiering che sfrutta la tecnologia NetApp FabricPool. Identifica i dati utilizzati con minore frequenza e i Tier IT in un cold storage di proprietà, implementato e gestito on-premise da NetApp. Puoi scegliere di tiering iscrivendoti ai livelli di servizio di tiering estremo o di tiering premium.
+
+Le seguenti API sono state modificate per includere nuovi valori di attributo per i nuovi livelli di servizio di tiering:
+
+* API di file Services
+* API di archiviazione a blocchi
+
+
+Per ulteriori informazioni, consultare i seguenti collegamenti:
+
+* link:nkfsosm_tiering.html["Tiering"]
+* link:nkfsosm_performance.html["livelli di servizio"]
+
+
+{sp} + {sp} + {sp}
+
+
+
+== Funzionalità introdotte in NetApp Service Engine 2.0.1
+
+Le nuove funzionalità di questa release includono:
+
+
+
+=== Supporto esteso ai Cloud Volumes Services per Google Cloud Platform
+
+Il motore di servizi NetApp è ora in grado di supportare i servizi Cloud Volumes per la piattaforma cloud Google (GCP) oltre al supporto esistente per Azure NetApp Files. È ora possibile gestire i servizi sottoscritti, eseguire il provisioning e modificare i volumi Google Cloud da NetApp Service Engine.
+
+
+NOTE: Gli abbonamenti ai servizi Cloud Volumes vengono gestiti al di fuori di NetApp Service Engine. Le credenziali pertinenti vengono fornite a NetApp Service Engine per consentire la connessione ai servizi cloud.
+
+
+
+=== Possibilità di gestire gli oggetti forniti al di fuori di NetApp Service Engine
+
+I volumi (dischi e condivisioni di file) già presenti nell'ambiente del cliente e appartenenti alle VM di storage configurate nel motore di servizio NetApp possono ora essere visualizzati e gestiti come parte dell'abbonamento a NetApp Keystone. I volumi forniti al di fuori del NetApp Service Engine sono ora elencati nelle pagine *shares* e *Disks* con i codici di stato appropriati. Un processo in background viene eseguito a intervalli periodici e importa i carichi di lavoro esterni all'interno dell'istanza di NetApp Service Engine.
+
+I dischi e le condivisioni di file importati potrebbero non essere nello stesso standard dei dischi e delle condivisioni di file esistenti su NetApp Service Engine. Dopo l'importazione, i dischi e le condivisioni di file vengono classificati con `Non-Standard` stato. È possibile inoltrare una richiesta di servizio da *Support > Service Request > New Service Request* per la standardizzazione e la gestione attraverso il portale NetApp Service Engine.
+
+
+
+=== Integrazione di SnapCenter con il motore di servizio NetApp
+
+Come parte dell'integrazione di SnapCenter con il motore di servizi NetApp, è ora possibile clonare i dischi e le condivisioni di file dalle istantanee create nel proprio ambiente SnapCenter, al di fuori dell'istanza del motore di servizio NetApp. Durante la clonazione di una condivisione di file o di un disco da un'istantanea esistente sul portale NetApp Service Engine, queste istantanee vengono elencate per la selezione. Un processo di acquisizione viene eseguito in background a intervalli periodici per importare le snapshot all'interno dell'istanza di NetApp Service Engine.
+
+
+
+=== Nuova schermata per la gestione dei backup
+
+La nuova schermata *Backup* consente di visualizzare e gestire i backup dei dischi e delle condivisioni di file create nel proprio ambiente. È possibile modificare i criteri di backup, interrompere la relazione di backup con il volume di origine ed eliminare il volume di backup con tutti i punti di ripristino. Questa funzione consente di conservare i backup (come backup orfani) anche quando i volumi di origine vengono cancellati, per un ripristino successivo. Per ripristinare una condivisione di file o un disco da un punto di ripristino specifico, è possibile inoltrare una richiesta di servizio da *Support > Service Request > New Service Request* (supporto > richiesta di servizio > Nuova richiesta di servizio).
+
+
+
+=== Provisioning per limitare l'accesso degli utenti sulle condivisioni CIFS
+
+È ora possibile specificare l'elenco di controllo di accesso (ACL) per limitare l'accesso dell'utente su una condivisione CIFS (SMB) o multiprotocollo. È possibile specificare utenti o gruppi Windows in base alle impostazioni di Active Directory (ad) da aggiungere all'ACL.link:https://docs.netapp.com/us-en/keystone/sewebiug_create_a_new_file_share.html#steps["Scopri di più"].
+
+
+
+== Funzionalità introdotte in NetApp Service Engine 2.0
+
+Le nuove funzionalità di questa release includono:
+
+
+
+=== Supporto MetroCluster
+
+Il motore di servizi NetApp supporta i siti configurati con configurazioni MetroCluster. MetroCluster è una funzionalità di protezione dei dati di ONTAP che fornisce obiettivi del punto di ripristino (RPO) 0 o obiettivi del tempo di ripristino (RTO) 0 utilizzando il mirror sincrono per lo storage a disponibilità continua. Il supporto MetroCluster si traduce in una funzionalità di disaster recovery sincrono all'interno del motore di servizi NetApp. Ogni lato di un'istanza di MetroCluster viene registrato come zona separata, ciascuna con un proprio abbonamento che include un piano tariffario avanzato per la protezione dei dati. Le condivisioni o i dischi creati in una zona abilitata MetroCluster vengono replicati in modo sincrono nella seconda zona. Il consumo della zona replicata segue il piano tariffario Data Protection Advanced applicabile alla zona in cui viene eseguito il provisioning dello storage.
+
+
+
+=== Supporto di Cloud Volumes Services
+
+NetApp Service Engine è ora in grado di supportare Cloud Volumes Services. Ora può supportare Azure NetApp Files.
+
+
+NOTE: Gli abbonamenti ai servizi Cloud Volumes vengono gestiti al di fuori di NetApp Service Engine. Le credenziali pertinenti vengono fornite a NetApp Service Engine per consentire la connessione ai servizi cloud.
+
+NetApp Service Engine supporta:
+
+* Provisioning o modifica dei volumi Cloud Volumes Services (inclusa la possibilità di creare snapshot)
+* Backup dei dati in un'area Cloud Volumes Services
+* Visualizzazione dei volumi Cloud Volumes Services nell'inventario NSE
+* Visualizzazione dell'utilizzo di Cloud Volumes Services.
+
+
+
+
+=== Gruppi di host
+
+NetApp Service Engine supporta l'utilizzo di gruppi di host. Un gruppo di host è un gruppo di nomi di porte internazionali (WWPN) o di nomi di nodi host iSCSI (IQN) del protocollo FC. È possibile definire gruppi di host e mapparli sui dischi per controllare quali iniziatori hanno accesso ai dischi. I gruppi di host sostituiscono la necessità di specificare singoli iniziatori per ogni disco e consentono quanto segue:
+
+* Un disco aggiuntivo da presentare allo stesso gruppo di iniziatori
+* Aggiornamento del set di iniziatori su più dischi
+
+
+
+
+=== Utilizzo burst e notifiche
+
+Alcune sottoscrizioni allo storage supportate da NetApp Service Engine consentono ai clienti di utilizzare una capacità burst sulla propria capacità impegnata, che viene addebitata separatamente oltre la capacità impegnata sottoscritta. È importante che gli utenti comprendano quando stanno per utilizzare o hanno utilizzato la capacità burst per controllare l'utilizzo e i costi.
+
+
+
+==== Notifica quando una modifica proposta comporta l'utilizzo della capacità di burst
+
+Una notifica per visualizzare una modifica nel provisioning proposto che causerà un burst dell'abbonamento. L'utente può scegliere di continuare, sapendo che l'abbonamento verrà messo in burst o scegliendo di non continuare con l'azione.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["Scopri di più"].
+
+
+
+==== Notifica quando l'abbonamento è in burst
+
+Quando un abbonamento è in burst, viene visualizzato un banner di notifica.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["Scopri di più"].
+
+
+
+==== Il report della capacità mostra l'utilizzo in sequenza
+
+Report sulla capacità che mostra il numero di giorni in cui l'abbonamento è stato in burst e la quantità di capacità burst utilizzata.link:sewebiug_working_with_reports.html#capacity-usage["Scopri di più"].
+
+
+
+=== Report sulle performance
+
+Un nuovo Performance Report nell'interfaccia Web di NetApp Service Engine visualizza informazioni sulle performance dei singoli dischi o delle condivisioni sulle seguenti misure di performance:
+
+* IOPS/TIB (Input/Output Operations per second per tebibyte): La velocità con cui le operazioni di input e output per secondo (IOPS) avvengono sul dispositivo di storage.
+* Throughput in Mbps: Velocità di trasferimento dei dati da e verso i supporti di storage in megabyte al secondo.
+* Latency (ms) (latenza (ms)): Tempo medio di lettura e scrittura dal disco o dalla condivisione in millisecondi.
+
+
+
+
+=== Gestione degli abbonamenti
+
+La gestione degli abbonamenti è stata migliorata. Ora puoi:
+
+* Richiedi un add-on per la protezione dei dati o richiedi capacità aggiuntiva per un add-on per la protezione dei dati per un abbonamento o un servizio
+* Visualizza la capacità di utilizzo della protezione dei dati
+
+
+
+
+=== Miglioramento della fatturazione
+
+La fatturazione ora supporta la capacità di misurare e fatturare l'utilizzo dello snapshot per lo storage ONTAP (file e blocchi).
+
+
+
+=== Condivisioni CIFS nascoste
+
+NetApp Service Engine supporta la creazione di condivisioni CIFS nascoste.

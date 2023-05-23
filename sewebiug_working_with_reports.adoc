@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_working_with_reports.html 
+keywords: netapp, keystone, working, reports, 
+summary: Keystone lavorare con i report 
+---
+= Visualizzare i report
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile creare report sulla capacità e sulle performance in relazione all'utilizzo dell'abbonamento NetApp Keystone e del tenant.
+
+
+
+== Report sull'utilizzo della capacità dell'abbonamento Keystone
+
+La pagina Capacity Usage for Keystone Subscriptions (utilizzo della capacità per gli abbonamenti Keystone) visualizza l'utilizzo della capacità per ciascun livello di servizio di storage in un abbonamento nel tempo. In qualità di amministratore di NetApp, puoi visualizzare il report sull'utilizzo della capacità per tutti i tenant e i partner in un abbonamento. In qualità di amministratore del partner, è possibile visualizzare il report della capacità per l'utilizzo dell'abbonamento in relazione a ciascun livello di servizio sottoscritto.
+
+Utilizzare i report grafici di questa pagina per visualizzare le tendenze di utilizzo di tutti i livelli di servizio, nonché i servizi aggiuntivi di protezione dei dati, in schede separate. Quando un servizio è in modalità burst, un banner visualizza la capacità burst utilizzata nel ciclo di fatturazione corrente.
+
+image:sewebiug_image33.png["Errore: Immagine grafica mancante"]
+
+Per visualizzare la pagina Capacity Usage for Keystone Subscriptions (utilizzo capacità per gli abbonamenti Keystone), selezionare *Reports > Keystone Usage* (Report > utilizzo chiave) dal menu.
+
+Per visualizzare l'utilizzo della capacità per un servizio, attenersi alla seguente procedura:
+
+.Fasi
+. Selezionare il numero di abbonamento contenente il servizio dall'elenco a discesa *Subscription* (abbonamento).
+. È possibile scegliere di visualizzare l'utilizzo della capacità per i livelli di servizio di base o i servizi di protezione dei dati selezionando le diverse schede. La pagina visualizza la vista del livello di servizio per impostazione predefinita.
+. È possibile scorrere la pagina per visualizzare i servizi e utilizzare i filtri del periodo per limitare la visualizzazione a un periodo selezionato.
+
+
+
+
+== Report sull'utilizzo della capacità dell'abbonamento tenant
+
+La pagina Capacity Usage for tenant Subscriptions (utilizzo della capacità per gli abbonamenti tenant) visualizza l'utilizzo della capacità nel tempo per ciascun tenant per i servizi di storage sottoscritti nell'abbonamento Keystone. Questa pagina è disponibile per NetApp, i partner e gli amministratori dei tenant o dei clienti per visualizzare i report sull'utilizzo della capacità per uno specifico tenant.
+
+
+NOTE: Per l'amministratore del tenant, la pagina viene visualizzata come "utilizzo della capacità".
+
+Utilizza i report grafici di questa pagina per visualizzare le tendenze di utilizzo di tutti i servizi di storage, nonché i servizi aggiuntivi, come la protezione dei dati e la protezione avanzata, in schede separate. Quando un servizio è in modalità burst, un banner visualizza la capacità burst utilizzata nel ciclo di fatturazione corrente.
+
+Per visualizzare la pagina Capacity Usage for tenant Subscriptions (utilizzo capacità per gli abbonamenti tenant), selezionare *Reports > Tenant Usage/Capacity Usage* (Report > utilizzo tenant/utilizzo capacità*) dal menu.
+
+Per visualizzare l'utilizzo della capacità di un tenant, attenersi alla seguente procedura:
+
+.Fasi
+. Selezionare il numero di abbonamento contenente il servizio dall'elenco a discesa *Subscription* (abbonamento).
+. È possibile scegliere di visualizzare l'utilizzo della capacità per i livelli di servizio di base o i servizi di protezione dei dati selezionando le rispettive schede. La pagina visualizza la vista del livello di servizio per impostazione predefinita.
+. È possibile scorrere la pagina per visualizzare i servizi e utilizzare i filtri del periodo per limitare la visualizzazione a un periodo selezionato.
+
+
+
+
+== Report sulle performance
+
+La pagina Performance (prestazioni) (mostrata nell'immagine seguente) visualizza informazioni sulle prestazioni di singoli dischi o condivisioni. Visualizza informazioni su tre misurazioni delle performance:
+
+* Operazioni di input/output al secondo per tebibyte (IOPS/TIB).
++
+La velocità di esecuzione degli IOPS sul dispositivo di storage.
+
+* Throughput in Mbps.
++
+Il throughput misura la velocità di trasferimento dei dati da e verso i supporti di storage in megabyte al secondo.
+
+* Latenza (ms).
++
+Tempo medio di lettura/scrittura dal disco/condivisione in millisecondi.
+
++
+Per visualizzare la pagina Performance (prestazioni), selezionare Reports (rapporti) > Performance (prestazioni) dal menu.
+
++
+Per visualizzare i dettagli delle prestazioni di un disco/condivisione, attenersi alla seguente procedura.
+
++
+.. Selezionare *subtenant*, *Region* e *zone*, quindi il tipo di oggetto storage per visualizzare *Disks* o *share* per il disco o la condivisione. La pagina visualizza l'elenco degli oggetti di storage che soddisfano i criteri selezionati, mostrando i dati sulle performance più recenti per tali oggetti.
+.. Per visualizzare l'andamento dei dati sulle performance per una condivisione o un disco selezionato, individuare l'oggetto di storage nell'elenco e fare clic per espandere il pannello. Vengono visualizzati i grafici delle prestazioni per l'oggetto selezionato.
+
+
+
+
+image:sewebiug_image34.png["Errore: Immagine grafica mancante"]
+
+I grafici mostrano le performance dello storage nel tempo. È possibile:
+
+* Scegliere il periodo da visualizzare selezionando i filtri del periodo oppure fare clic e trascinare il grafico.
+* Spostare il cursore su un punto del grafico per visualizzare ulteriori informazioni su tale punto.
+

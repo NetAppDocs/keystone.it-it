@@ -1,0 +1,45 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_data_protection.html 
+keywords: netapp, keystone, data, protection, 
+summary: Protezione dei dati 
+---
+= Protezione dei dati
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Il servizio di data Protection di NetApp Keystone è in grado di eseguire il backup dei dati ed è in grado di ripristinarli, se necessario. I servizi di protezione dei dati disponibili sono:
+
+* Snapshot di dischi e condivisioni
+* Backup di dischi e condivisioni (richiede il servizio di protezione dei dati come parte dell'abbonamento)
+* Disaster recovery per dischi e condivisioni (richiede il servizio di protezione dei dati come parte dell'abbonamento)
+
+
+
+NOTE: I servizi di backup e disaster recovery sono disponibili come servizi aggiuntivi, mentre snapshot è disponibile come parte del servizio di storage di base.
+
+|===
+|  | Snapshot Single Region (disponibili come parte del servizio di storage di base) | Backup multi-regione (add-on per la protezione dei dati) | Disaster recovery multi-regione (add-on per la protezione dei dati) 
+
+
+| Caso d'utilizzo | Mitigare il rischio di eliminazione o danneggiamento dei dati dell'utente o dell'applicazione, non di perdita o guasto dell'infrastruttura | Ridurre il rischio di perdita completa dei dati sul volume primario a causa di perdita o guasto dell'infrastruttura | Ridurre il rischio di perdita completa dei dati sul volume primario a causa di perdita o guasto dell'infrastruttura con un obiettivo di tempo di ripristino 
+
+
+| Policy | Orario, giornaliero, settimanale e mensile | Numero di backup da conservare in base alle snapshot orarie, giornaliere, settimanali e mensili | 1 ora, 4 ore e ogni giorno 
+
+
+| Topologia | Solo origine | Backup | Destinazione della replica asincrona 
+
+
+| Livello del servizio di replica di destinazione^1^ | n/a. | Standard | Uguale a primario 
+|===
+^1^capacità di storage aggiuntiva da sottoscrivere
+
+
+NOTE: L'abbonamento a un servizio Keystone di base non esegue automaticamente il backup dei dati. È necessario iscriversi ai servizi aggiuntivi di protezione dei dati e configurare il sistema per il backup dei dati e i servizi di disaster recovery. Se il tuo sistema storage non è gestito dai servizi Keystone, NetApp può comunque supportare la protezione dei dati sul tuo sistema storage e aiutarti a connetterlo ai servizi Keystone. Tuttavia, NetApp non è responsabile di eventuali errori di backup.

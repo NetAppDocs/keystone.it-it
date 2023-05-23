@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_service_terms_and_description_overview.html 
+keywords: netapp, keystone, service, terms, description, overview, 
+summary: Panoramica dei termini e della descrizione del servizio Keystone 
+---
+= Termini e descrizioni del servizio Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Keystone è guidato dai seguenti termini e descrizioni del servizio.
+
+* I servizi Keystone sono disponibili per un periodo minimo di un anno e fino a tre anni. Dopo il termine iniziale, il servizio è rinnovabile su base annuale. La capacità può essere aumentata con incrementi di 1 TIB.
+* La capacità minima è di 100 TIB per sito e ogni sito può disporre di uno o più cluster per soddisfare i requisiti di capacità minimi. In un modello gestito dal partner, vengono create sottoscrizioni con minimi flessibili per un cliente, per sito e per diversi livelli di servizio.
+* La capacità di 100 TIB può essere un singolo livello di servizio o una combinazione di livelli.
+* Gli abbonamenti tenant sono limitati ai livelli di servizio a cui sono iscritti i partner.
+* il 20% della capacità di burst è disponibile in ogni sito; l'utilizzo di burst viene fatturato solo per quel periodo di fatturazione. Se hai bisogno di ulteriori requisiti di burst superiori al 20%, contatta il supporto.
+* La capacità o i livelli di servizio impegnati non possono essere modificati durante un periodo di validità del contratto.
+* È consentito aumentare la capacità o passare a un livello di servizio superiore durante il periodo; tuttavia, non è consentito passare da un livello di servizio superiore a un livello inferiore.
+* Qualsiasi richiesta di modifica negli ultimi 90 giorni del termine richiede al cliente di rinnovare il servizio per almeno un anno.
+

@@ -1,0 +1,77 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_tenancy_overview.html 
+keywords: netapp, keystone, tenants, subtenants, hierarchy, tenancy 
+summary: 'Panoramica della tenancy dell"abbonamento a NetApp Keystone Keystone' 
+---
+= Tenancy e multi-tenancy in Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Keystone utilizza i concetti di *tenant* e *subtenant* come entità gerarchiche che possiedono risorse di storage logico. È supportato anche il concetto di multi-tenancy, in cui più tenant sono legati a un partner o a un service provider. Il partner e il service provider delle entità vengono utilizzati in modo intercambiabile.
+
+
+NOTE: Nel contesto di Keystone, un singolo tenancy è un modello gestito da NetApp, mentre un multi-tenancy è un modello gestito dal partner.
+
+.Tenant
+Un tenant è l'entità di fatturazione primaria definita in Keystone. Ogni cliente che è iscritto a Keystone e possiede un abbonamento ai servizi, esiste come tenant Keystone. Il cliente fornisce a NetApp un nome e/o un identificatore del cliente ai fini dell'assunzione dei tenant e del monitoraggio delle date di iscrizione e dei termini di impegno.
+
+In un multi-tenancy, un partner è un tenant/cliente di NetApp in un ambiente Keystone. Il partner, a sua volta, può supportare più tenant o clienti, collegati a clienti finali/subtenant. In questo modello, i tenant/subtenant sono i clienti dei service provider e non hanno alcun rapporto di fatturazione con NetApp.
+
+.Subtenant
+I subtenant Keystone esistono interamente all'interno di un tenant padre con una relazione molti-a-uno. I subtenant forniscono una separazione logica delle risorse all'interno di un tenancy e vengono utilizzati come base per il reporting show-back. Tutte le risorse di storage (ovvero servizi di file, storage a blocchi e storage a oggetti) appartengono a un subtenant.
+
+image:nkfsosm_image10.png["arco di tenancy"]
+
+
+
+== Modello di abbonamento in un ambiente gestito da NetApp (tenancy singola)
+
+* L'amministratore di NetApp o GSSC crea un abbonamento per un tenant e una zona.
+* I nomi delle sottoscrizioni derivano dall'entità di fatturazione a cui è iscritto il tenant.
+* Nell'abbonamento vengono configurati la data di inizio e la durata del contratto.
+* Per ciascuna zona tenant può essere attivo un solo abbonamento
+* Un abbonamento può avere più piani tariffari e ciascun piano tariffario corrisponde a un livello di servizio.
+* Ogni piano tariffario ha una capacità impegnata per livello di servizio.
+* I livelli di servizio possono includere:
++
+** Estremo
+** Tiering estremo
+** Performance
+** Tier di performance
+** Valore
+** Protezione dei dati per ciascuno dei livelli di servizio
+** Protezione avanzata dei dati per livelli estremi, performance e valore
+** Oggetti di storage
+
+
+
+
+
+
+== Modello di abbonamento in un ambiente multi-tenant
+
+* I service provider sono clienti Keystone e hanno abbonamenti come tenant. Gli abbonamenti si basano su:
++
+** Impegno per livello di servizio e zona
+** Addebitato sulla capacità allocata con un minimo di 100 TiB
+** I costi di burst si applicano al 100-120% della capacità impegnata
+
+
+* NetApp addebita ai provider il costo mensile, come parte dei normali termini di tenancy.
+* Affinché un livello di servizio sia disponibile per i tenant, il service provider o il partner deve disporre di un Keystone per il livello di servizio.
+* Il provider di servizi crea sottoscrizioni tenant per livello di servizio, zona e minimi flessibili.
+* I service provider possono vendere ai propri tenant una capacità superiore a quella acquistata da NetApp (oversubscription). Pertanto, la capacità utilizzata dai tenant non è limitata dalla capacità a cui il service provider ha sottoscritto l'abbonamento.
+* I tenant possono utilizzare la capacità di storage oltre la quantità sottoscritta, indicata come "burst" nei report di utilizzo.
+* I report sull'utilizzo dei tenant sono disponibili per i partner per la visualizzazione giornaliera o mensile.
+* I tenant possono creare abbonamenti per un periodo di tempo più lungo rispetto al corrispondente abbonamento Keystone, ma viene visualizzato un messaggio di avviso per il cliente finale durante l'attività.
+* L'abbonamento Keystone per un partner viene configurato dagli amministratori NetApp o da GSSC. La gestione delle sottoscrizioni Keystone e delle sottoscrizioni tenant viene eseguita da un utente con ruolo di amministratore del partner.
+* Gli utenti con ruoli di amministratore del tenant possono visualizzare solo l'abbonamento tenant (non l'abbonamento Keystone del partner). Possono aggiornare l'abbonamento per modificare la capacità e il livello di servizio. Possono inoltrare richieste di servizio per abbonamenti aggiuntivi.
+* L'amministratore del partner può creare un altro abbonamento quando l'abbonamento esistente è scaduto o per una data futura in cui l'abbonamento esistente non è più valido. La data di inizio di un nuovo abbonamento deve essere maggiore o uguale alla data di fine corrente.
+

@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: seapiref_netapp_service_engine_rest_apis.html 
+keywords: netapp, keystone, rest apis, sort, offset 
+summary: API REST del motore di servizio NetApp 
+---
+= API REST di NetApp Service Engine
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Molte chiamate API restituiscono un gran numero di record. È possibile limitare il numero di record specificando `offset` e. `limit` valori.
+
+Limitare questi valori:
+
+* *Limit.* numero di record da restituire.
+* *Offset.* numero di record da saltare prima di restituire il primo record. Ad esempio, un offset di uno ignora il primo record e restituisce i record a partire da due.
+
+
+È inoltre possibile ordinare e ordinare le risposte:
+
+* *Sort_by.* Ordina i record utilizzando l'attributo specificato. Ad esempio, per ordinare in base alla data di creazione, specificare created (creato).
+* *Order_by.* Ordina i record in base all'ordine ascendente (asc) o discendente (desc).
+

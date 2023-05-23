@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_an_object_storage_group.html 
+keywords: netapp, keystone, modify, object, storage, group 
+summary: Keystone modifica un gruppo di storage a oggetti 
+---
+= Modificare un gruppo di storage a oggetti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizzare questo metodo per modificare i dettagli di un gruppo di storage a oggetti, ad esempio il nome del gruppo e il criterio S3.
+
+.Fasi
+. Visualizzare il gruppo di storage a oggetti link:sewebiug_view_the_object_storage_group_and_users.html["Visualizzare utenti e gruppi di storage a oggetti"].
+. Assicurarsi di aver selezionato il subtenant corretto e di aver fatto clic sulla scheda *Groups* (gruppi).
+. Individuare il gruppo nell'elenco e fare clic sull'icona di modifica corrispondente.
++
+Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view-actions["Azioni di visualizzazione elenco"].
+
+. Nella finestra di dialogo *Modifica gruppo*, modificare il criterio S3 applicabile al gruppo. Per informazioni sui criteri S3, vedere https://docs.netapp.com/us-en/storagegrid-116/s3/bucket-and-group-access-policies.html#specify-permissions-in-a-policy["Specificare le autorizzazioni in un criterio"].
+. È possibile aggiungere ulteriori dichiarazioni di policy in base alle esigenze.
+. Fare clic su *Aggiorna*. In questo modo viene creato un lavoro per modificare il gruppo con le impostazioni specificate. Per informazioni sul monitoraggio dei processi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+

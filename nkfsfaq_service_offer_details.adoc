@@ -1,0 +1,83 @@
+---
+sidebar: sidebar 
+permalink: nkfsfaq_service_offer_details.html 
+keywords: netapp, keystone, service, offer, details, 
+summary: 'Dettagli dell"offerta di servizi' 
+---
+= Offerta di servizi Keystone
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le seguenti domande forniscono risposte alle tue domande frequenti sull'offerta di servizi Keystone di NetApp Keystone.
+
+*Qual è la capacità minima impegnata?*
+
+La capacità minima impegnata per un servizio di abbonamento NetApp Keystone è di 100 TIB, per sito su uno o più livelli di servizio.
+
+*Qual è la durata tipica di un contratto di servizi Keystone?*
+
+I servizi Keystone offrono periodi di 12, 24 e 36 mesi.
+
+*Come si accede allo storage?*
+
+In un modello (standard) gestito da NetApp, i controller di storage (Gestore di sistema ONTAP o accesso amministrativo ai sistemi) sono di proprietà e gestiti da NetApp. È possibile monitorare e gestire lo storage solo attraverso l'interfaccia utente e le API di NetApp Service Engine. In un'implementazione gestita dal cliente (o Lite), in cui l'interfaccia utente e le API del motore di servizio NetApp vengono utilizzate principalmente per le funzioni di fatturazione, è possibile accedere ai controller di storage, come Active IQ Unified Manager e Gestore di sistema ONTAP, e direttamente ai cluster ONTAP.
+
+*Come gestire il servizio?*
+
+NetApp Service Engine è lo strumento di orchestrazione e gestione che puoi utilizzare per eseguire il provisioning dello storage e ottenere report sull'utilizzo del servizio.
+
+*Come posso aumentare la capacità impegnata in un abbonamento?*
+
+È possibile inviare una richiesta di aggiunta di capacità tramite il tool di gestione del motore di servizio NetApp o tramite il proprio Success Manager NetApp Keystone.
+
+*L'aumento della capacità aumenta il termine?*
+
+Tutte le aggiunte sono a termine congiunto al periodo di validità, salvo nel caso in cui la richiesta venga effettuata negli ultimi 90 giorni dell'abbonamento, nel qual caso il termine deve essere esteso per almeno 12 mesi.
+
+*Gli abbonamenti possono essere co-terminati?*
+
+No, i termini dell'abbonamento sono indipendenti l'uno dall'altro.
+
+*Posso aggiungere storage di backup a un abbonamento esistente?*
+
+Per un caso di utilizzo del backup, è possibile aggiungere capacità a un abbonamento esistente per un livello di servizio nuovo o esistente, inclusi i livelli di servizio Standard o Value. Ciò non modifica la durata dell'abbonamento esistente. Tuttavia, se si desidera aggiungere capacità negli ultimi 90 giorni della scadenza dell'abbonamento (ovvero gli ultimi 90 giorni prima della scadenza dell'abbonamento), è necessario rinnovare l'abbonamento per almeno un anno.
+
+*Un nuovo abbonamento ha la flessibilità di arrivare con un nuovo termine annuale?*
+
+Sì, i nuovi abbonamenti possono avere nuovi termini separati da quelli esistenti.
+
+*I termini dell'abbonamento al tenant possono estendersi oltre il termine dell'abbonamento del partner?*
+
+Gli abbonamenti ai tenant possono estendersi oltre l'attuale termine dei servizi Keystone del partner. Viene visualizzato un avviso quando vengono create le sottoscrizioni e anche nei report di utilizzo.
+
+*È possibile combinare più sottoscrizioni sullo stesso cluster ONTAP?*
+
+No, ogni cluster viene assegnato a un abbonamento specifico.
+
+*Chi esegue il monitoraggio e le operazioni?*
+
+Per il servizio gestito da NetApp, NetApp è responsabile del monitoraggio remoto dell'infrastruttura in modo che il servizio venga erogato in base alle aspettative concordate.
+
+Per il servizio gestito dal partner, il partner è responsabile del monitoraggio remoto dell'infrastruttura in modo che il servizio venga erogato in base alle aspettative concordate.
+
+Per il servizio gestito dal cliente, il cliente è responsabile del monitoraggio dell'infrastruttura e della risoluzione di eventuali problemi a NetApp.
+
+*Cosa succede se il servizio viene interrotto in anticipo?*
+
+L'impegno minimo per il servizio è di 12 mesi. Se si annulla il servizio in anticipo, il valore residuo deve essere pagato anticipatamente.
+
+*Esiste un'opportunità di conversione in un acquisto dopo il completamento del termine iniziale?* No L'offerta non include un'opzione per la conversione in un acquisto. Inoltre, i prodotti NetApp acquistati in precedenza non rientrano nell'ambito di questo programma.
+
+*Posso richiedere una particolare versione del software?*
+
+No NetApp Keystone ha standardizzato la versione del software in tutta la sua base clienti.
+
+*Sarò informato sugli aggiornamenti software?*
+
+Sì. Tutte le attività di manutenzione/upgrade vengono comunicate al cliente e pianificate in un momento reciprocamente accettabile dal responsabile del successo NetApp Keystone.

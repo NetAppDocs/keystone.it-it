@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_getting_started_overview.html 
+keywords: netapp, keystone, getting, started, overview, 
+summary: Panoramica introduttiva di Keystone 
+---
+= Panoramica
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive come iniziare a utilizzare il portale NetApp Service Engine.
+
+
+NOTE: Quando navigate nel portale NetApp Service Engine, potete vedere che alcune informazioni, come la vostra regione e zona, vengono popolate automaticamente in base alla configurazione dell'abbonamento configurata dal team di supporto.
+
+Per iniziare le attività su questo portale:
+
+* Accedere all'interfaccia Web di NetApp Service Engine.
++
+** Accedere con un nome utente e una password
+** Per ulteriori informazioni, accedere a NetApp SSO, vedere link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html["Accedere all'interfaccia Web di NetApp Service Engine"]
+
+
+* Selezionare il tenant. Viene visualizzata la dashboard. Per ulteriori informazioni, vedere link:sewebiug_dashboard.html["Visualizza la dashboard di Keystone"]
+
+
+Per una panoramica dell'interfaccia Web di NetApp Service Engine, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html["Panoramica dell'interfaccia Web di NetApp Service Engine"]

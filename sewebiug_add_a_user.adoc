@@ -1,0 +1,37 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_add_a_user.html 
+keywords: netapp, keystone, add, user, 
+summary: Keystone aggiunge un utente 
+---
+= Aggiungere un utente
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Questa sezione descrive come aggiungere un utente.
+
+.Prima di iniziare
+Hai bisogno di:
+
+* I tenant ai quali l'utente deve avere accesso.
+* Il ruolo che l'utente deve assegnare all'interno di ogni tenancy. Un utente può avere un solo ruolo all'interno di un tenancy.
+
+
+.Fasi
+. Selezionare *AMMINISTRAZIONE > utenti* dal menu.
+. Fare clic su *Create User* (Crea utente).
+. Nella finestra di dialogo Create User (Crea utente), specificare il nome utente, l'indirizzo e-mail, il nome, il cognome, il nome visualizzato, e password per l'utente.
+. Selezionare il tenant primario e il ruolo dell'utente in tale tenancy.
++
+
+NOTE: È possibile assegnare privilegi a un utente in base al proprio ruolo, ad esempio un amministratore NetApp, un amministratore NetApp con privilegi di sola lettura, un amministratore del partner o un amministratore del tenant. In base al tuo ruolo, puoi visualizzare i ruoli dei diversi utenti all'interno del tuo ambiente e assegnare ruoli agli utenti appena creati o esistenti.
+
+. Per aggiungere ulteriori tenancy, fare clic su *Add Tenancy* (Aggiungi tenancy) per visualizzare i nuovi campi di immissione e selezionare il tenant e il ruolo dell'utente in tale tenancy.
+. Fare clic su *Create* (Crea).
+

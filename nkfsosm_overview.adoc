@@ -1,0 +1,92 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_overview.html 
+keywords: netapp, keystone, kfs, overview, 
+summary: Panoramica di NetApp Keystone 
+---
+= Modello operativo, ruoli e responsabilità
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+NetApp Keystone si basa sul modello di tenancy.
+
+Keystone offre tre modelli operativi per l'erogazione del servizio.
+
+* *Il modello gestito da NetApp* consente al cliente di sottoscrivere i servizi offerti (in base ai livelli di performance selezionati e ai tipi di servizi storage) e di selezionare l'opzione gestita da NetApp a un costo aggiuntivo. NetApp definisce l'architettura e i prodotti, si installa presso la sede del cliente e gestisce le operazioni quotidiane di gestione dell'infrastruttura utilizzando lo storage e le risorse IT di NetApp. I tipi di servizi di storage disponibili sono file, blocco e oggetto. Gli abbonamenti storage basati su Cloud Volumes Service per GCP e AWS possono essere gestiti anche attraverso l'istanza di NetApp Keystone.
+* *Il modello * gestito dal partner è simile al modello gestito da NetApp, ma con il partner che gestisce il servizio per i propri clienti finali. In questo modello, il partner è la parte contrattuale di riferimento. I tenant sono clienti di partner o service provider e non hanno rapporti di fatturazione con NetApp. Un modello gestito dal partner di solito dispone di un ambiente multi-tenant in cui i tenant e i clienti finali/subtenant hanno le proprie sottoscrizioni fatturate dal service provider/partner. L'amministratore del partner esegue le attività amministrative per tutti i tenant. Le funzioni che un amministratore può eseguire in un modello gestito dal partner sono diverse da quelle di un amministratore in un modello gestito da NetApp.
+* *Customer-operated* *model* consente al cliente di sottoscrivere un servizio offerto, in base ai livelli di performance selezionati e ai tipi di servizio storage. NetApp definisce l'architettura e i prodotti e li installa presso la sede del cliente e consente ai clienti di gestire l'infrastruttura utilizzando le risorse IT e di storage. Un cliente può essere legato a NetApp o a un partner/service provider e, in base a ciò, le richieste di servizio possono essere inoltrate a NetApp o al service provider. Un amministratore del cliente può eseguire le attività amministrative in un ambiente gestito dal cliente. Queste attività sono legate ai tenant e ai subtenant per il cliente specifico.
+
+
+Le caratteristiche e le opzioni dell'offerta variano in base ai modelli. Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html["Ruoli e operazioni di service provider e clienti"]
+
+
+
+== Ruoli e responsabilità durante l'intero ciclo di vita del servizio
+
+* *Modello gestito da NetApp*: La gestione end-to-end di installazione, implementazione, operazioni, monitoraggio, ottimizzazione e supporto viene eseguita da NetApp.
+* *Modello gestito dal partner*: La condivisione dei ruoli e delle responsabilità dipende dallo SLA tra l'utente e il provider di servizi o il partner. Per ulteriori informazioni, rivolgersi al provider di servizi.
+* *Modello gestito dal cliente*: La seguente tabella riassume il modello di ciclo di vita generale del servizio e i ruoli e le responsabilità ad essi associati in un ambiente gestito dal cliente.
+
+
+|===
+| Attività | NetApp | Cliente 
+
+
+ a| 
+Installazione e attività correlate
+
+* Installare
+* Configurare
+* Implementare
+* A bordo
+
+| image:check.pngcheck["controllare"] | Nessuno 
+
+
+ a| 
+Amministrazione e monitoraggio
+
+* Monitorare
+* Report
+* Eseguire attività amministrative
+* Avviso
+
+| Nessuno | image:check.png["controllare"] 
+
+
+ a| 
+Operazioni e ottimizzazione
+
+* Gestire la capacità
+* Gestire le performance
+* Gestire lo SLA
+
+| Nessuno | image:check.png["controllare"] 
+
+
+ a| 
+Supporto
+
+* Supportare il cliente
+* Riparazione dell'hardware
+* Supporto software
+* Aggiornamenti e patch
+
+| image:check.png["controllare"] | Nessuno 
+|===
+
+
+=== Riepilogo ruoli e responsabilità
+
+Il seguente elenco riassume i ruoli e le responsabilità di NetApp:
+
+* NetApp fornisce, installa, configura e abilita il servizio applicabile (inclusa la versione applicabile di NetApp Service Engine presso un data center designato dal cliente o un CoLo). NetApp è responsabile della disinstallazione al termine del contratto o se il cliente decide di rescindere il contratto prima.
+* Mentre si interagisce con altri provider di servizi IT, NetApp collabora con i service provider IT del cliente o con il suo team tecnico.
+* Sono incluse le performance dei servizi gestiti da NetApp, con l'ipotesi che le responsabilità condivise siano applicabili all'ambiente supportato.
+

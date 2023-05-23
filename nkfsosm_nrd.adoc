@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: nkfsosm_nrd.html 
+keywords: netapp, keystone, NRD, Non-returnable disk 
+summary: Keystone ed Equinix 
+---
+= Offerta di dischi non restituibili
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Come parte dei servizi NetApp Keystone, NetApp estende l'offerta di dischi non restituibili (NRD).
+
+Se acquisti l'offerta NRD per Keystone, NetApp non ripristina i supporti di storage fisici utilizzati durante l'intero servizio a causa di attività di supporto e manutenzione o alla cessazione del servizio quando NetApp recupera in altro modo tutte le risorse fisiche utilizzate per l'erogazione del servizio.
+
+Se è stato acquistato questo servizio, tenere presente quanto segue:
+
+* Anche con l'acquisto di questo servizio, è possibile optare per NetApp per il ripristino dei supporti di storage fisici.
+* Nel caso in cui NetApp non sia responsabile del ripristino dei supporti, l'utente ha il diritto di distruggere i dischi o i supporti di storage utilizzati per l'erogazione del servizio Keystone al termine del servizio.
+* È possibile aggiungere, modificare o terminare l'offerta NRD durante il rinnovo dell'abbonamento e non durante il periodo di validità.
+* Il costo associato all'offerta NRD cambia in base alla capacità impegnata dell'abbonamento. In altri termini, se si sceglie di aumentare la capacità impegnata a metà del periodo di abbonamento, il costo di NRD viene rivisto allo stesso modo. L'aumento sarà proporzionale all'aumento della capacità impegnata.
+* È possibile conservare solo i supporti di storage fisici utilizzati nel servizio. Controller, shelf, cavi, switch, schede di rete, E qualsiasi altra apparecchiatura di proprietà di NetApp verrà recuperata da NetApp.
+

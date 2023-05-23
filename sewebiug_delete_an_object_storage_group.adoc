@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_delete_an_object_storage_group.html 
+keywords: netapp, keystone, delete, object, storage, group, 
+summary: Keystone elimina un gruppo di storage a oggetti 
+---
+= Eliminare un gruppo di storage a oggetti
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilizzare questo metodo per eliminare un gruppo di archiviazione oggetti.
+
+.Fasi
+. Visualizzare il gruppo di storage a oggetti link:sewebiug_view_the_object_storage_group_and_users.html["Visualizzare utenti e gruppi di storage a oggetti"].
+. Assicurarsi di aver selezionato il subtenant corretto e di aver fatto clic sulla scheda *Groups* (gruppi).
+. Individuare il gruppo nell'elenco e fare clic sull'icona Delete (Elimina) del gruppo.
+. Per confermare l'operazione di eliminazione, fare clic su *Confirm* (Conferma). Il gruppo di storage a oggetti viene rimosso dall'elenco.
+

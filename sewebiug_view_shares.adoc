@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_view_shares.html 
+keywords: netapp, keystone, view, shares, 
+summary: Keystone view Shares 
+---
+= Visualizzare le condivisioni di file
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'elenco *shares* visualizza le condivisioni di file appartenenti al tenant selezionato. Per visualizzare l'elenco, selezionare *SERVIZI FILE > condivisioni* dal menu.
+
+Le condivisioni di file che fanno già parte dell'ambiente esistente e appartengono alle VM di storage configurate nel motore di servizio NetApp possono essere visualizzate anche in questa schermata e gestite come parte dei servizi di abbonamento NetApp Keystone. Le condivisioni di file fornite al di fuori del NetApp Service Engine vengono periodicamente importate ed elencate in questa pagina con i codici di stato appropriati.
+
+Se le condivisioni di file importate rientrano negli standard accettabili di NetApp Service Engine, ovvero tutti i parametri necessari per rendere operative le condivisioni sono disponibili, vengono importate con lo stato As `Operational` E può essere gestito direttamente tramite NetApp Service Engine. Tuttavia, alcune condivisioni potrebbero non essere dello stesso standard delle condivisioni esistenti su NetApp Service Engine. Dopo l'importazione, queste condivisioni di file vengono classificate con `Imported` oppure `Non-Standard` stato. Per informazioni sugli stati dei volumi e sui passaggi da intraprendere per renderli operativi, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#Object-states["stati degli oggetti"]
+
+L'elenco Shares (condivisioni) visualizza semplici informazioni su ciascuna condivisione. Per ulteriori informazioni sull'utilizzo delle funzioni di un elenco, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Vista elenco"].
+
+* Nome di condivisione
+* Server su cui risiede
+* Percorso di condivisione
+* Percorso di condivisione CIFS (utilizzato per montare la condivisione CIFS con l'integrazione DNS)
+* Subtenant a cui appartiene
+* Zona in cui esiste
+* Livello di servizio
+* Stato operativo (operativo, aggiornato o contatta il supporto)
+* Data di creazione
+

@@ -1,0 +1,39 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_modify_file_server.html 
+keywords: netapp, keystone, modify, file, server, 
+summary: Modificare il file server 
+---
+= Modificare il file server
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile apportare le seguenti modifiche a un server esistente:
+
+. Modificare il nome del server
+. Attivare CIFS del server e specificare nome utente e password di Active Directory, dominio Active Directory, server DNS, nome server e, facoltativamente, l'unità organizzativa di Active Directory. Le credenziali di Active Directory devono essere valide per un utente che dispone dei privilegi necessari per accedere a un computer al dominio Active Directory.
+. Attivare il DP di disaster recovery asincrono specificando una regione o una zona in cui replicare il server.
+
+
+
+NOTE: Se il disaster recovery asincrono è già attivato, non può essere disattivato. Per ulteriori informazioni, vedere link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#disaster-recovery["Disaster recovery"].
+
+.Fasi
+. Visualizzare il link:sewebiug_view_servers.html#view-servers["File Server"].
+. Individuare il server nell'elenco e fare clic sull'icona Edit (Modifica) relativa a tale server. Per ulteriori informazioni sull'utilizzo degli elementi negli elenchi, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#list-view["Azioni di visualizzazione elenco"]).
+. Apportare le modifiche necessarie; fare riferimento a. link:sewebiug_create_a_file_server.html["Creare un file server"] per le descrizioni dei campi.
+. Fare clic su *fine*. In questo modo viene creato un processo per modificare il server.
+
+
+.Al termine
+Il server di modifica viene eseguito come processo asincrono. È possibile:
+
+* Verificare lo stato del lavoro nell'elenco dei lavori. Per informazioni sul monitoraggio dei processi, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_netapp_service_engine_web_interface_overview.html#jobs-and-job-status-indicator["qui"].
+* Al termine del lavoro, controllare lo stato del server nell'elenco Server.
+

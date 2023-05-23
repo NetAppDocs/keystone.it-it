@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: seapiref_authorization_and_authentication.html 
+keywords: netapp, keystone, authorization, authentication, 
+summary: Autorizzazione e autenticazione Keystone 
+---
+= Autorizzazione e autenticazione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+L'API REST di NetApp Service Engine è accessibile utilizzando qualsiasi browser Web o piattaforma di programmazione in grado di emettere richieste HTTP. NetApp Service Engine supporta il meccanismo di autenticazione HTTP di base e l'autenticazione bearer Java Web Token (JWT). Prima di chiamare un'API, è necessario autenticare un utente.
+
+Per le API di riferimento, è possibile accedere all'interfaccia Web di NetApp Service Engine e visualizzare l'interfaccia Swagger dal *riquadro di navigazione sinistro > supporto > documentazione API*.
+
+
+
+== Codici di stato HTTP
+
+Durante l'esecuzione delle API o la risoluzione dei problemi, è necessario conoscere i vari codici di stato HTTP e i codici di errore utilizzati dalle API di NetApp Service Engine.
+
+La tabella seguente elenca i codici di errore relativi all'autenticazione.
+
+|===
+| Codice di stato HTTP | Titolo del codice di stato | Descrizione 
+
+
+| 200 | OK | Restituito in caso di esecuzione riuscita di chiamate API sincrone. 
+
+
+| 201 | Creato | Creazione di nuove risorse mediante chiamate sincrone, ad esempio la configurazione di Active Directory. 
+
+
+| 202 | Accettato | Restituito in caso di esecuzione corretta di chiamate asincrone per funzioni di provisioning, come la creazione di LUN e condivisioni di file. 
+
+
+| 400 | Richiesta non valida | Indica un errore di convalida dell'input. L'utente deve correggere gli input, ad esempio chiavi valide in un corpo di richiesta. 
+
+
+| 401 | Richiesta non autorizzata | Non sei autorizzato a visualizzare la risorsa/non autorizzato. 
+
+
+| 403 | Richiesta vietata | L'accesso alla risorsa che si stava tentando di raggiungere è vietato. 
+
+
+| 404 | Risorsa non trovata | La risorsa che stavi cercando di raggiungere non è stata trovata. 
+
+
+| 405 | Metodo non consentito | Metodo non consentito. 
+
+
+| 412 | Precondizione non riuscita | Una o più condizioni preliminari non sono state soddisfatte. 
+
+
+| 500 | Errore interno del server | Errore interno del server. Impossibile ottenere una risposta dal server. Questo errore interno del server potrebbe essere permanente. Ad esempio, se si esegue un'operazione GET o GET ALL e si riceve questo errore, si consiglia di ripetere questa operazione per almeno cinque tentativi. Se si tratta di un errore permanente, il codice di stato restituito continua a essere 500. Se l'operazione ha esito positivo, il codice di stato restituito è 200. 
+|===
+
+
+== Raccomandazioni per l'utilizzo delle API
+
+Quando si utilizzano le API, è necessario seguire alcune procedure consigliate:
+
+* Per un'esecuzione valida, assicurarsi che tutti i tipi di contenuto della risposta siano nel seguente formato:
++
+....
+application/json
+....
+* Durante l'aggiornamento dei valori della matrice, è necessario aggiornare l'intera stringa di valori. Non è possibile aggiungere valori a un array: È possibile sostituire solo un array esistente.
+* Evitare di eseguire query sugli oggetti utilizzando una combinazione di caratteri jolly degli operatori di filtro (`*`) e tubo (`|`). Potrebbe recuperare un numero di oggetti non corretto.
+

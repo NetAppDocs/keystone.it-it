@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: sewebiug_log_in_to_the_netapp_service_engine_web_interface.html 
+keywords: netapp, keystone, log, in, netapp, service, engine, web, interface, 
+summary: 'Accedere all"interfaccia Web del motore di servizio NetApp' 
+---
+= Accedere all'interfaccia Web di NetApp Service Engine
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Per utilizzare l'interfaccia Web di NetApp Service Engine, è necessario disporre di un account. Al tuo account vengono assegnati uno o più ruoli (dall'amministratore del NetApp Service Engine) che determinano le tue autorizzazioni e quindi le attività che puoi eseguire nel portale NetApp Service Engine.
+
+NetApp Service Engine consente di accedere utilizzando le seguenti credenziali:
+
+* Nome utente e password (vedere link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html#log-in-with-user-name-and-password["Accedere con nome utente e password"])
+* NetApp SSO (vedere link:sewebiug_log_in_to_the_netapp_service_engine_web_interface.html#log-in-with-netapp-sso["Accedi con NetApp SSO"])
++
+Confermare l'opzione di accesso in uso con l'istanza di NetApp Service Engine con l'amministratore di NetApp Service Engine.
+
+
+
+
+
+== Accesso in base al ruolo
+
+Nella tabella seguente sono elencate le descrizioni degli accessi in base al ruolo.
+
+|===
+| Ruolo | Accesso 
+
+
+| Amministratore del partner/proprietario dell'account | Può eseguire tutte le attività di gestione dei tenant e delle relative sottoscrizioni. Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html#activities-that-you-can-perform-as-a-service-provider-administrator["questo link"]. 
+
+
+| Amministratore del cliente/tenant | Il cliente o l'amministratore del tenant può eseguire tutte le azioni relative alla gestione dei subtenant. Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html#activities-that-you-can-perform-as-a-customertenant-administrator["questo link"]. 
+
+
+| Amministratore di NetApp (lettura) | Accesso in sola lettura per tutti i componenti. 
+
+
+| Amministratore di NetApp | Accesso completo e autorizzazioni per eseguire tutte le funzioni del portale Web del motore di servizio NetApp per la gestione dei servizi di abbonamento NetApp Keystone e di tutte le attività per l'amministrazione di partner e tenant. 
+|===
+
+
+=== Accedere con nome utente e password
+
+Per accedere con un nome utente e una password, è necessario:
+
+* Nome utente e password dell'interfaccia Web di NetApp Service Engine
+* URL del portale NetApp Service Engine
+* Un browser Web
+
+
+.Fasi
+. Nel browser Web, accedere all'URL del portale NetApp Service Engine. Viene visualizzata la pagina di accesso.
+. Selezionare *accesso utente locale*.
+. Nella pagina Log in to NetApp Service Engine (Accedi a NetApp Service Engine), inserire il nome utente e la password e fare clic su *Log in* (Accedi).
+. Una volta effettuato l'accesso, viene caricata l'interfaccia Web di NetApp Service Engine, aperta nella dashboard. Per una panoramica della GUI, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#netapp-service-engine-web-interface-overview["Panoramica dell'interfaccia Web di NetApp Service Engine"].
+
+
+
+NOTE: Se l'accesso viene eseguito correttamente ma non viene visualizzata la dashboard, rivolgersi all'amministratore del portale NetApp Service Engine per verificare che all'account del portale NetApp Service Engine sia stato assegnato il ruolo corretto.
+
+
+
+=== Accedi con NetApp SSO
+
+Per accedere a NetApp SSO, è necessario:
+
+* Un account SSO di NetApp. È possibile richiedere un account sul sito NetApp Support; dalla schermata di accesso, selezionare *Create NetApp SSO account* e seguire i passaggi successivi.
+* URL del portale NetApp Service Engine.
+* Un browser Web.
+
+
+.Fasi
+. Nel browser Web, accedere all'URL del portale NetApp Service Engine. Viene visualizzata la pagina di accesso.
+. Selezionare NetApp SSO.
+. Nella pagina di accesso SSO, immettere il nome utente e la password e fare clic su *Sign in* (Accedi).
++
+Una volta completato l'accesso, viene visualizzata la dashboard dei servizi di abbonamento Keystone. Per una panoramica della GUI, vedere link:sewebiug_netapp_service_engine_web_interface_overview.html#netapp-service-engine-web-interface-overview["Panoramica dell'interfaccia Web di NetApp Service Engine"].
+
+
+
+
+
+=== Disconnettersi dall'interfaccia Web di NetApp Service Engine
+
+.Fasi
+. Per disconnettersi dall'interfaccia, fare clic sull'icona dell'utente e fare clic su *Disconnetti*.
+
+
+image:sewebiug_image7.png["Errore: Immagine grafica mancante"]
