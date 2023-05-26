@@ -47,7 +47,7 @@ Per ciascun numero di abbonamento, vengono visualizzate le seguenti informazioni
 * *Tracking ID*: L'ID di tracciamento assegnato al momento dell'attivazione dell'abbonamento. Si tratta di un ID univoco per ciascun abbonamento e sito, utilizzato per tenere traccia dell'abbonamento.
 * *Billing Period* (periodo di fatturazione): Il periodo di fatturazione dell'abbonamento, ad esempio mensile, trimestrale o annuale.
 * *Data di inizio*: La data di inizio dell'abbonamento.
-* *Data di fine*: Data di fine dell'abbonamento. In base a questa data, potrebbero essere visualizzati messaggi informativi per gli abbonamenti che stanno per scadere.
+* *Data di fine*: Data di fine dell'abbonamento. Una data vuota indica che l'abbonamento non ha una data di fine e viene rinnovato automaticamente. In base a questa data, potrebbero essere visualizzati messaggi informativi per le sottoscrizioni in scadenza o con criteri di rinnovo automatico allegati.
 * *Usage Status* (Stato utilizzo): Indica la quantità di abbonamento utilizzata o utilizzata in eccesso. È possibile ordinare l'elenco in base a questa colonna se si desidera visualizzare i record di consumo più elevato.
 * image:aiq-ks-time-icon.png["icona"]: Facendo clic su questa icona, viene visualizzata la scheda *Subscription Time Series* (Serie temporale abbonamento) in cui sono visualizzati i dati storici di utilizzo per ciascun livello di servizio incluso in questo abbonamento.
 
@@ -105,7 +105,7 @@ I seguenti colori nei grafici a barre indicano la capacità consumata definita a
 ** Viola: Al di sopra del limite di burst o. `Above Limit`.
 +
 
-NOTE: Passando il mouse su un grafico a barre, è possibile visualizzare i dati di _utilizzo temporaneo_. Si tratta dell'utilizzo registrato quando i dati esatti per il periodo di tempo non sono disponibili e vengono sostituiti dai dati disponibili nel punto di raccolta dati precedente.
+NOTE: Un grafico vuoto indica che non sono disponibili dati nell'ambiente in quel punto di raccolta dati.
 
 
 

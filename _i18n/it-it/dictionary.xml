@@ -2969,7 +2969,6 @@
   <block id="f06c1648cc175308e5d0425681e31f63" category="list-text">*Tracking ID*: L'ID di tracciamento assegnato al momento dell'attivazione dell'abbonamento. Si tratta di un ID univoco per ciascun abbonamento e sito, utilizzato per tenere traccia dell'abbonamento.</block>
   <block id="3644820829d44e327e43dd95769b1686" category="list-text">*Billing Period* (periodo di fatturazione): Il periodo di fatturazione dell'abbonamento, ad esempio mensile, trimestrale o annuale.</block>
   <block id="58ddac2ef16530986372a556eb9e6b7a" category="list-text">*Data di inizio*: La data di inizio dell'abbonamento.</block>
-  <block id="b8905d711198e80b0e2927dff32cfd11" category="list-text">*Data di fine*: Data di fine dell'abbonamento. In base a questa data, potrebbero essere visualizzati messaggi informativi per gli abbonamenti che stanno per scadere.</block>
   <block id="83adb6d347afacf7d560a4bb6f74dfa1" category="list-text">*Usage Status* (Stato utilizzo): Indica la quantità di abbonamento utilizzata o utilizzata in eccesso. È possibile ordinare l'elenco in base a questa colonna se si desidera visualizzare i record di consumo più elevato.</block>
   <block id="baec6461b0d69dde1b861aefbe375d8a" category="inline-image-macro">icona</block>
   <block id="465b53bf56fb8c088ea55a58377aec59" category="list-text"><block ref="435e416487181a998706b8fd7ece7b01" category="inline-image-macro-rx" type="image"></block>: Facendo clic su questa icona, viene visualizzata la scheda *Subscription Time Series* (Serie temporale abbonamento) in cui sono visualizzati i dati storici di utilizzo per ciascun livello di servizio incluso in questo abbonamento.</block>
@@ -3001,7 +3000,6 @@
   <block id="744f7cb6bd1aa9077ff244891a651e80" category="list-text">Ambra: 80% - 100%.</block>
   <block id="c3b2392317dad26eb62ae53f36697f5e" category="list-text">Rosso: Utilizzo burst (100% della capacità impegnata fino al limite burst concordato)</block>
   <block id="7673426e4a1c3cc1b97d1f96f8bd076a" category="list-text">Viola: Al di sopra del limite di burst o.<block ref="a9793d8430f5962bfc6384a1d9f6d19b" prefix=" " category="inline-code"></block>.</block>
-  <block id="fcdba6ace545174b3125451ecdd38a60" category="admonition">Passando il mouse su un grafico a barre, è possibile visualizzare i dati di _utilizzo temporaneo_. Si tratta dell'utilizzo registrato quando i dati esatti per il periodo di tempo non sono disponibili e vengono sostituiti dai dati disponibili nel punto di raccolta dati precedente.</block>
   <block id="e87913116d2be6cac8be4e9b2fdf61e4" category="list-text">*Corrente assorbita*: Indicatore della capacità consumata (in TIB) definita per il livello di servizio. Questo campo utilizza colori specifici per l'utilizzo:</block>
   <block id="500993209cab49c52b98999c19742b12" category="list-text">Grigio: Nessuno.</block>
   <block id="3cc6f4aa3b6f7beebb36ba03d0894c83" category="list-text">Verde: Entro il 80% della capacità impegnata.</block>
@@ -3283,4 +3281,6 @@
   <block id="2f12e5ae44c9cf77ed83b5e5e83ea318" category="sidebar">Gestire le reti</block>
   <block id="2bd05dd0cbc467a7641e108606fa1c5a" category="sidebar">Riferimento API del NetApp Service Engine</block>
   <block id="ab4eeed97074daacb19be5e9f701fc55" category="sidebar">Creare sottoreti utilizzando le API</block>
+  <block id="e34cff1dbe58bcff4567c9224e5370c6" category="list-text">*Data di fine*: Data di fine dell'abbonamento. Una data vuota indica che l'abbonamento non ha una data di fine e viene rinnovato automaticamente. In base a questa data, potrebbero essere visualizzati messaggi informativi per le sottoscrizioni in scadenza o con criteri di rinnovo automatico allegati.</block>
+  <block id="85701aafc47f53d769db3988637e595c" category="admonition">Un grafico vuoto indica che non sono disponibili dati nell'ambiente in quel punto di raccolta dati.</block>
 </blocks>
