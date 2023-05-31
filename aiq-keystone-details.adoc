@@ -64,9 +64,11 @@ Per verificare lo stato di utilizzo di ciascun abbonamento, fare riferimento ai 
 image:usage-indicator.png["icone"]
 
 .Indice
-image:usage-indicator.png["icona"]
-image:usage-indicator.png["icona"]
-image:icon-grey.png["icona"]: Nessun utilizzo della capacità registrato rispetto alla capacità impegnata del livello di servizioimage:icon-green.png["icona"]: Il consumo è normale, entro il 80% della capacità impegnataimage:icon-amber.png["icona"]: Consumo massimo, ovvero l'utilizzo sta per raggiungere il 100% o più della capacità impegnata. La colonna *consumato* visualizza questo indicatore per qualsiasi consumo superiore al 80% della capacità impegnataimage:icon-red.png["icona"]: Il consumo rientra nel limite di burst. Il consumo burst è il consumo che supera il 100% della capacità impegnata di un livello di servizio e rientra nel limite di utilizzo burst concordato, ad esempio il 120%image:icon-purple.png["icona"]Indica un consumo superiore al limite di burst stabilito
+image:icon-grey.png["icona"]: Nessun utilizzo della capacità registrato rispetto alla capacità impegnata del livello di servizio
+image:icon-green.png["icona"]: Il consumo è normale, entro il 80% della capacità impegnata
+image:icon-amber.png["icona"]: Consumo massimo, ovvero l'utilizzo sta per raggiungere il 100% o più della capacità impegnata. La colonna *consumato* visualizza questo indicatore per qualsiasi consumo superiore al 80% della capacità impegnata
+image:icon-red.png["icona"]: Il consumo rientra nel limite di burst. Il consumo burst è il consumo che supera il 100% della capacità impegnata di un livello di servizio e rientra nel limite di utilizzo burst concordato, ad esempio il 120%
+image:icon-purple.png["icona"]Indica un consumo superiore al limite di burst stabilito
 
 
 
