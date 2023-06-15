@@ -17,7 +17,7 @@
   <meta http-equiv="encoding" content="utf-8">
   <meta http-equiv="nss-type" content="Product Documentation"/>
   <meta http-equiv="nss-subtype" content="User Guide"/><meta name="description" content="Report e grafici dell"abbonamento Keystone">
-  <meta name="keywords" content=" keystone-aiq, digital advisor keystone, keystone reports, alerts, keystone dashboard, keystone usage graphs charts, generate reports"><!-- Icons -->
+  <meta name="keywords" content=" keystone-aiq, digital advisor keystone, keystone reports, alerts, keystone dashboard, keystone usage graphs charts, generate reports, MetroCluster, StorageGRID, consumption details"><!-- Icons -->
   <link rel="icon" href="/it-it/keystone/images/favicon.ico" type="image/x-icon">
 
   <!-- RSS Feed --><!-- CSS Definitions: NetApp CSS should be defined after generic css -->
@@ -2007,7 +2007,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-31 05:57:11 +0000">05/31/2023</time>
+    <time datetime="2023-06-15 15:28:59 +0000">06/15/2023</time>
     
   
 
@@ -2087,6 +2087,21 @@ Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibe
 </li>
 <li>
 <p><strong>Tracking ID</strong>: L&#8217;ID di tracciamento assegnato al momento dell&#8217;attivazione dell&#8217;abbonamento. Si tratta di un ID univoco per ciascun abbonamento e sito, utilizzato per tenere traccia dell&#8217;abbonamento.</p>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/keystone/images/tip.svg" alt="Suggerimento">
+</td>
+<td class="content">
+Se il tuo abbonamento ha un livello di servizio di protezione dati o un piano tariffario assegnato, una descrizione comandi ti aiuta a identificare l&#8217;ID di rilevamento dell&#8217;abbonamento partner in una configurazione MetroCluster. Per informazioni su come visualizzare il consumo dettagliato delle sottoscrizioni dei partner in una configurazione MetroCluster, vedere <a href="https://docs.netapp.com/us-en/keystone/aiq-keystone-details.html#additional-details-for-data-protection">"Ulteriori dettagli sulla protezione dei dati"</a>.
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p><strong>Tipo di utilizzo</strong>: Potresti aver sottoscritto più abbonamenti Keystone (versione 1) o Keystone STaaS (versione 2). Le regole del piano tariffario per i livelli di servizio possono variare in base ai due tipi di abbonamento. Osservando il valore di questa colonna, è possibile sapere se il tipo di utilizzo viene fatturato in base all&#8217;utilizzo logico o di provisioning per entrambi <code>v1</code> oppure <code>v2</code>. Per ulteriori informazioni su Keystone STaaS, vedere <a href="https://docs.netapp.com/us-en/keystone-staas/index.html">"Documentazione Keystone STaaS"</a>.</p>
 </li>
 <li>
 <p><strong>Billing Period</strong> (periodo di fatturazione): Il periodo di fatturazione dell&#8217;abbonamento, ad esempio mensile, trimestrale o annuale.</p>
@@ -2108,11 +2123,11 @@ Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibe
 <div class="paragraph">
 <p>Per ulteriori informazioni, fare clic sulla freccia verso il basso per il record di un abbonamento. I dettagli, come il nome del livello di servizio, le capacità assegnate, consumate, disponibili e l&#8217;utilizzo corrente e accumulato burst, sono visualizzati in TIB.</p>
 </div>
-<div class="admonitionblock note">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<img src="/us-en/keystone/images/note.svg" alt="Nota">
+<img src="/us-en/keystone/images/tip.svg" alt="Suggerimento">
 </td>
 <td class="content">
 Vengono evidenziati livelli di servizio specifici che registrano un consumo più elevato. È inoltre possibile visualizzare avvisi e avvisi generati per i volumi.
@@ -2156,11 +2171,11 @@ Vengono evidenziati livelli di servizio specifici che registrano un consumo più
 </li>
 <li>
 <p>Selezionare l&#8217;intervallo di tempo dalle icone del calendario nei campi <strong>Data</strong> e <strong>Data</strong>. L&#8217;intervallo di tempo predefinito va dalla data di inizio del periodo di fatturazione alla data corrente.</p>
-<div class="admonitionblock note">
+<div class="admonitionblock tip">
 <table>
 <tr>
 <td class="icon">
-<img src="/us-en/keystone/images/note.svg" alt="Nota">
+<img src="/us-en/keystone/images/tip.svg" alt="Suggerimento">
 </td>
 <td class="content">
 Per ottenere performance ottimali e un&#8217;esperienza utente ottimale, limitare l&#8217;intervallo di date della query a un massimo di tre mesi.
@@ -2280,11 +2295,13 @@ Gli indicatori <strong>consumo corrente</strong>, <strong>burst corrente</strong
 </li>
 </ul>
 </div>
+<div class="sect2">
+<h3 id="ulteriori-dettagli-sulla-protezione-dei-dati">Ulteriori dettagli sulla protezione dei dati</h3>
 <details>
-<summary class="title">Dettagli su &lt;strong&gt; per Data ProtecTector &lt;/strong&gt;</summary>
+<summary class="title">Fare clic qui</summary>
 <div class="content">
 <div class="paragraph">
-<p>Se si è abbonati al servizio protezione dati (DP), è possibile visualizzare la disgregazione dei dati di consumo in base ai siti primari e mirror MetroCluster nella scheda <strong>Serie temporale abbonamento</strong>.</p>
+<p>Se si è abbonati al servizio protezione dati (DP), è possibile visualizzare la disgregazione dei dati di consumo in base ai siti dei partner MetroCluster nella scheda <strong>abbonamento Time Series</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Per informazioni sulla protezione dei dati, vedere <a href="https://docs.netapp.com/us-en/keystone/nkfsosm_data_protection.html">"Protezione dei dati"</a>.</p>
@@ -2306,7 +2323,7 @@ I grafici a barre dei consumi sono suddivisi solo per i livelli di servizio di b
 </div>
 <div class="paragraph">
 <div class="title">Livelli di servizio per la protezione dei dati</div>
-<p>Per i livelli di servizio DP, il consumo totale viene suddiviso e l&#8217;utilizzo in ciascun sito viene riflesso e fatturato in un abbonamento separato, vale a dire un abbonamento per il sito primario e un altro per il sito mirror. Per questo motivo, quando si seleziona il numero di abbonamento per il sito primario nella scheda <strong>Subscription Time Series</strong>, i grafici dei consumi per i livelli di servizio DP visualizzano i dettagli relativi al consumo discreto solo per il sito primario. Poiché ogni sito in una configurazione MetroCluster agisce come origine e mirror, il consumo totale di ogni sito include i volumi di origine e mirror creati in quel sito.</p>
+<p>Per i livelli di servizio DP, il consumo totale viene suddiviso e l&#8217;utilizzo in ciascun sito partner viene riflesso e fatturato in un abbonamento separato, vale a dire un abbonamento per il sito primario e un altro per il sito mirror. Per questo motivo, quando si seleziona il numero di abbonamento per il sito primario nella scheda <strong>Subscription Time Series</strong>, i grafici dei consumi per i livelli di servizio DP visualizzano i dettagli relativi al consumo discreto solo per il sito primario. Poiché ogni sito partner in una configurazione MetroCluster agisce come origine e mirror, il consumo totale di ogni sito include i volumi di origine e mirror creati in quel sito.</p>
 </div>
 <div class="paragraph">
 <div class="title">Livelli di servizio di base</div>
@@ -2345,14 +2362,17 @@ I grafici a barre dei consumi sono suddivisi solo per i livelli di servizio di b
 </details>
 </div>
 </div>
+</div>
 <div class="sect1">
 <h2 id="visualizza-i-dettagli-del-sistema">Visualizza i dettagli del sistema</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Nella scheda <strong>Dettagli sistema</strong>, è possibile visualizzare il consumo e altri dettagli dei volumi in ONTAP. Per StorageGRID, questa scheda visualizza i nodi e il loro utilizzo individuale nell&#8217;ambiente di storage a oggetti.</p>
 </div>
+<div class="sect2">
+<h3 id="dettagli-del-volume-ontap">Dettagli del volume ONTAP</h3>
 <details>
-<summary class="title">Dettagli volume &lt;strong&gt; ONTAP &lt;/strong&gt;</summary>
+<summary class="title">Fare clic qui</summary>
 <div class="content">
 <div class="paragraph">
 <p>Per ONTAP, la scheda <strong>Dettagli sistema</strong> visualizza informazioni, come l&#8217;utilizzo della capacità, il tipo di volume, il cluster, l&#8217;aggregato e il livello di servizio dei volumi nell&#8217;ambiente di storage gestito dall&#8217;abbonamento Keystone.</p>
@@ -2388,8 +2408,11 @@ Per i servizi di protezione dei dati, viene visualizzata una colonna aggiuntiva 
 </div>
 </div>
 </details>
+</div>
+<div class="sect2">
+<h3 id="nodi-storagegrid-e-dettagli-sui-consumi">Nodi StorageGRID e dettagli sui consumi</h3>
 <details>
-<summary class="title">Nodi &lt;strong&gt; Fundes GRID e dettagli sul consumo &lt;/strong&gt;</summary>
+<summary class="title">Fare clic qui</summary>
 <div class="content">
 <div class="paragraph">
 <p>Per StorageGRID, questa scheda visualizza l&#8217;utilizzo logico dei nodi nell&#8217;ambiente di storage a oggetti.</p>
@@ -2416,6 +2439,7 @@ Per i servizi di protezione dei dati, viene visualizzata una colonna aggiuntiva 
 </div>
 </div>
 </details>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -2457,6 +2481,18 @@ Per i servizi di protezione dei dati, viene visualizzata una colonna aggiuntiva 
 </li>
 <li>
 <p><strong>Attenzione</strong>: I problemi, come la non conformità, vengono visualizzati come avvisi. Ad esempio, se all&#8217;interno dei cluster gestiti sono presenti volumi che non dispongono di criteri QoS adattivi (AQoS), viene visualizzato un messaggio di avviso. È possibile fare clic sul collegamento nel messaggio di avviso per visualizzare l&#8217;elenco dei volumi non conformi nella scheda <strong>Dettagli sistema</strong>.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/keystone/images/note.svg" alt="Nota">
+</td>
+<td class="content">
+Se si è abbonati a un singolo livello di servizio o piano tariffario, non sarà possibile visualizzare l&#8217;avviso relativo ai volumi non conformi.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>Per informazioni sui criteri AQoS, vedere <a href="https://docs.netapp.com/us-en/keystone/nkfsosm_kfs_billing.html#billing-and-adaptive-qos-policies">"Policy di fatturazione e QoS adattivi"</a>.</p>
 </div>
