@@ -24,6 +24,8 @@ Il servizio di data Protection di NetApp Keystone è in grado di eseguire il bac
 
 NOTE: I servizi di backup e disaster recovery sono disponibili come servizi aggiuntivi, mentre snapshot è disponibile come parte del servizio di storage di base.
 
+Se hai sottoscritto un abbonamento ai servizi di protezione dei dati, ai tuoi abbonamenti vengono assegnati livelli di servizio specifici, ad esempio _Data-Protect Extreme_, _Data-Protect Premium_ e così via. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/keystone/aiq-keystone-details.html#additional-details-for-data-protection["Ulteriori dettagli per la protezione dei dati"]
+
 |===
 |  | Snapshot Single Region (disponibili come parte del servizio di storage di base) | Backup multi-regione (add-on per la protezione dei dati) | Disaster recovery multi-regione (add-on per la protezione dei dati) 
 
