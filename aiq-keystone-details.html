@@ -2007,7 +2007,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-06-15 15:28:59 +0000">06/15/2023</time>
+    <time datetime="2023-06-27 12:01:42 +0000">06/27/2023</time>
     
   
 
@@ -2061,7 +2061,7 @@ Le informazioni qui disponibili si applicano sia a ONTAP che a StorageGRID. Le e
 <img src="/us-en/keystone/images/note.svg" alt="Nota">
 </td>
 <td class="content">
-Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibers su dashboard e report, fino a due cifre decimali. Se l&#8217;utilizzo è inferiore a 0.01 TIB, il valore viene visualizzato come <code>0</code> oppure <code>No Usage</code>. Per altre metriche di utilizzo, vedere <a href="https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html">"Metriche e definizioni dei livelli di servizio"</a>. Per informazioni sulle diverse capacità utilizzate in Keystone, vedere <a href="https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html">"Definizioni della capacità del servizio Keystone"</a>.
+Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibers su dashboard e report e arrotondato a due cifre decimali. Se l&#8217;utilizzo è inferiore a 0.01 TIB, il valore viene visualizzato come <code>0</code> oppure <code>No Usage</code>. Per altre metriche di utilizzo, vedere <a href="https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html">"Metriche e definizioni dei livelli di servizio"</a>. Per informazioni sulle diverse capacità utilizzate in Keystone, vedere <a href="https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html">"Definizioni della capacità del servizio Keystone"</a>.
 </td>
 </tr>
 </table>
@@ -2094,7 +2094,7 @@ Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibe
 <img src="/us-en/keystone/images/tip.svg" alt="Suggerimento">
 </td>
 <td class="content">
-Se il tuo abbonamento ha un livello di servizio di protezione dati o un piano tariffario assegnato, una descrizione comandi ti aiuta a identificare l&#8217;ID di rilevamento dell&#8217;abbonamento partner in una configurazione MetroCluster. Per informazioni su come visualizzare il consumo dettagliato delle sottoscrizioni dei partner in una configurazione MetroCluster, vedere <a href="https://docs.netapp.com/us-en/keystone/aiq-keystone-details.html#additional-details-for-data-protection">"Ulteriori dettagli sulla protezione dei dati"</a>.
+Se il tuo abbonamento ha un livello di servizio di protezione dati o un piano tariffario assegnato, una descrizione comandi ti aiuta a identificare l&#8217;ID di rilevamento dell&#8217;abbonamento partner in una configurazione MetroCluster. Per informazioni su come visualizzare il consumo dettagliato delle sottoscrizioni dei partner in una configurazione MetroCluster, vedere <a href="https://docs.netapp.com/us-en/keystone/aiq-keystone-details.html#additional-details-for-data-protection">"Ulteriori dettagli per la protezione dei dati"</a>.
 </td>
 </tr>
 </table>
@@ -2296,12 +2296,12 @@ Gli indicatori <strong>consumo corrente</strong>, <strong>burst corrente</strong
 </ul>
 </div>
 <div class="sect2">
-<h3 id="ulteriori-dettagli-sulla-protezione-dei-dati">Ulteriori dettagli sulla protezione dei dati</h3>
+<h3 id="ulteriori-dettagli-per-la-protezione-dei-dati">Ulteriori dettagli per la protezione dei dati</h3>
 <details>
 <summary class="title">Fare clic qui</summary>
 <div class="content">
 <div class="paragraph">
-<p>Se si è abbonati al servizio protezione dati (DP), è possibile visualizzare la disgregazione dei dati di consumo in base ai siti dei partner MetroCluster nella scheda <strong>abbonamento Time Series</strong>.</p>
+<p>Se si è abbonati al servizio di protezione dei dati, è possibile visualizzare la disgregazione dei dati di consumo per i siti dei partner MetroCluster nella scheda <strong>Serie temporale abbonamento</strong>.</p>
 </div>
 <div class="paragraph">
 <p>Per informazioni sulla protezione dei dati, vedere <a href="https://docs.netapp.com/us-en/keystone/nkfsosm_data_protection.html">"Protezione dei dati"</a>.</p>
@@ -2316,41 +2316,53 @@ Gli indicatori <strong>consumo corrente</strong>, <strong>burst corrente</strong
 <img src="/us-en/keystone/images/note.svg" alt="Nota">
 </td>
 <td class="content">
-I grafici a barre dei consumi sono suddivisi solo per i livelli di servizio di base. Per i livelli di servizio DP, questa delimitazione non viene visualizzata.
+I grafici a barre dei consumi sono suddivisi solo per i livelli di servizio di base. Per i livelli di servizio di protezione dei dati, questa delimitazione non viene visualizzata.
 </td>
 </tr>
 </table>
 </div>
 <div class="paragraph">
 <div class="title">Livelli di servizio per la protezione dei dati</div>
-<p>Per i livelli di servizio DP, il consumo totale viene suddiviso e l&#8217;utilizzo in ciascun sito partner viene riflesso e fatturato in un abbonamento separato, vale a dire un abbonamento per il sito primario e un altro per il sito mirror. Per questo motivo, quando si seleziona il numero di abbonamento per il sito primario nella scheda <strong>Subscription Time Series</strong>, i grafici dei consumi per i livelli di servizio DP visualizzano i dettagli relativi al consumo discreto solo per il sito primario. Poiché ogni sito partner in una configurazione MetroCluster agisce come origine e mirror, il consumo totale di ogni sito include i volumi di origine e mirror creati in quel sito.</p>
+<p>Per i livelli di servizio di protezione dei dati, il consumo totale viene suddiviso tra i siti partner e l&#8217;utilizzo in ciascun sito partner viene riflesso e fatturato in un abbonamento separato, ovvero un abbonamento per il sito primario e un altro per il sito mirror. Per questo motivo, quando si seleziona il numero di abbonamento per il sito primario nella scheda <strong>Subscription Time Series</strong>, i grafici dei consumi per i livelli di servizio DP visualizzano i dettagli relativi al consumo discreto solo per il sito primario. Poiché ogni sito partner in una configurazione MetroCluster agisce come origine e mirror, il consumo totale di ogni sito include i volumi di origine e mirror creati in quel sito.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/keystone/images/tip.svg" alt="Suggerimento">
+</td>
+<td class="content">
+La descrizione accanto all&#8217;ID di registrazione dell&#8217;abbonamento nella scheda <strong>Dettagli abbonamento</strong> consente di identificare l&#8217;abbonamento partner nella configurazione di MetroCluster.
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <div class="title">Livelli di servizio di base</div>
-<p>Per i livelli di servizio di base, tuttavia, ciascun volume viene addebitato come provisioning nei siti primario e mirror, quindi lo stesso grafico a barre viene suddiviso in base al consumo nei siti primario e mirror.</p>
+<p>Per i livelli di servizio di base, ciascun volume viene addebitato come provisioning nei siti primario e mirror, quindi lo stesso grafico a barre viene suddiviso in base al consumo nei siti primario e mirror.</p>
 </div>
 <div class="paragraph">
 <div class="title">Cosa puoi vedere per l&#8217;abbonamento primario</div>
-<p>La seguente immagine mostra i grafici relativi al livello di servizio <em>Extreme</em> e al numero di abbonamento principale. Il grafico della stessa serie temporale indica il consumo del sito mirror in una tonalità più chiara del codice colore utilizzato per il sito primario. Il suggerimento del mouse mostra la disgregazione dei consumi (in TIB) per i siti primario e mirror, rispettivamente 1.02 TIB e 1.05 TIB.</p>
+<p>L&#8217;immagine seguente mostra i grafici relativi al livello di servizio <em>Extreme</em> (livello di servizio di base) e al numero di abbonamento primario. Il grafico della stessa serie temporale indica il consumo del sito mirror in una tonalità più chiara del codice colore utilizzato per il sito primario. Il suggerimento del mouse mostra la disgregazione dei consumi (in TIB) per i siti primario e mirror, rispettivamente 1.02 TIB e 1.05 TIB.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/mcc-chart.png" alt="mcc primario"></span></p>
 </div>
 <div class="paragraph">
-<p>Per il livello di servizio <em>Data-Protect Extreme</em>, i grafici appaiono come segue:</p>
+<p>Per il livello di servizio <em>Data-Protect Extreme</em> (livello di servizio di protezione dei dati), i grafici appaiono come segue:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/dp-src.png" alt="base primaria mcc"></span></p>
 </div>
 <div class="paragraph">
 <div class="title">Cosa puoi vedere per l&#8217;abbonamento secondario (sito mirror)</div>
-<p>Quando si controlla l&#8217;abbonamento secondario, è possibile vedere che il grafico a barre per il livello di servizio <em>Extreme</em> nello stesso punto di raccolta dati viene invertito e la disgregazione dei consumi nei siti primario e mirror è rispettivamente di 1.05 TIB e 1.02 TIB.</p>
+<p>Quando si controlla l&#8217;abbonamento secondario, è possibile vedere che il grafico a barre per il livello di servizio <em>Extreme</em> (livello di servizio di base) nello stesso punto di raccolta dati del sito partner viene invertito e la disgregazione dei consumi nei siti primario e mirror è rispettivamente di 1.05 TIB e 1.02 TIB.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/mcc-chart-mirror.png" alt="mirror mcc"></span></p>
 </div>
 <div class="paragraph">
-<p>Per il livello di servizio <em>Data-Protect Extreme</em>, il grafico viene visualizzato nello stesso punto di raccolta:</p>
+<p>Per il livello di servizio <em>Data-Protect Extreme</em> (livello di servizio di protezione dei dati), il grafico viene visualizzato nello stesso punto di raccolta del sito del partner:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/dp-mir.png" alt="base mirror mcc"></span></p>
