@@ -14,9 +14,38 @@ summary: Cosa possono vedere i clienti in Active IQ per Keystone
 
 
 [role="lead"]
-Se si è abbonati ai servizi NetApp Keystone, è possibile visualizzare i report e i grafici sull'utilizzo nella dashboard di Active IQ Advisor.
+Se ti sei abbonato ai servizi NetApp Keystone, puoi ottenere una panoramica delle tue iscrizioni nel widget *Sottoscrizioni Keystone* del dashboard di consulente digitale Active IQ.
 
-Accedendo a Digital Advisor, è possibile visualizzare il widget *Keystone Subscriptions* che riepiloga l'utilizzo della capacità rispetto ai servizi Keystone acquistati.
+Digital Advisor offre un dashboard unificato che fornisce informazioni dettagliate sui vari livelli dei dati di abbonamento e sulle informazioni sull'utilizzo tramite il pulsante *passa alla dashboard precedente/nuova*.
+
+.Dashboard predefinito (vecchio)
+Puoi visualizzare il numero di iscrizione, il nome dell'account, le date di inizio e fine dell'abbonamento e i grafici sull'utilizzo della capacità in base ai tuoi livelli di servizio con iscrizione.
+
+image:old-db.png["vecchio cruscotto"]
+
+.Cruscotto alternativo (nuovo)
+Puoi vedere la suddivisione dell'utilizzo della capacità in base alle tue sottoscrizioni e avvisi e avvisi che richiedono attenzione o azione immediata. Le informazioni vengono visualizzate in modo selettivo, a seconda delle sottoscrizioni e dello stato di utilizzo. È possibile visualizzare le seguenti informazioni:
+
+* Utilizzo della capacità, come:
++
+** Nessun utilizzo.
+** Consumo superiore al 80% della capacità impegnata.
+** Utilizzo burst.
+** Consumi superiori alla capacità burst.
+
+
+* Le avvertenze varie vengono visualizzate se applicabili.
++
+** *In scadenza*: Nel caso in cui i tuoi abbonamenti scadano entro 90 giorni.
+** *Aggiornamenti hardware critici*: Se sono in sospeso aggiornamenti hardware critici.
+** *Avvertenze AQoS*: Sono stati assegnati volumi senza criteri AQoS.
++
+
+TIP: Fare clic sul collegamento *Sottoscrizioni* per visualizzare l'elenco delle sottoscrizioni filtrate nella scheda *Sottoscrizioni*.
+
+
+
+
 
 Per ulteriori informazioni su Digital Advisor, vedere link:https://docs.netapp.com/us-en/active-iq/index.html["Documentazione di Digital Advisor"].
 

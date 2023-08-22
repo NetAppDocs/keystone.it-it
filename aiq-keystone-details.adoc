@@ -34,27 +34,27 @@ NOTE: Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato i
 
 
 
-== Visualizza tutti gli abbonamenti
+== Visualizzare le iscrizioni
 
-È possibile visualizzare un elenco di tutti gli abbonamenti nella scheda *tutti gli abbonamenti*.
+È possibile visualizzare un elenco delle sottoscrizioni nella scheda *Sottoscrizioni*.
 
 image:all-subs.png["immagine della scheda all subscriptions (tutte le sottoscrizioni)"]
 
-Per ciascun numero di abbonamento, vengono visualizzate le seguenti informazioni:
+È possibile visualizzare le seguenti informazioni. Per alcuni campi e colonne, è possibile visualizzare informazioni o icone di avvertenza e descrizioni dei comandi che forniscono informazioni aggiuntive sui dati.
 
 * *Subscription Number*: Il numero di abbonamento Keystone assegnato da NetApp.
 * *Tracking ID*: L'ID di tracciamento assegnato al momento dell'attivazione dell'abbonamento. Si tratta di un ID univoco per ciascun abbonamento e sito, utilizzato per tenere traccia dell'abbonamento.
 +
 
-TIP: Se il tuo abbonamento ha un livello di servizio di protezione dati o un piano tariffario assegnato, una descrizione comandi ti aiuta a identificare l'ID di rilevamento dell'abbonamento partner in una configurazione MetroCluster. Per informazioni su come visualizzare il consumo dettagliato delle sottoscrizioni dei partner in una configurazione MetroCluster, vedere https://docs.netapp.com/us-en/keystone/aiq-keystone-details.html#additional-details-for-data-protection["Ulteriori dettagli per la protezione dei dati"].
+TIP: Se il tuo abbonamento ha un livello di servizio di protezione dati o un piano tariffario assegnato, una descrizione comandi ti aiuta a identificare l'ID di rilevamento dell'abbonamento partner in una configurazione MetroCluster. Per informazioni su come visualizzare il consumo dettagliato delle sottoscrizioni dei partner in una configurazione MetroCluster, vedere https://docs.netapp.com/us-en/keystone/aiq-keystone-details.html#reference-charts-for-data-protection["Diagrammi di riferimento per la protezione dei dati"].
 
-* *Tipo di utilizzo*: Potresti aver sottoscritto più abbonamenti Keystone (versione 1) o Keystone STaaS (versione 2). Le regole del piano tariffario per i livelli di servizio possono variare in base ai due tipi di abbonamento. Osservando il valore di questa colonna, è possibile sapere se il tipo di utilizzo viene fatturato in base all'utilizzo logico o di provisioning per entrambi `v1` oppure `v2`. Per ulteriori informazioni su Keystone STaaS, vedere https://docs.netapp.com/us-en/keystone-staas/index.html["Documentazione Keystone STaaS"].
+* *Tipo di utilizzo*: Potresti aver sottoscritto più abbonamenti Keystone (versione 1) o Keystone STaaS (versione 2). Le regole del piano tariffario per i livelli di servizio possono variare in base ai due tipi di abbonamento. Osservando il valore di questa colonna, è possibile sapere se il tipo di utilizzo viene fatturato in base all'utilizzo logico o di provisioning per entrambi `v1` oppure `v2`. Per ulteriori informazioni su Keystone STaaS, vedere https://docs.netapp.com/us-en/keystone-staas/index.html["Documentazione Keystone STaaS"^].
 * *Billing Period* (periodo di fatturazione): Il periodo di fatturazione dell'abbonamento, ad esempio mensile, trimestrale o annuale.
 * *Data di inizio*: La data di inizio dell'abbonamento.
 * *Data di fine*: Data di fine dell'abbonamento. Una data vuota indica che l'abbonamento non ha una data di fine e viene rinnovato automaticamente. In base a questa data, potrebbero essere visualizzati messaggi informativi per le sottoscrizioni in scadenza o con criteri di rinnovo automatico allegati.
 * *Usage Status* (Stato utilizzo): Indica la quantità di abbonamento utilizzata o utilizzata in eccesso. È possibile ordinare l'elenco in base a questa colonna se si desidera visualizzare i record di consumo più elevato.
-* image:subs-dtls-icon.png["icona"]: Facendo clic su questa icona per un abbonamento, si apre la scheda *Dettagli abbonamento* con ulteriori dettagli sull'abbonamento.
-* image:aiq-ks-time-icon.png["icona"]: Facendo clic su questa icona si apre la scheda *Time Series*, in cui è possibile visualizzare i dati storici di utilizzo per ciascun livello di servizio incluso in questo abbonamento.
+* image:subs-dtls-icon.png["icona"]: Facendo clic su questa icona per un abbonamento, viene aperta la scheda *uso corrente* con ulteriori dettagli sull'abbonamento.
+* image:aiq-ks-time-icon.png["icona"]: Facendo clic su questa icona si apre la scheda *tendenza capacità*, in cui è possibile visualizzare i dati cronologici di utilizzo per ciascun livello di servizio incluso in questo abbonamento.
 Per verificare lo stato di utilizzo di ciascun abbonamento, fare riferimento ai seguenti indicatori di utilizzo:
 
 
@@ -69,11 +69,11 @@ image:icon-purple.png["icona"]Indica un consumo superiore al limite di burst sta
 
 
 
-== Visualizza i dettagli dell'abbonamento
+== Visualizza i dettagli di utilizzo degli abbonamenti
 
-Per conoscere i dettagli dei tuoi abbonamenti, fai clic sulla scheda *Dettagli abbonamento* e seleziona il numero di abbonamento desiderato.
+Per conoscere i dettagli delle sottoscrizioni, fare clic sulla scheda *uso corrente* e selezionare il numero di abbonamento richiesto.
 
-image:aiq-ks-dtls.png["scheda subscription details"]
+image:aiq-ks-dtls.png["Scheda uso corrente"]
 
 I dettagli, come il nome del livello di servizio, le capacità assegnate, consumate, disponibili e l'utilizzo corrente e accumulato burst, sono visualizzati in TIB.
 
@@ -84,12 +84,12 @@ Per informazioni sui servizi di storage Keystone e sui relativi livelli di servi
 
 
 
-== Visualizzare i dati storici dell'abbonamento
+== Consente di visualizzare i dati cronologici di utilizzo
 
-La scheda *Time Series* visualizza i dati storici delle sottoscrizioni Keystone per un periodo specifico. I grafici verticali visualizzano i dettagli di utilizzo per l'intervallo di tempo selezionato con gli indicatori appropriati per il confronto e la generazione di report.
+La scheda *tendenza capacità* visualizza i dati storici delle sottoscrizioni Keystone per un periodo specifico. I grafici verticali visualizzano i dettagli di utilizzo per l'intervallo di tempo selezionato con gli indicatori appropriati per il confronto e la generazione di report.
 
 .Fasi
-. Fare clic sulla scheda *Time Series*.
+. Fare clic sulla scheda *Trend capacità*.
 . Selezionare l'abbonamento richiesto per il quale si desidera visualizzare i dettagli. Per impostazione predefinita, viene selezionato il primo abbonamento nel nome dell'account.
 . Selezionare l'intervallo di tempo dalle icone del calendario nei campi *Data* e *Data*. L'intervallo di tempo predefinito va dalla data di inizio del periodo di fatturazione alla data corrente.
 +
@@ -103,7 +103,7 @@ image:aiq-ks-subtime-2.png["dati storici"]
 
 Vengono visualizzati i seguenti dettagli:
 
-* *Dettagli dell'abbonamento*: La data di inizio e di fine dell'abbonamento e il periodo di fatturazione, ad esempio trimestrale, annuale e così via.
+* *Utilizzo corrente*: La data di inizio e di fine dell'abbonamento e il periodo di fatturazione, ad esempio, trimestrale, annuale e così via.
 * *Diagrammi di utilizzo*: I grafici a barre visualizzano il nome del livello di servizio e la capacità consumata rispetto a tale livello di servizio per l'intervallo di date. La data e l'ora della raccolta vengono visualizzate nella parte inferiore del grafico.
 +
 
@@ -146,31 +146,31 @@ NOTE: Gli indicatori *consumo corrente*, *burst corrente* e *burst accumulato* d
 
 
 
-=== Ulteriori dettagli per la protezione dei dati
+=== Diagrammi di riferimento per la protezione dei dati
 
 .Scopri di più
 [%collapsible]
 ====
-Se si è abbonati al servizio di protezione dei dati, è possibile visualizzare la disgregazione dei dati di consumo per i siti dei partner MetroCluster nella scheda *Time Series*.
+Se si è abbonati al servizio di protezione dei dati, è possibile visualizzare la suddivisione dei dati di consumo per i siti partner MetroCluster nella scheda *tendenza capacità*.
 
 Per informazioni sulla protezione dei dati, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_data_protection.html["Protezione dei dati"].
 
-Se i cluster nell'ambiente di storage ONTAP sono configurati in una configurazione MetroCluster, i dati di consumo dell'abbonamento Keystone vengono suddivisi nello stesso grafico della serie temporale per visualizzare il consumo sui siti primario e mirror per i livelli di servizio di base.
+Se i cluster nel tuo ambiente di storage ONTAP sono configurati in una configurazione MetroCluster, i dati di consumo dell'iscrizione Keystone vengono suddivisi nello stesso grafico dei dati storici per visualizzare il consumo nei siti primario e di mirroring per i livelli di servizio di base.
 
 
 NOTE: I grafici a barre dei consumi sono suddivisi solo per i livelli di servizio di base. Per i livelli di servizio di protezione dei dati, questa delimitazione non viene visualizzata.
 
 .Livelli di servizio per la protezione dei dati
-Per i livelli di servizio di protezione dei dati, il consumo totale viene suddiviso tra i siti partner e l'utilizzo in ciascun sito partner viene riflesso e fatturato in un abbonamento separato, ovvero un abbonamento per il sito primario e un altro per il sito mirror. Per questo motivo, quando si seleziona il numero di abbonamento per il sito primario nella scheda *Time Series*, i grafici di consumo per i livelli di servizio DP visualizzano i dettagli di consumo discreto solo per il sito primario. Poiché ogni sito partner in una configurazione MetroCluster agisce come origine e mirror, il consumo totale di ogni sito include i volumi di origine e mirror creati in quel sito.
+Per i livelli di servizio di protezione dei dati, il consumo totale viene suddiviso tra i siti partner e l'utilizzo in ciascun sito partner viene riflesso e fatturato in un abbonamento separato, ovvero un abbonamento per il sito primario e un altro per il sito mirror. Per questo motivo, quando si seleziona il numero di abbonamento per il sito primario nella scheda *tendenza capacità*, i grafici di consumo per i livelli di servizio DP visualizzano i dettagli di consumo discreti solo per il sito primario. Poiché ogni sito partner in una configurazione MetroCluster agisce come origine e mirror, il consumo totale di ogni sito include i volumi di origine e mirror creati in quel sito.
 
 
-TIP: La descrizione accanto all'ID di registrazione dell'abbonamento nella scheda *Dettagli abbonamento* consente di identificare l'abbonamento partner nella configurazione di MetroCluster.
+TIP: La descrizione dei comandi accanto all'ID di modifica dell'abbonamento nella scheda *utilizzo corrente* consente di identificare l'abbonamento partner nella configurazione di MetroCluster.
 
 .Livelli di servizio di base
 Per i livelli di servizio di base, ciascun volume viene addebitato come provisioning nei siti primario e mirror, quindi lo stesso grafico a barre viene suddiviso in base al consumo nei siti primario e mirror.
 
 .Cosa puoi vedere per l'abbonamento primario
-L'immagine seguente mostra i grafici relativi al livello di servizio _Extreme_ (livello di servizio di base) e al numero di abbonamento primario. Il grafico della stessa serie temporale indica il consumo del sito mirror in una tonalità più chiara del codice colore utilizzato per il sito primario. Il suggerimento del mouse mostra la disgregazione dei consumi (in TIB) per i siti primario e mirror, rispettivamente 1.02 TIB e 1.05 TIB.
+L'immagine seguente mostra i grafici relativi al livello di servizio _Extreme_ (livello di servizio di base) e al numero di abbonamento primario. Lo stesso grafico dei dati storici contrassegna il consumo del sito mirror in una tonalità più chiara del codice colore utilizzato per il sito primario. Il suggerimento del mouse mostra la disgregazione dei consumi (in TIB) per i siti primario e mirror, rispettivamente 1.02 TIB e 1.05 TIB.
 
 image:mcc-chart.png["mcc primario"]
 
@@ -192,9 +192,12 @@ Per informazioni su come MetroCluster protegge i dati, consulta https://docs.net
 ====
 
 
-== Visualizza i dettagli del sistema
+== Visualizzare i dettagli di volumi e oggetti
 
-Nella scheda *Dettagli sistema*, è possibile visualizzare il consumo e altri dettagli dei volumi in ONTAP. Per StorageGRID, questa scheda visualizza i nodi e il loro utilizzo individuale nell'ambiente di storage a oggetti.
+Nella scheda *volumi e oggetti*, è possibile visualizzare il consumo e altri dettagli per i volumi in ONTAP. Per StorageGRID, questa scheda visualizza i nodi e il loro utilizzo individuale nell'ambiente di storage a oggetti.
+
+
+NOTE: Il nome di questa scheda varia in base alla natura della distribuzione presso il sito. Se si dispone sia di volumi che di storage a oggetti, è possibile visualizzare la scheda *volumi e oggetti*. Se nell'ambiente di archiviazione sono presenti solo volumi, il nome cambia in *volumi*. Per l'archiviazione di oggetti, è possibile visualizzare la scheda *oggetti*.
 
 
 
@@ -203,10 +206,10 @@ Nella scheda *Dettagli sistema*, è possibile visualizzare il consumo e altri de
 .Scopri di più
 [%collapsible]
 ====
-Per ONTAP, la scheda *Dettagli sistema* visualizza informazioni, come l'utilizzo della capacità, il tipo di volume, il cluster, l'aggregato e il livello di servizio dei volumi nell'ambiente di storage gestito dall'abbonamento Keystone.
+Per ONTAP, la scheda *volumi* visualizza informazioni come l'utilizzo della capacità, il tipo di volume, il cluster, l'aggregato e il livello di servizio dei volumi nel tuo ambiente storage gestito dall'iscrizione Keystone.
 
 .Fasi
-. Fare clic sulla scheda *Dettagli sistema*.
+. Fare clic sulla scheda *Volumes* (volumi).
 . Selezionare il numero dell'abbonamento. Per impostazione predefinita, viene selezionato il primo numero di abbonamento disponibile.
 +
 Vengono visualizzati i dettagli del volume. È possibile scorrere le colonne e ottenere ulteriori informazioni facendo clic con il mouse sulle icone delle informazioni accanto alle intestazioni delle colonne. È possibile ordinare in base alle colonne e filtrare gli elenchi per visualizzare informazioni specifiche.
@@ -217,7 +220,7 @@ NOTE: Per i servizi di protezione dei dati, viene visualizzata una colonna aggiu
 
 
 
-image:aiq-ks-sysdtls.png["scheda system details (dettagli sistema)"]
+image:aiq-ks-sysdtls.png["Scheda volumi  oggetti"]
 
 ====
 
@@ -230,10 +233,10 @@ image:aiq-ks-sysdtls.png["scheda system details (dettagli sistema)"]
 Per StorageGRID, questa scheda visualizza l'utilizzo logico dei nodi nell'ambiente di storage a oggetti.
 
 .Fasi
-. Fare clic sulla scheda *Dettagli sistema*.
+. Fare clic sulla scheda *oggetti*.
 . Selezionare il numero dell'abbonamento. Per impostazione predefinita, viene selezionato il primo numero di abbonamento disponibile. Selezionando il numero di abbonamento, viene attivato il collegamento per i dettagli dello storage a oggetti.
 +
-image:sg-link.png["Dettagli del sistema SG"]
+image:sg-link.png["Oggetti SG"]
 
 . Fare clic sul collegamento per visualizzare i nomi dei nodi e i dettagli sull'utilizzo logico per ciascun nodo.
 +
@@ -246,15 +249,15 @@ image:sg-link-2.png["Pop-up SG"]
 
 == Generare report
 
-È possibile generare e visualizzare i report relativi ai dettagli dell'abbonamento, ai dati storici di utilizzo di un intervallo di tempo e ai dettagli di sistema da ciascuna scheda facendo clic sul pulsante *Download CSV*: image:download-icon.png["icona di download dei report"]
+È possibile generare e visualizzare i report relativi ai dettagli dell'abbonamento, ai dati cronologici sull'utilizzo di un intervallo di tempo e ai dettagli dei volumi da ciascuna scheda facendo clic sul pulsante *Scarica CSV*: image:download-icon.png["icona di download dei report"]
 
 I dettagli vengono generati in formato CSV che è possibile salvare per un utilizzo futuro.
 
-Nella scheda *Time Series*, è possibile scaricare il report per i 30 punti di raccolta dati predefiniti dell'intervallo di date della query o dei report giornalieri.
+Nella scheda *Trend capacità* è possibile scaricare il report per i 30 punti di raccolta dati predefiniti dell'intervallo di date della query o per i referti giornalieri.
 
 image:aiq-report-dnld.png["esempi di report"]
 
-Un report di esempio per la scheda *Time Series*, in cui vengono convertiti i dati grafici:
+Un esempio di referto per la scheda *Trend capacità*, in cui i dati grafici vengono convertiti:
 
 image:report.png["esempi di report"]
 
@@ -267,7 +270,7 @@ Gli avvisi sul dashboard inviano messaggi di attenzione che consentono di compre
 Gli avvisi possono essere di due tipi:
 
 * *Informazioni*: In caso di problemi, come ad esempio le sottoscrizioni, è possibile visualizzare avvisi informativi. Passare il cursore sull'icona delle informazioni per ulteriori informazioni sul problema.
-* *Attenzione*: I problemi, come la non conformità, vengono visualizzati come avvisi. Ad esempio, se all'interno dei cluster gestiti sono presenti volumi che non dispongono di criteri QoS adattivi (AQoS), viene visualizzato un messaggio di avviso. È possibile fare clic sul collegamento nel messaggio di avviso per visualizzare l'elenco dei volumi non conformi nella scheda *Dettagli sistema*.
+* *Attenzione*: I problemi, come la non conformità, vengono visualizzati come avvisi. Ad esempio, se all'interno dei cluster gestiti sono presenti volumi che non dispongono di criteri QoS adattivi (AQoS), viene visualizzato un messaggio di avviso. È possibile fare clic sul collegamento sul messaggio di avviso per visualizzare l'elenco dei volumi non conformi nella scheda *volumi*.
 +
 
 NOTE: Se si è abbonati a un singolo livello di servizio o piano tariffario, non sarà possibile visualizzare l'avviso relativo ai volumi non conformi.
