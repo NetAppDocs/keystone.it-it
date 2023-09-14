@@ -30,8 +30,6 @@ Le seguenti domande forniscono risposte alle domande frequenti sui servizi Keyst
 
 *I partner possono vendere ai clienti una capacità superiore a quella acquistata da NetApp?* gli abbonamenti tenant non sono limitati dalla capacità acquistata dal partner. I partner possono vendere ai propri clienti una capacità superiore a quella acquistata da NetApp. La capacità in eccesso rispetto alla capacità acquistata viene indicata come oversubscription.
 
-*Le API vengono fornite per l'integrazione con gli strumenti del cliente?* Sì, le API RESTful sono disponibili per l'integrazione nelle tue applicazioni. Accedere a *SUPPORT> API Documentation* per consultare la documentazione API per i servizi Keystone. Per ulteriori informazioni, consultare link:https://docs.netapp.com/us-en/keystone/seapiref_overview_of_netapp_service_engine_apis.html["Guida alle API Keystone"].
-
 *Cos'è la capacità burst?* puoi aumentare e ridurre l'utilizzo fino al 20% rispetto alla capacità impegnata. L'utilizzo della capacità burst viene misurato quotidianamente e fatturato solo se utilizzato. Ad esempio, se la capacità impegnata è 100 TIB, è possibile eseguire il burst fino a 120 TIB.
 
 *È previsto un costo premium per l'utilizzo di burst?* l'utilizzo della capacità burst fino al 20% della capacità impegnata viene fatturato allo stesso tasso della capacità impegnata, per qualsiasi utilizzo superiore al 20% della capacità impegnata viene addebitato un costo premium del 50%.
@@ -40,11 +38,14 @@ Le seguenti domande forniscono risposte alle domande frequenti sui servizi Keyst
 
 *Come viene allocata la capacità burst ai tenant?* la capacità Burst viene allocata ai partner, che la allocano ulteriormente ai loro clienti in base ai requisiti.
 
-*Dove posso vedere l'utilizzo della capacità burst e impegnata?* NetApp Service Engine dispone di dashboard integrati per segnalare la capacità consumata rispetto alla capacità impegnata.
+*Dove posso vedere l'utilizzo della capacità impegnata e di burst?*
+Nella dashboard di Active IQ Digital Advisor.
 
-*Se raggiungerò una determinata percentuale di utilizzo della capacità impegnata, verranno inviate notifiche?* Sì, i tool di gestione forniscono notifiche sull'utilizzo della capacità attraverso il dashboard di NetApp Service Engine.
+*Se raggiungo una determinata percentuale di utilizzo della capacità impegnata, verranno visualizzate delle notifiche?*
+Sì, i tool di gestione forniscono notifiche sull'utilizzo della capacità tramite la dashboard di Active IQ Digital Advisor.
 
-*Come posso visualizzare l'utilizzo di Keystone?* NetApp Service Engine offre una vista dashboard con informazioni su tutti i servizi a cui sono stati sottoscritti e su quanto viene utilizzato. Per ulteriori informazioni su NetApp Service Engine, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_overview.html["qui"].
+*Come posso visualizzare l'utilizzo di Keystone?*
+Il consulente digitale Active IQ offre una vista dalla dashboard, con informazioni su tutti i servizi a cui si è abbonati e su quanto viene utilizzato.
 
 *Come posso segnalare eventuali problemi con il servizio?* il supporto NetApp Keystone può essere raggiunto attraverso i seguenti canali:
 
@@ -52,7 +53,8 @@ Le seguenti domande forniscono risposte alle domande frequenti sui servizi Keyst
 * Email di escalation: Mailto:keystone.escalations@netapp.com[keystone.escalations@netapp.com^]
 
 
-*Posso ordinare un nuovo servizio di storage?* Sì, è possibile richiedere un nuovo servizio di storage o un nuovo servizio di espansione allo storage dal portale NetApp Service Engine. La richiesta viene elaborata dal team operativo NetApp Keystone prima di renderla disponibile per l'utilizzo.
+*È possibile ordinare un nuovo servizio di archiviazione?*
+Sì, è possibile richiedere nuovi servizi di storage o l'espansione al servizio di storage a tale scopo. La richiesta viene elaborata dal team operativo NetApp Keystone prima di renderla disponibile per l'utilizzo.
 
 *Gli aumenti degli impegni di storage sono immediatamente disponibili?* a seconda della quantità di capacità richiesta, viene effettuata una determinazione se la capacità è già implementata o se richiede la spedizione e l'installazione di apparecchiature aggiuntive.
 

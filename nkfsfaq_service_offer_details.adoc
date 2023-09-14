@@ -26,15 +26,16 @@ I servizi Keystone offrono periodi di 12, 24 e 36 mesi.
 
 *Come si accede allo storage?*
 
-In un modello (standard) gestito da NetApp, i controller di storage (Gestore di sistema ONTAP o accesso amministrativo ai sistemi) sono di proprietà e gestiti da NetApp. È possibile monitorare e gestire lo storage solo attraverso l'interfaccia utente e le API di NetApp Service Engine. In un'implementazione gestita dal cliente (o Lite), in cui l'interfaccia utente e le API del motore di servizio NetApp vengono utilizzate principalmente per le funzioni di fatturazione, è possibile accedere ai controller di storage, come Active IQ Unified Manager e Gestore di sistema ONTAP, e direttamente ai cluster ONTAP.
+In un modello (standard) gestito da NetApp, i controller di storage (Gestore di sistema ONTAP o accesso amministrativo ai sistemi) sono di proprietà e gestiti da NetApp. È possibile monitorare lo storage solo tramite l'interfaccia utente di Active IQ Digital Advisor.
+In un'implementazione gestita dal cliente (o Lite), dove l'interfaccia utente di Active IQ Digital Advisor viene utilizzata principalmente per le funzioni di fatturazione, è possibile accedere agli storage controller, come Active IQ Unified Manager e ONTAP System Manager, e accedere direttamente ai cluster ONTAP.
 
 *Come gestire il servizio?*
 
-NetApp Service Engine è lo strumento di orchestrazione e gestione che puoi utilizzare per eseguire il provisioning dello storage e ottenere report sull'utilizzo del servizio.
+È possibile sollevare i biglietti di supporto per qualsiasi esigenza.
 
 *Come posso aumentare la capacità impegnata in un abbonamento?*
 
-È possibile inviare una richiesta di aggiunta di capacità tramite il tool di gestione del motore di servizio NetApp o tramite il proprio Success Manager NetApp Keystone.
+Attraverso il tuo manager del successo di NetApp Keystone.
 
 *L'aumento della capacità aumenta il termine?*
 

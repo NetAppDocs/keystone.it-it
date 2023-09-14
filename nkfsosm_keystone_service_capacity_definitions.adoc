@@ -41,7 +41,7 @@ Durante il periodo di validità di un abbonamento, è possibile modificare le ca
 
 * La capacità impegnata non può essere diminuita
 * La capacità impegnata non può essere aumentata 90 giorni prima della scadenza dell'abbonamento, a meno che l'abbonamento non debba essere rinnovato per un ulteriore periodo di 12 mesi.
-* Puoi richiedere modifiche alla capacità impegnata tramite l'interfaccia NetApp Service Engine o Keystone Success Manager. Per informazioni sulla richiesta di modifiche, vedere link:sewebiug_raise_a_service_request.html["Inoltrare una richiesta di servizio"].
+* Puoi richiedere modifiche alla capacità impegnata tramite Keystone Success Manager.
 
 
 

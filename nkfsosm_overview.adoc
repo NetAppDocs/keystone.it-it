@@ -23,7 +23,7 @@ Keystone offre tre modelli operativi per l'erogazione del servizio.
 * *Customer-operated* *model* consente al cliente di sottoscrivere un servizio offerto, in base ai livelli di performance selezionati e ai tipi di servizio storage. NetApp definisce l'architettura e i prodotti e li installa presso la sede del cliente e consente ai clienti di gestire l'infrastruttura utilizzando le risorse IT e di storage. Un cliente può essere legato a NetApp o a un partner/service provider e, in base a ciò, le richieste di servizio possono essere inoltrate a NetApp o al service provider. Un amministratore del cliente può eseguire le attività amministrative in un ambiente gestito dal cliente. Queste attività sono legate ai tenant e ai subtenant per il cliente specifico.
 
 
-Le caratteristiche e le opzioni dell'offerta variano in base ai modelli. Per ulteriori informazioni, vedere link:https://docs.netapp.com/us-en/keystone/sewebiug_partner_service_provider.html["Ruoli e operazioni di service provider e clienti"]
+Le caratteristiche e le opzioni dell'offerta variano in base ai modelli.
 
 
 
@@ -86,7 +86,7 @@ Supporto
 
 Il seguente elenco riassume i ruoli e le responsabilità di NetApp:
 
-* NetApp fornisce, installa, configura e abilita il servizio applicabile (inclusa la versione applicabile di NetApp Service Engine presso un data center designato dal cliente o un CoLo). NetApp è responsabile della disinstallazione al termine del contratto o se il cliente decide di rescindere il contratto prima.
+* NetApp consegna, installa, configura e abilita il servizio applicabile. NetApp è responsabile della disinstallazione al termine del contratto o se il cliente decide di rescindere il contratto prima.
 * Mentre si interagisce con altri provider di servizi IT, NetApp collabora con i service provider IT del cliente o con il suo team tecnico.
 * Sono incluse le performance dei servizi gestiti da NetApp, con l'ipotesi che le responsabilità condivise siano applicabili all'ambiente supportato.
 

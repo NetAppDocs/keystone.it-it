@@ -47,6 +47,8 @@ TIP: Fare clic sul collegamento *Sottoscrizioni* per visualizzare l'elenco delle
 
 
 
+image:db-card.png["senza sla"]
+
 Per ulteriori informazioni su Digital Advisor, vedere link:https://docs.netapp.com/us-en/active-iq/index.html["Documentazione di Digital Advisor"].
 
 Per informazioni sulla scheda *Abbonamenti Keystone*, consulta la sezione _dashboard e report di Digital Advisor per Keystone_.

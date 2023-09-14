@@ -30,8 +30,6 @@ La fatturazione di Keystone si basa sulla capacità impegnata e sul consumo vari
 
 Per informazioni sull'utilizzo della capacità di burst e commit, vedere link:nkfsosm_keystone_service_capacity_definitions.html["Definizioni della capacità del servizio Keystone"].
 
-Per informazioni su come visualizzare i dettagli di fatturazione, vedere link:sewebiug_billing.html["Visualizza fatturazione"].
-
 
 
 == Fatturazione basata sulla capacità impegnata

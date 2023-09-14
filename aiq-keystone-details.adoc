@@ -51,7 +51,7 @@ TIP: Se il tuo abbonamento ha un livello di servizio di protezione dati o un pia
 * *Tipo di utilizzo*: Potresti aver sottoscritto più abbonamenti Keystone (versione 1) o Keystone STaaS (versione 2). Le regole del piano tariffario per i livelli di servizio possono variare in base ai due tipi di abbonamento. Osservando il valore di questa colonna, è possibile sapere se il tipo di utilizzo viene fatturato in base all'utilizzo logico o di provisioning per entrambi `v1` oppure `v2`. Per ulteriori informazioni su Keystone STaaS, vedere https://docs.netapp.com/us-en/keystone-staas/index.html["Documentazione Keystone STaaS"^].
 * *Billing Period* (periodo di fatturazione): Il periodo di fatturazione dell'abbonamento, ad esempio mensile, trimestrale o annuale.
 * *Data di inizio*: La data di inizio dell'abbonamento.
-* *Data di fine*: Data di fine dell'abbonamento. Una data vuota indica che l'abbonamento non ha una data di fine e viene rinnovato automaticamente. In base a questa data, potrebbero essere visualizzati messaggi informativi per le sottoscrizioni in scadenza o con criteri di rinnovo automatico allegati.
+* *Data di fine*: Data di fine dell'abbonamento. Se si dispone di un abbonamento mensile fatturabile che viene rinnovato automaticamente ogni mese, viene visualizzato `Month-on-month` anziché la data di fine. In base a questa data, potrebbero essere visualizzati messaggi informativi per le sottoscrizioni in scadenza o con criteri di rinnovo automatico allegati.
 * *Usage Status* (Stato utilizzo): Indica la quantità di abbonamento utilizzata o utilizzata in eccesso. È possibile ordinare l'elenco in base a questa colonna se si desidera visualizzare i record di consumo più elevato.
 * image:subs-dtls-icon.png["icona"]: Facendo clic su questa icona per un abbonamento, viene aperta la scheda *uso corrente* con ulteriori dettagli sull'abbonamento.
 * image:aiq-ks-time-icon.png["icona"]: Facendo clic su questa icona si apre la scheda *tendenza capacità*, in cui è possibile visualizzare i dati cronologici di utilizzo per ciascun livello di servizio incluso in questo abbonamento.
@@ -91,10 +91,10 @@ La scheda *tendenza capacità* visualizza i dati storici delle sottoscrizioni Ke
 .Fasi
 . Fare clic sulla scheda *Trend capacità*.
 . Selezionare l'abbonamento richiesto per il quale si desidera visualizzare i dettagli. Per impostazione predefinita, viene selezionato il primo abbonamento nel nome dell'account.
-. Selezionare l'intervallo di tempo dalle icone del calendario nei campi *Data* e *Data*. L'intervallo di tempo predefinito va dalla data di inizio del periodo di fatturazione alla data corrente.
+. Selezionare l'intervallo di tempo dalle icone del calendario nei campi *Data* e *Data*. Per gli abbonamenti scaduti, l'intervallo di date predefinito corrisponde alle date di inizio e di fine dell'abbonamento. Per gli abbonamenti esistenti, l'intervallo di tempo predefinito va dalla data di inizio del periodo di fatturazione alla data corrente. Non è possibile selezionare una data futura.
 +
 
-TIP: Per ottenere performance ottimali e un'esperienza utente ottimale, limitare l'intervallo di date della query a un massimo di tre mesi.
+TIP: Per ottenere prestazioni ottimali e un'esperienza utente ottimale, limitare l'intervallo di date della query a tre mesi.
 
 . Fare clic su *View Details* (Visualizza dettagli). I dati di consumo cronologici dell'abbonamento per ciascun livello di servizio vengono visualizzati in base all'intervallo di tempo selezionato. Puoi spostare il cursore del mouse sui grafici per visualizzare la suddivisione dell'utilizzo in termini di dati impegnati, consumati, burst e superiori al limite burst in quel punto di raccolta dati.
 
@@ -123,17 +123,18 @@ NOTE: Un grafico vuoto indica che non sono disponibili dati nell'ambiente in que
 
 
 
-* *Corrente assorbita*: Indicatore della capacità consumata (in TIB) definita per il livello di servizio. Questo campo utilizza colori specifici per l'utilizzo:
+* *Corrente assorbita*: Indicatore della capacità consumata (in TIB) definita per il livello di servizio. Questo campo utilizza colori specifici:
 +
-** Grigio: Nessuno.
+** Nessun colore: Utilizzo burst o burst superiore.
+** Grigio: Nessun utilizzo.
 ** Verde: Entro il 80% della capacità impegnata.
-** Ambra: Qualsiasi consumo superiore al 80% della capacità impegnata.
+** Ambra: 80% della capacità di burst impegnata.
 
 
-* *Current Burst*: Indicatore della capacità consumata entro o al di sopra del limite di burst definito. Qualsiasi utilizzo entro il limite di burst concordato, ad esempio il 20% al di sopra della capacità impegnata, rientra nel limite di burst. L'utilizzo ulteriore viene considerato come utilizzo superiore al limite di burst. Questo campo utilizza colori specifici per l'utilizzo:
+* *Current Burst*: Indicatore della capacità consumata entro o al di sopra del limite di burst definito. Qualsiasi utilizzo entro il limite di burst concordato, ad esempio il 20% al di sopra della capacità impegnata, rientra nel limite di burst. L'utilizzo ulteriore viene considerato come utilizzo superiore al limite di burst. Questo campo visualizza colori specifici:
 +
-** Grigio: Nessuno.
-** Rosso: Burst.
+** Nessun colore: Nessun utilizzo di burst.
+** Rosso: Utilizzo burst.
 ** Viola: Al di sopra del limite di burst.
 
 
@@ -282,4 +283,4 @@ Per informazioni sui criteri AQoS, vedere https://docs.netapp.com/us-en/keystone
 
 image:alert-aiq.png["avvisi"]
 
-Contattare il supporto NetApp per ulteriori informazioni su questi messaggi di avvertenza. Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/keystone/sewebiug_raise_a_service_request.html["Inoltrare una richiesta di servizio"].
+Contattare il supporto NetApp per ulteriori informazioni su questi messaggi di avvertenza.

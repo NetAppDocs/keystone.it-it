@@ -33,7 +33,7 @@ La dashboard di NetApp Service Engine è stata riprogettata per includere i segu
 * *Utilizzo della capacità* per visualizzare la capacità utilizzata per i servizi sottoscritti.
 * *Addebiti mensili (fatturazione)* per visualizzare gli addebiti mensili aggregati per tutti gli abbonamenti.
 * *Avvisi* per visualizzare il riepilogo degli avvisi più recenti nell'ambiente in uso.
-* *Richieste di servizio* per visualizzare l'elenco delle richieste di servizio più recenti generate nel proprio ambiente. Per ulteriori informazioni, vedere link:sewebiug_dashboard.html["Visualizza la dashboard di Keystone"].
+* *Richieste di servizio* per visualizzare l'elenco delle richieste di servizio più recenti generate nel proprio ambiente.
 
 
 
@@ -42,13 +42,13 @@ La dashboard di NetApp Service Engine è stata riprogettata per includere i segu
 
 È stata aggiunta una nuova schermata *Billing* per facilitare l'accesso e il calcolo dei dati di fatturazione storici. La schermata offre una vista olistica dei costi mensili associati a tutti i servizi sottoscritti.
 
-Accedere a questa schermata dal widget *addebiti mensili* nella dashboard o da *AMMINISTRAZIONE > fatturazione* per visualizzare una suddivisione mensile a livello di abbonamento dei costi per tutti i servizi sottoscritti. I dati di fatturazione si basano sull'utilizzo della capacità burst e impegnata e sono disponibili per l'utilizzo nei mesi precedenti. Per ulteriori informazioni, vedere link:sewebiug_billing.html["Visualizza fatturazione"].
+Accedere a questa schermata dal widget *addebiti mensili* nella dashboard o da *AMMINISTRAZIONE > fatturazione* per visualizzare una suddivisione mensile a livello di abbonamento dei costi per tutti i servizi sottoscritti. I dati di fatturazione si basano sull'utilizzo della capacità burst e impegnata e sono disponibili per l'utilizzo nei mesi precedenti.
 
 
 
 === Schermata New Alerts (nuovi avvisi
 
-In questa release viene introdotta una nuova schermata *Alerts* che elenca tutti gli avvisi generati dal sistema e dagli utenti. La schermata consente inoltre di creare messaggi di avviso personalizzati per gli eventi critici relativi all'ambiente e di trasmetterli ad altri utenti. Possono visualizzare e chiudere gli avvisi, in base alle esigenze. Per ulteriori informazioni, vedere link:sewebiug_alerts.html["Creare e gestire gli avvisi"].
+In questa release viene introdotta una nuova schermata *Alerts* che elenca tutti gli avvisi generati dal sistema e dagli utenti. La schermata consente inoltre di creare messaggi di avviso personalizzati per gli eventi critici relativi all'ambiente e di trasmetterli ad altri utenti. Possono visualizzare e chiudere gli avvisi, in base alle esigenze.
 
 
 
@@ -77,18 +77,6 @@ NetApp Service Engine supporta ora la gestione di un ambiente multi-tenant da pa
 * *Abbonamento:* in qualità di amministratore partner, puoi visualizzare e aggiornare le tue sottoscrizioni e i tuoi abbonamenti tenant rispettivamente da *ABBONAMENTI* > *Abbonamenti Keystone* e *ABBONAMENTI* > *Abbonamenti tenant*. In qualità di amministratore del tenant, è possibile visualizzare solo le sottoscrizioni del tenant.
 * *Utenti:* in base al tuo ruolo, puoi assegnare i privilegi a un utente nuovo o esistente all'interno di una locazione in base ai requisiti. Il ruolo può essere amministratore di NetApp, amministratore di NetApp con privilegi di sola lettura, amministratore del partner o amministratore del tenant. In qualità di amministratore del partner, è possibile assegnare ai nuovi utenti solo ruoli di amministratore del partner o del tenant. Un utente amministratore tenant può assegnare solo il ruolo di amministratore tenant ad altri utenti.
 * *Menu reti:* in qualità di amministratore del partner, è possibile visualizzare le reti definite per il proprio tenancy. È inoltre possibile creare subnet per il proprio subtenant e zona da *RETI* > *subnet*. Ciò è necessario durante il provisioning dello storage da parte dei clienti finali o dei subtenant.
-* Supporto API: Il `/tenants/{tenant_id}/zones/{zone_name}/subnets` e. `/tenants/{tenant_id}/zones/{zone_name}/subnets/{id}/tags` Le API vengono offerte come parte di questa release per creare e visualizzare le subnet per i subtenant.
-
-
-Per ulteriori informazioni su questa funzionalità, consultare i seguenti collegamenti:
-
-* link:nkfsosm_overview.html["Modello operativo, ruoli e responsabilità"]
-* link:nkfsosm_tenancy_overview.html["Tenancy e multi-tenancy in Keystone"]
-* link:sewebiug_dashboard.html["Visualizza la dashboard di Keystone"]
-* link:sewebiug_working_with_reports.html["Visualizzare i report"]
-* link:sewebiug_managing_subscriptions.html["Gestione delle sottoscrizioni"]
-* link:sewebiug_managing_tenants_and_subtenants.html["Gestione di tenant e subtenant"]
-* link:sewebiug_define_network_configurations.html["Definire le reti per tenant e subtenant"]
 
 
 
@@ -150,7 +138,7 @@ La nuova schermata *Backup* consente di visualizzare e gestire i backup dei disc
 
 === Provisioning per limitare l'accesso degli utenti sulle condivisioni CIFS
 
-È ora possibile specificare l'elenco di controllo di accesso (ACL) per limitare l'accesso dell'utente su una condivisione CIFS (SMB) o multiprotocollo. È possibile specificare utenti o gruppi Windows in base alle impostazioni di Active Directory (ad) da aggiungere all'ACL.link:https://docs.netapp.com/us-en/keystone/sewebiug_create_a_new_file_share.html#steps["Scopri di più"].
+È ora possibile specificare l'elenco di controllo di accesso (ACL) per limitare l'accesso dell'utente su una condivisione CIFS (SMB) o multiprotocollo. È possibile specificare utenti o gruppi Windows in base alle impostazioni di Active Directory (ad) da aggiungere all'ACL.
 
 
 
@@ -201,19 +189,19 @@ Alcune sottoscrizioni allo storage supportate da NetApp Service Engine consenton
 
 ==== Notifica quando una modifica proposta comporta l'utilizzo della capacità di burst
 
-Una notifica per visualizzare una modifica nel provisioning proposto che causerà un burst dell'abbonamento. L'utente può scegliere di continuare, sapendo che l'abbonamento verrà messo in burst o scegliendo di non continuare con l'azione.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["Scopri di più"].
+Una notifica per visualizzare una modifica nel provisioning proposto che causerà un burst dell'abbonamento. L'utente può scegliere di continuare, sapendo che l'abbonamento verrà messo in burst o scegliendo di non continuare con l'azione.
 
 
 
 ==== Notifica quando l'abbonamento è in burst
 
-Quando un abbonamento è in burst, viene visualizzato un banner di notifica.link:sewebiug_billing_accounts,_subscriptions,_services,_and_performance.html#burst-usage-notifications["Scopri di più"].
+Quando un abbonamento è in burst, viene visualizzato un banner di notifica.
 
 
 
 ==== Il report della capacità mostra l'utilizzo in sequenza
 
-Report sulla capacità che mostra il numero di giorni in cui l'abbonamento è stato in burst e la quantità di capacità burst utilizzata.link:sewebiug_working_with_reports.html#capacity-usage["Scopri di più"].
+Report sulla capacità che mostra il numero di giorni in cui l'abbonamento è stato in burst e la quantità di capacità burst utilizzata.
 
 
 
