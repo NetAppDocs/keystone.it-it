@@ -37,7 +37,7 @@ Per informazioni sull'utilizzo della capacità di burst e commit, vedere link:nk
 La capacità impegnata si riferisce alle capacità dei vari servizi in un singolo abbonamento, concordato dalle parti interessate (NetApp/partner e cliente). Questa capacità viene indicata su ciascun ordine Keystone e viene fatturata, indipendentemente dal consumo effettivo.
 
 .Misurazione della capacità consumata
-Nell'ambito dell'implementazione del servizio Keystone, NetApp monitora e misura continuamente il consumo del servizio. Ogni cinque minuti, il sistema genera un record di consumo, che indica in dettaglio la capacità corrente consumata per l'abbonamento. Questi record vengono aggregati nel periodo di fatturazione per generare fatture e report sull'utilizzo.
+Nell'ambito dell'implementazione del servizio Keystone, NetApp monitora e misura continuamente il consumo del servizio. Almeno una volta ogni cinque minuti, il sistema genera un record di consumo, con i dettagli della capacità corrente consumata per l'abbonamento. Questi record vengono aggregati nel periodo di fatturazione per generare fatture e report sull'utilizzo.
 
 
 
@@ -74,8 +74,9 @@ Se i volumi vengono clonati in ONTAP e utilizzati per il backup e il ripristino 
 
 Tenere presente quanto segue:
 
-* Il consumo sui volumi clonati non viene preso in considerazione durante le prime 24 ore di creazione del clone e non si verificano addebiti durante questo periodo.
-* I volumi clonati con i livelli di servizio Standard e Value non vengono considerati per il consumo, se i nuovi dati non vengono scritti nel volume. Ad esempio, in un caso di utilizzo di backup o ripristino, il backup o il ripristino dei dati da un volume clonato non modifica i dati nel volume clonato stesso e non viene considerato come consumo.
+* I volumi clonati non possono essere caricati purché le loro dimensioni siano inferiori al 10% del volume principale (la capacità fisica utilizzata nel volume clone rispetto alla capacità fisica utilizzata nel volume principale).
+* Non esiste un Grace period di 24 ore per i volumi clonati, ma vengono prese in considerazione solo le dimensioni del clone.
+* Una volta che il volume clone supera il 10% delle dimensioni fisiche dell'immagine principale, il clone viene fatturato come volume standard (capacità logica utilizzata).
 
 
 

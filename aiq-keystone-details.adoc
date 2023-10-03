@@ -248,6 +248,71 @@ image:sg-link-2.png["Pop-up SG"]
 ====
 
 
+== Visualizza le performance del volume ONTAP
+
+Puoi fare clic sulla scheda *Performance* per visualizzare i dettagli sulle performance per i volumi ONTAP gestiti dalle tue iscrizioni Keystone.
+
+Questa scheda potrebbe non essere disponibile per la visualizzazione delle metriche delle performance sui tuoi ONTAP Volumes. Contattare il supporto per la visualizzazione di questa scheda.
+
+.Fasi
+. Fare clic sulla scheda *prestazioni*.
+. Selezionare il numero dell'abbonamento. Per impostazione predefinita, viene selezionato il primo numero di abbonamento.
+. Selezionare il nome del volume desiderato dall'elenco.
++
+In alternativa, è possibile fare clic su image:aiq-ks-time-icon.png["icona grafico"] Accanto a un volume ONTAP nella scheda *volumi* per passare a questa scheda.
+
+. Selezionare l'intervallo di date per la query. L'intervallo di date può essere l'inizio del mese o la data di inizio dell'abbonamento alla data corrente o la data di fine dell'abbonamento.
+
+
+I dettagli recuperati si basano sull'obiettivo del livello di servizio per ogni livello di servizio. Ad esempio, gli IOPS di picco, il massimo throughput, la latenza di destinazione e le altre metriche sono determinati dalle singole impostazioni per il livello di servizio. Per ulteriori informazioni sulle impostazioni, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_performance.html["Livelli di servizio"].
+
+
+NOTE: Se si seleziona la casella di controllo *linea di riferimento SLO*, il rendering dei grafici IOPS, throughput e latenza viene eseguito in base all'obiettivo del livello di servizio per il livello di servizio. In caso contrario, vengono visualizzati in numeri effettivi.
+
+I dati delle prestazioni visualizzati sul grafico orizzontale sono una media ogni cinque minuti e ordinati in base all'intervallo di date della query. È possibile scorrere i grafici e passare il mouse su punti di dati specifici per analizzare ulteriormente i dati raccolti.
+
+È possibile visualizzare e confrontare le metriche delle prestazioni nelle sezioni seguenti in base alla combinazione del numero di abbonamento, del nome del volume e dell'intervallo di date selezionato. I dettagli vengono visualizzati in base al livello di servizio assegnato al volume. Puoi vedere il nome del cluster e il tipo di volume, ovvero i permessi di lettura e scrittura assegnati al volume. Viene visualizzato anche qualsiasi messaggio di avvertenza associato al volume.
+
+
+
+=== IOPS/TiB
+
+In questa sezione vengono visualizzati i grafici di input-output per i carichi di lavoro nel volume in base all'intervallo di date della query. Vengono visualizzati gli IOPS di picco per il livello di servizio e gli IOPS correnti (negli ultimi cinque minuti, non in base all'intervallo di date della query), insieme agli IOPS minimi, massimi e medi per l'intervallo di tempo, in IOPS/TiB.
+
+image:perf-iops.png["IOPS del grafico"]
+
+
+
+=== Throughput (Mbps/TiB)
+
+In questa sezione vengono visualizzati i grafici del throughput per i carichi di lavoro nel volume in base all'intervallo di date della query. Vengono visualizzati il throughput massimo per il livello di servizio (SLO Max) e il throughput corrente (negli ultimi cinque minuti, non in base all'intervallo di date della query), insieme al throughput minimo, massimo e medio per l'intervallo di tempo, in Mbps/TiB.
+
+image:perf-thr.png["Grafici della produttività"]
+
+
+
+=== Latenza (ms)
+
+In questa sezione vengono visualizzati i grafici della latenza per i carichi di lavoro nel volume in base all'intervallo di date della query. Vengono visualizzate la latenza massima per il livello di servizio (destinazione SLO) e la latenza corrente (negli ultimi cinque minuti, non in base all'intervallo di date della query), insieme alla latenza minima, massima e media per l'intervallo di tempo, in millisecondi.
+
+Questo grafico ha i seguenti colori:
+
+* Blu chiaro: _Latenza_. Si tratta della latenza effettiva che include qualsiasi latenza diversa dal servizio Keystone. Ciò potrebbe includere una latenza aggiuntiva, ad esempio la latenza che si verifica tra la rete e il client.
+* Blu scuro: _Latenza effettiva_. La latenza effettiva è la latenza applicabile solo al servizio Keystone in relazione al tuo SLA.
+
+
+image:perf-lat.png["grafici delle prestazioni"]
+
+
+
+=== TIB (Logical Used)
+
+Questa sezione visualizza le capacità del volume oggetto del provisioning e quelle logiche utilizzate. La capacità logica utilizzata corrente (negli ultimi cinque minuti, non in base all'intervallo di date della query), insieme all'utilizzo minimo, massimo e medio per l'intervallo di tempo vengono visualizzati in Tibs. In questo grafico, l'area grigia rappresenta la capacità di commit e il grafico giallo indica l'utilizzo logico.
+
+image:perf-log-usd.png["grafico della capacità logica utilizzata"]
+
+
+
 == Generare report
 
 È possibile generare e visualizzare i report relativi ai dettagli dell'abbonamento, ai dati cronologici sull'utilizzo di un intervallo di tempo e ai dettagli dei volumi da ciascuna scheda facendo clic sul pulsante *Scarica CSV*: image:download-icon.png["icona di download dei report"]
