@@ -30,7 +30,9 @@ I dettagli degli abbonamenti, i grafici di utilizzo per ciascun livello di servi
 
 
 
-NOTE: Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibers su dashboard e report e arrotondato a due cifre decimali. Se l'utilizzo è inferiore a 0.01 TIB, il valore viene visualizzato come `0` oppure `No Usage`. Per altre metriche di utilizzo, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metriche e definizioni dei livelli di servizio"]. Per informazioni sulle diverse capacità utilizzate in Keystone, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Definizioni della capacità del servizio Keystone"].
+NOTE: Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibers su dashboard e report e arrotondato a due cifre decimali. Se l'utilizzo è inferiore a 0.01 TIB, il valore viene visualizzato come `0` oppure `No Usage`. L'ora locale immessa per la query in queste schede viene convertita in ora UTC. Pertanto, potrebbero verificarsi differenze minori nei dati restituiti in base al tempo richiesto.
+
+Per informazioni sulle metriche di utilizzo, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metriche e definizioni dei livelli di servizio"]. Per informazioni sulle diverse capacità utilizzate in Keystone, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Definizioni della capacità del servizio Keystone"].
 
 
 
@@ -91,37 +93,43 @@ La scheda *tendenza capacità* visualizza i dati storici delle sottoscrizioni Ke
 .Fasi
 . Fare clic sulla scheda *Trend capacità*.
 . Selezionare l'abbonamento richiesto per il quale si desidera visualizzare i dettagli. Per impostazione predefinita, viene selezionato il primo abbonamento nel nome dell'account.
-. Selezionare l'intervallo di tempo dalle icone del calendario nei campi *Data* e *Data*. Per gli abbonamenti scaduti, l'intervallo di date predefinito corrisponde alle date di inizio e di fine dell'abbonamento. Per gli abbonamenti esistenti, l'intervallo di tempo predefinito va dalla data di inizio del periodo di fatturazione alla data corrente. Non è possibile selezionare una data futura.
+. Selezionare *tendenza capacità* se si desidera visualizzare i dati storici e analizzare la tendenza di utilizzo della capacità. Selezionare *Burst maturato* se si desidera visualizzare i dati di utilizzo burst storici e analizzare l'utilizzo fatturato in base alla fattura.
+
+
+
+
+=== Visualizzare il trend di capacità
+
+.Scopri di più
+[%collapsible]
+====
+Se è stata selezionata l'opzione *Trend capacità*, procedere come segue:
+
+.Fasi
+. Selezionare l'intervallo di tempo dalle icone del calendario nei campi *Data* e *Data*. Selezionare l'intervallo di date per la query. L'intervallo di date può essere l'inizio del mese o la data di inizio dell'abbonamento alla data corrente o la data di fine dell'abbonamento. Non è possibile selezionare una data futura.
 +
 
 TIP: Per ottenere prestazioni ottimali e un'esperienza utente ottimale, limitare l'intervallo di date della query a tre mesi.
 
-. Fare clic su *View Details* (Visualizza dettagli). I dati di consumo cronologici dell'abbonamento per ciascun livello di servizio vengono visualizzati in base all'intervallo di tempo selezionato. Puoi spostare il cursore del mouse sui grafici per visualizzare la suddivisione dell'utilizzo in termini di dati impegnati, consumati, burst e superiori al limite burst in quel punto di raccolta dati.
+. Fare clic su *View Details* (Visualizza dettagli). I dati di consumo cronologici dell'abbonamento per ciascun livello di servizio vengono visualizzati in base all'intervallo di tempo selezionato.
 
+
+I grafici a barre visualizzano il nome del livello di servizio e la capacità consumata rispetto a tale livello di servizio per l'intervallo di date. La data e l'ora della raccolta vengono visualizzate nella parte inferiore del grafico. In base all'intervallo di date della query, i grafici di utilizzo vengono visualizzati in un intervallo di 30 punti di raccolta dati. Puoi spostare il cursore del mouse sui grafici per visualizzare la suddivisione dell'utilizzo in termini di dati impegnati, consumati, burst e superiori al limite burst in quel punto di raccolta dati.
 
 image:aiq-ks-subtime-2.png["dati storici"]
 
-Vengono visualizzati i seguenti dettagli:
+I seguenti colori nei grafici a barre indicano la capacità consumata come definita nel livello di servizio. I dati mensili attraverso i grafici sono separati da una linea verticale.
 
-* *Utilizzo corrente*: La data di inizio e di fine dell'abbonamento e il periodo di fatturazione, ad esempio, trimestrale, annuale e così via.
-* *Diagrammi di utilizzo*: I grafici a barre visualizzano il nome del livello di servizio e la capacità consumata rispetto a tale livello di servizio per l'intervallo di date. La data e l'ora della raccolta vengono visualizzate nella parte inferiore del grafico.
-+
+* Verde: Entro il 80%.
+* Ambra: 80% - 100%.
+* Rosso: Utilizzo burst (100% della capacità impegnata fino al limite burst concordato)
+* Viola: Al di sopra del limite di burst o. `Above Limit`.
 
-NOTE: In base all'intervallo di date della query, i grafici di utilizzo vengono visualizzati in un intervallo di 30 punti di raccolta dati.
 
-+
-I seguenti colori nei grafici a barre indicano la capacità consumata definita all'interno del livello di servizio:
-
-+
-** Verde: Entro il 80%.
-** Ambra: 80% - 100%.
-** Rosso: Utilizzo burst (100% della capacità impegnata fino al limite burst concordato)
-** Viola: Al di sopra del limite di burst o. `Above Limit`.
-+
 
 NOTE: Un grafico vuoto indica che non sono disponibili dati nell'ambiente in quel punto di raccolta dati.
 
-
+È possibile fare clic sul pulsante di attivazione/disattivazione *Mostra utilizzo corrente* per visualizzare il consumo corrente e l'utilizzo burst rispetto al periodo di fatturazione dell'abbonamento. Questi non sono basati sull'intervallo di date della query.
 
 * *Corrente assorbita*: Indicatore della capacità consumata (in TIB) definita per il livello di servizio. Questo campo utilizza colori specifici:
 +
@@ -138,13 +146,26 @@ NOTE: Un grafico vuoto indica che non sono disponibili dati nell'ambiente in que
 ** Viola: Al di sopra del limite di burst.
 
 
-* *Burst maturato*: Indicatore dell'utilizzo burst accumulato o della capacità consumata calcolata al mese per il periodo di fatturazione corrente. L'utilizzo del burst accumulato viene calcolato in base alla capacità impegnata e consumata per un livello di servizio: `(consumed - committed)/365.25/12`.
-+
-
-NOTE: Gli indicatori *consumo corrente*, *burst corrente* e *burst accumulato* determinano il consumo rispetto al periodo di fatturazione dell'abbonamento e non si basano sull'intervallo di date della query.
 
 
+====
 
+
+=== Visualizzazione dei dati burst storici
+
+.Scopri di più
+[%collapsible]
+====
+Se è stata selezionata l'opzione *Burst maturato*, per impostazione predefinita, è possibile visualizzare i dati mensili sull'utilizzo dei burst maturati negli ultimi 12 mesi. È possibile eseguire una query in base all'intervallo di date fino agli ultimi 30 mesi.
+
+
+TIP: L'utilizzo del bursting maturato o la capacità consumata vengono calcolati al mese per il periodo di fatturazione corrente. L'utilizzo del bursting maturato viene calcolato in base alla capacità impegnata e consumata per un livello di servizio mediante questa formula: `(consumed - committed)/365.25/12`.
+
+image:accr-burst.png["grafici di utilizzo burst maturati"]
+
+Questa funzionalità è disponibile in una modalità di sola anteprima. Contattare il proprio KSM per ulteriori informazioni su questa funzione.
+
+====
 
 
 === Diagrammi di riferimento per la protezione dei dati
@@ -261,7 +282,7 @@ Questa scheda potrebbe non essere disponibile per la visualizzazione delle metri
 +
 In alternativa, è possibile fare clic su image:aiq-ks-time-icon.png["icona grafico"] Accanto a un volume ONTAP nella scheda *volumi* per passare a questa scheda.
 
-. Selezionare l'intervallo di date per la query. L'intervallo di date può essere l'inizio del mese o la data di inizio dell'abbonamento alla data corrente o la data di fine dell'abbonamento.
+. Selezionare l'intervallo di date per la query. L'intervallo di date può essere l'inizio del mese o la data di inizio dell'abbonamento alla data corrente o la data di fine dell'abbonamento. Non è possibile selezionare una data futura.
 
 
 I dettagli recuperati si basano sull'obiettivo del livello di servizio per ogni livello di servizio. Ad esempio, gli IOPS di picco, il massimo throughput, la latenza di destinazione e le altre metriche sono determinati dalle singole impostazioni per il livello di servizio. Per ulteriori informazioni sulle impostazioni, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_performance.html["Livelli di servizio"].

@@ -54,7 +54,7 @@ Il consulente digitale Active IQ offre una vista dalla dashboard, con informazio
 
 
 *È possibile ordinare un nuovo servizio di archiviazione?*
-Sì, è possibile richiedere nuovi servizi di storage o l'espansione al servizio di storage a tale scopo. La richiesta viene elaborata dal team operativo NetApp Keystone prima di renderla disponibile per l'utilizzo.
+Sì, è possibile richiedere nuovi servizi di storage o l'espansione al servizio di storage tramite i KSM. La richiesta viene elaborata dal team operativo NetApp Keystone prima di renderla disponibile per l'utilizzo.
 
 *Gli aumenti degli impegni di storage sono immediatamente disponibili?* a seconda della quantità di capacità richiesta, viene effettuata una determinazione se la capacità è già implementata o se richiede la spedizione e l'installazione di apparecchiature aggiuntive.
 
