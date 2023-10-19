@@ -129,7 +129,7 @@ I seguenti colori nei grafici a barre indicano la capacità consumata come defin
 
 NOTE: Un grafico vuoto indica che non sono disponibili dati nell'ambiente in quel punto di raccolta dati.
 
-È possibile fare clic sul pulsante di attivazione/disattivazione *Mostra utilizzo corrente* per visualizzare il consumo corrente e l'utilizzo burst rispetto al periodo di fatturazione dell'abbonamento. Questi non sono basati sull'intervallo di date della query.
+È possibile fare clic sul pulsante di attivazione/disattivazione *Mostra utilizzo corrente* per visualizzare i dati relativi a consumo, utilizzo burst e burst di accantonamento per il periodo di fatturazione corrente. Questi dettagli non sono basati sull'intervallo di date della query.
 
 * *Corrente assorbita*: Indicatore della capacità consumata (in TIB) definita per il livello di servizio. Questo campo utilizza colori specifici:
 +
@@ -146,6 +146,7 @@ NOTE: Un grafico vuoto indica che non sono disponibili dati nell'ambiente in que
 ** Viola: Al di sopra del limite di burst.
 
 
+* *Bursting maturato*: Indicatore dell'utilizzo bursting maturato o della capacità consumata calcolata al mese per il periodo di fatturazione corrente. L'utilizzo del burst accumulato viene calcolato in base alla capacità impegnata e consumata per un livello di servizio: `(consumed - committed)/365.25/12`.
 
 
 ====
