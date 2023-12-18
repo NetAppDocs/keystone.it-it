@@ -30,13 +30,13 @@ I dettagli degli abbonamenti, i grafici di utilizzo per ciascun livello di servi
 
 
 
-NOTE: Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibers su dashboard e report e arrotondato a due cifre decimali. Se l'utilizzo è inferiore a 0.01 TIB, il valore viene visualizzato come `0` oppure `No Usage`. L'ora locale immessa per la query in queste schede viene convertita in ora UTC. Pertanto, potrebbero verificarsi differenze minori nei dati restituiti in base al tempo richiesto.
+NOTE: Il consumo di capacità nelle sottoscrizioni Keystone viene visualizzato in Tibers su dashboard e report e arrotondato a due cifre decimali. Se l'utilizzo è inferiore a 0.01 TIB, il valore viene visualizzato come `0` oppure `No Usage`. I dati di queste schermate vengono visualizzati in ora UTC (fuso orario del server). Quando si immette una data per la query, questa viene automaticamente considerata nel fuso orario UTC.
 
 Per informazioni sulle metriche di utilizzo, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_service_level_metrics_and_definitions.html["Metriche e definizioni dei livelli di servizio"]. Per informazioni sulle diverse capacità utilizzate in Keystone, vedere https://docs.netapp.com/us-en/keystone/nkfsosm_keystone_service_capacity_definitions.html["Definizioni della capacità del servizio Keystone"].
 
 
 
-== Visualizzare le iscrizioni
+== Abbonamenti
 
 È possibile visualizzare un elenco delle sottoscrizioni nella scheda *Sottoscrizioni*.
 
@@ -71,7 +71,7 @@ image:icon-purple.png["icona"]Indica un consumo superiore al limite di burst sta
 
 
 
-== Visualizza i dettagli di utilizzo degli abbonamenti
+== Utilizzo corrente
 
 Per conoscere i dettagli delle sottoscrizioni, fare clic sulla scheda *uso corrente* e selezionare il numero di abbonamento richiesto.
 
@@ -86,7 +86,7 @@ Per informazioni sui servizi di storage Keystone e sui relativi livelli di servi
 
 
 
-== Consente di visualizzare i dati cronologici di utilizzo
+== Tendenza capacità
 
 La scheda *tendenza capacità* visualizza i dati storici delle sottoscrizioni Keystone per un periodo specifico. I grafici verticali visualizzano i dettagli di utilizzo per l'intervallo di tempo selezionato con gli indicatori appropriati per il confronto e la generazione di report.
 
@@ -215,7 +215,7 @@ Per informazioni su come MetroCluster protegge i dati, consulta https://docs.net
 ====
 
 
-== Visualizzare i dettagli di volumi e oggetti
+== Volumi e oggetti
 
 Nella scheda *volumi e oggetti*, è possibile visualizzare il consumo e altri dettagli per i volumi in ONTAP. Per StorageGRID, questa scheda visualizza i nodi e il loro utilizzo individuale nell'ambiente di storage a oggetti.
 
@@ -224,7 +224,7 @@ NOTE: Il nome di questa scheda varia in base alla natura della distribuzione pre
 
 
 
-=== Dettagli del volume ONTAP
+=== Visualizza i dettagli del volume ONTAP
 
 .Scopri di più
 [%collapsible]
@@ -248,12 +248,12 @@ image:aiq-ks-sysdtls.png["Scheda volumi  oggetti"]
 ====
 
 
-=== Nodi StorageGRID e dettagli sui consumi
+=== Visualizza i nodi del StorageGRID e il consumo
 
 .Scopri di più
 [%collapsible]
 ====
-Per StorageGRID, questa scheda visualizza l'utilizzo logico dei nodi nell'ambiente di storage a oggetti.
+Per StorageGRID, questa scheda visualizza l'utilizzo logico per i nodi per lo storage a oggetti.
 
 .Fasi
 . Fare clic sulla scheda *oggetti*.
@@ -270,11 +270,12 @@ image:sg-link-2.png["Pop-up SG"]
 ====
 
 
-== Visualizza le performance del volume ONTAP
+== Performance
 
-Puoi fare clic sulla scheda *Performance* per visualizzare i dettagli sulle performance per i volumi ONTAP gestiti dalle tue iscrizioni Keystone.
+La scheda *Performance* ti consente di visualizzare le metriche delle performance dei ONTAP Volumes gestiti dalle tue iscrizioni a Keystone.
 
-Questa scheda potrebbe non essere disponibile per la visualizzazione delle metriche delle performance sui tuoi ONTAP Volumes. Contattare il supporto per la visualizzazione di questa scheda.
+
+TIP: Questa scheda è disponibile come opzione. Contattare il supporto per la visualizzazione di questa scheda.
 
 .Fasi
 . Fare clic sulla scheda *prestazioni*.

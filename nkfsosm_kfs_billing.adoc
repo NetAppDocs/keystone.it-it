@@ -97,7 +97,8 @@ Occasionalmente, i volumi temporanei (TMP) vengono creati da ONTAP durante lo sp
 
 === Policy di fatturazione e QoS adattivi
 
-Keystone misura il consumo in base ai livelli di servizio. Ogni livello di servizio è associato a una specifica policy di qualità del servizio (QoS) adattativa. Durante l'implementazione, sarai informato dei dettagli di ogni policy QoS per i servizi Keystone sottoscritti. Durante le operazioni di gestione dello storage, assicurarsi che i volumi abbiano le policy QoS appropriate assegnate in base ai livelli di servizio sottoscritti, per evitare la fatturazione imprevista. Per ulteriori informazioni sui criteri QoS in ONTAP, vedere link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Garantire il throughput con la panoramica QoS"].
+Keystone misura il consumo in base ai livelli di servizio. Ogni livello di servizio è associato a una specifica policy di qualità del servizio (QoS) adattativa. Durante l'implementazione, sarai informato dei dettagli di ogni policy QoS per i servizi Keystone sottoscritti. Durante le operazioni di gestione dello storage, assicurarsi che i volumi abbiano le policy QoS appropriate assegnate in base ai livelli di servizio sottoscritti, per evitare la fatturazione imprevista.
+Per ulteriori informazioni sui criteri QoS in ONTAP, vedere link:https://docs.netapp.com/us-en/ontap/performance-admin/guarantee-throughput-qos-task.html["Garantire il throughput con la panoramica QoS"^].
 
 
 

@@ -30,6 +30,6 @@ L'infrastruttura Keystone include diversi componenti:
 * Strumenti per gestire e gestire il servizio, quali OpsRamp, Active IQ Digital Advisor e Active IQ Unified Manager.
 
 
-Per ulteriori informazioni sull'integrazione di NetApp Keystone con Active IQ, vedere link:https://docs.netapp.com/us-en/active-iq/["Documentazione di Active IQ Digital Advisor"]
+Per ulteriori informazioni sull'integrazione di NetApp Keystone con Active IQ, vedere link:https://docs.netapp.com/us-en/active-iq/["Documentazione di Active IQ Digital Advisor"^]
 
 image:nkfsosm_image8.png["infrastruttura ks"]

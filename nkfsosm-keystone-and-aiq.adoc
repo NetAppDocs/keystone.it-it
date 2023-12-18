@@ -16,6 +16,10 @@ summary: Cosa possono vedere i clienti in Active IQ per Keystone
 [role="lead"]
 Se ti sei abbonato ai servizi NetApp Keystone, puoi ottenere una panoramica delle tue iscrizioni nel widget *Sottoscrizioni Keystone* del dashboard di consulente digitale Active IQ.
 
+Puoi cercare i dettagli dell'iscrizione Keystone effettuando una ricerca in base al nome di un cliente o di un nome di una lista di controllo che include più clienti. Per informazioni su come cercare le sottoscrizioni Keystone in base agli elenchi di controllo, vedere https://docs.netapp.com/us-en/keystone/nkfsosm-keystone-and-aiq.html#search-by-using-keystone-watchlists["Effettuare una ricerca utilizzando gli elenchi di controllo Keystone"].
+
+Digital Advisor offre un dashboard unificato che fornisce informazioni dettagliate sui vari livelli dei dati di abbonamento e sulle informazioni sull'utilizzo tramite il pulsante *passa alla dashboard precedente/nuova*.
+
 Digital Advisor offre un dashboard unificato che fornisce informazioni dettagliate sui vari livelli dei dati di abbonamento e sulle informazioni sull'utilizzo tramite il pulsante *passa alla dashboard precedente/nuova*.
 
 .Dashboard predefinito (vecchio)
@@ -49,6 +53,27 @@ TIP: Fare clic sul collegamento *Sottoscrizioni* per visualizzare l'elenco delle
 
 image:db-card.png["senza sla"]
 
-Per ulteriori informazioni su Digital Advisor, vedere link:https://docs.netapp.com/us-en/active-iq/index.html["Documentazione di Digital Advisor"].
+Per ulteriori informazioni su Digital Advisor, vedere link:https://docs.netapp.com/us-en/active-iq/index.html["Documentazione di Digital Advisor"^].
 
 Per informazioni sulla scheda *Abbonamenti Keystone*, consulta la sezione _dashboard e report di Digital Advisor per Keystone_.
+
+
+
+== Effettuare una ricerca utilizzando gli elenchi di controllo Keystone
+
+Watchlist è una funzione di consulente digitale Active IQ (Digital Advisor). Per ulteriori informazioni, vedere https://docs.netapp.com/us-en/active-iq/concept_overview_dashboard.html["Comprendere la lista di controllo"^]. Per informazioni sulla creazione di elenchi di controllo, vedere https://docs.netapp.com/us-en/active-iq/task_add_watchlist.html["Creare una lista di controllo"^].
+
+Keystone supporta la creazione di liste di controllo e la loro ricerca per visualizzare i dettagli dell'abbonamento di più clienti. Segui questi passaggi per creare una watchlist per i clienti Keystone:
+
+. Nella schermata *Crea elenco di controllo*, fornire un nome per l'elenco di controllo Keystone.
+. Selezionare *Categoria* nel campo *Aggiungi sistemi per*. *Cliente* è selezionato per impostazione predefinita nel campo *Scegli categoria*.
+. Cercare i clienti richiesti in base ai loro nomi e aggiungerli. È possibile aggiungere solo i clienti i cui dettagli sono autorizzati a visualizzare.
+. Fare clic su *Create Watchlist* (Crea lista di controllo). La schermata Digital Advisor visualizza i dati per la nuova lista di controllo.
+
+
+Quando si esegue una ricerca in base a un elenco di controllo nella schermata di Digital Advisor, è possibile visualizzare i clienti e le relative sottoscrizioni nell'elenco a discesa *sottoscrizione* del widget *Sottoscrizioni Keystone*.
+
+
+TIP: Se stai visualizzando il dashboard _new_ nel widget *Keystone Subscriptions*, fai clic su *passa alla vecchia dashboard* per visualizzare l'elenco.
+
+image:watchlist.png["schermata elenco di controllo"]

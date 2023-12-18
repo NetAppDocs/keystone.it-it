@@ -27,7 +27,8 @@ Sollevare un biglietto con i dettagli appropriati del problema per ottenere assi
 
 Puoi anche utilizzare le seguenti informazioni per contattare il team di supporto.
 
-* Contatti Global Service:https://www.netapp.com/us/contact-us/support.aspx[]
+* Contatti Global Service:
+https://www.netapp.com/us/contact-us/support.aspx[]
 * Se si dispone di un caso/ticket aperto che deve essere sottoposto a escalation, inviare un'e-mail a uno dei seguenti indirizzi: Keystone.services@netapp.com Keystone.escalations@netapp.com
 * NetApp utilizza OpsRamp, una soluzione di gateway remoto basata sul cloud per monitorare e connettersi in modo proattivo all'ambiente NetApp Keystone per la risoluzione dei problemi. Per informazioni su OpsRamp, vedere https://www.opsramp.com/#[].
 
