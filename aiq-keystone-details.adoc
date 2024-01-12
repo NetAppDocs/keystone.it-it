@@ -93,7 +93,7 @@ La scheda *tendenza capacità* visualizza i dati storici delle sottoscrizioni Ke
 .Fasi
 . Fare clic sulla scheda *Trend capacità*.
 . Selezionare l'abbonamento richiesto per il quale si desidera visualizzare i dettagli. Per impostazione predefinita, viene selezionato il primo abbonamento nel nome dell'account.
-. Selezionare *tendenza capacità* se si desidera visualizzare i dati storici e analizzare la tendenza di utilizzo della capacità. Selezionare *Burst maturato* se si desidera visualizzare i dati di utilizzo burst storici e analizzare l'utilizzo fatturato in base alla fattura.
+. Selezionare *tendenza capacità* se si desidera visualizzare i dati storici e analizzare la tendenza di utilizzo della capacità. Selezionare *Burst maturato fatturato* se si desidera visualizzare i dati di utilizzo burst storici, per i quali sono state generate le fatture. È possibile utilizzare questi dati per analizzare l'utilizzo fatturato in base alla fattura.
 
 
 
@@ -152,15 +152,15 @@ NOTE: Un grafico vuoto indica che non sono disponibili dati nell'ambiente in que
 ====
 
 
-=== Visualizzazione dei dati burst storici
+=== Visualizza bursting maturato fatturato
 
 .Scopri di più
 [%collapsible]
 ====
-Se è stata selezionata l'opzione *Burst maturato*, per impostazione predefinita, è possibile visualizzare i dati mensili sull'utilizzo dei burst maturati negli ultimi 12 mesi. È possibile eseguire una query in base all'intervallo di date fino agli ultimi 30 mesi.
+Se è stata selezionata l'opzione *Burst maturato fatturato*, per impostazione predefinita, è possibile visualizzare i dati mensili sull'utilizzo dei bursting maturati negli ultimi 12 mesi che sono stati fatturati. È possibile eseguire una query in base all'intervallo di date fino agli ultimi 30 mesi. I grafici a barre vengono visualizzati per i dati fatturati e, se l'utilizzo non è ancora stato fatturato, viene visualizzato _Pending_ per quel mese.
 
 
-TIP: L'utilizzo del bursting maturato o la capacità consumata vengono calcolati al mese per il periodo di fatturazione corrente. L'utilizzo del bursting maturato viene calcolato in base alla capacità impegnata e consumata per un livello di servizio mediante questa formula: `(consumed - committed)/365.25/12`.
+TIP: L'utilizzo dei bursting maturati fatturati viene calcolato per periodo di fatturazione in base alla capacità impegnata e consumata per un livello di servizio.
 
 image:accr-burst.png["grafici di utilizzo burst maturati"]
 
